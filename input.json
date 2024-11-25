@@ -1,0 +1,15 @@
+{
+    "groups": ["1A1", "1A2"],
+    "courses": {
+        "1": [
+            "Calculus I",
+            "Linear Algebra"
+        ]
+    },
+    "profs_subjects": {
+        "Dr. Smith": ["Calculus I", "Linear Algebra"]
+    },
+    "rooms": [
+        "C401"
+    ]
+}

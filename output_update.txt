@@ -1,0 +1,14 @@
+Variable 0 (Group: 1A1, Course: Calculus I):
+  Prof: Dr. Smith, Timeslot: Monday 8:00-10:00 C401
+Variable 1 (Group: 1A1, Course: Linear Algebra):
+  Prof: Dr. Smith, Timeslot: Monday 10:00-12:00 C401
+Variable 2 (Group: 1A2, Course: Calculus I):
+  Prof: Dr. Smith, Timeslot: Monday 12:00-14:00 C401
+  Prof: Dr. Smith, Timeslot: Monday 14:00-16:00 C401
+  Prof: Dr. Smith, Timeslot: Monday 16:00-18:00 C401
+  Prof: Dr. Smith, Timeslot: Monday 18:00-20:00 C401
+Variable 3 (Group: 1A2, Course: Linear Algebra):
+  Prof: Dr. Smith, Timeslot: Monday 12:00-14:00 C401
+  Prof: Dr. Smith, Timeslot: Monday 14:00-16:00 C401
+  Prof: Dr. Smith, Timeslot: Monday 16:00-18:00 C401
+  Prof: Dr. Smith, Timeslot: Monday 18:00-20:00 C401
