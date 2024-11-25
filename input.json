@@ -1,30 +1,15 @@
 {
-    "groups": ["1A1", "1A2", "2B1", "2B2"],
+    "groups": ["1A1", "1A2"],
     "courses": {
         "1": [
             "Calculus I",
-            "Linear Algebra",
-            "Computer Architecture",
-            "Digital Logic"
-        ],
-        "2": [
-            "Introduction to Programming",
-            "Object-Oriented Programming",
-            "Data Structures",
-            "Operating Systems",
-            "Algorithms"
+            "Linear Algebra"
         ]
     },
     "profs_subjects": {
-        "Dr. Smith": ["Introduction to Programming", "Object-Oriented Programming", "Data Structures"],
-        "Dr. Johnson": ["Calculus I", "Linear Algebra"],
-        "Prof. Williams": ["Computer Architecture", "Digital Logic", "Operating Systems"],
-        "Dr. Brown": ["Algorithms"]
+        "Dr. Smith": ["Calculus I", "Linear Algebra"]
     },
     "rooms": [
-        "C401",
-        "C402",
-        "C403",
-        "C404"
+        "C401"
     ]
 }
