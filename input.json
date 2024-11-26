@@ -1,15 +1,49 @@
 {
-    "groups": ["1A1", "1A2"],
+    "groups": ["1A1", "1A2", "2B1", "2B2", "3C1", "3C2"],
     "courses": {
         "1": [
+            "Introduction to Programming",
             "Calculus I",
-            "Linear Algebra"
+            "Linear Algebra",
+            "Computer Architecture",
+            "Digital Logic",
+            "Academic Writing"
+        ],
+        "2": [
+            "Data Structures",
+            "Object-Oriented Programming",
+            "Databases",
+            "Computer Networks",
+            "Operating Systems",
+            "Software Engineering"
+        ],
+        "3": [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Web Development",
+            "Mobile Applications",
+            "Cloud Computing",
+            "Cybersecurity"
         ]
     },
     "profs_subjects": {
-        "Dr. Smith": ["Calculus I", "Linear Algebra"]
+        "Dr. Smith": ["Introduction to Programming", "Object-Oriented Programming", "Data Structures"],
+        "Dr. Johnson": ["Calculus I", "Linear Algebra"],
+        "Prof. Williams": ["Computer Architecture", "Digital Logic", "Operating Systems"],
+        "Dr. Brown": ["Databases", "Computer Networks"],
+        "Prof. Davis": ["Artificial Intelligence", "Machine Learning"],
+        "Dr. Wilson": ["Web Development", "Mobile Applications"],
+        "Prof. Moore": ["Cloud Computing", "Cybersecurity"],
+        "Dr. Taylor": ["Software Engineering", "Academic Writing"]
     },
     "rooms": [
-        "C401"
+        "C401",
+        "C402",
+        "C403",
+        "L101",
+        "L102",
+        "S201",
+        "S202",
+        "A301"
     ]
 }

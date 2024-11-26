@@ -39,9 +39,7 @@ variables = list(range(len(classes_to_course)))
 
 domains = {}
 for index, class_info in enumerate(classes_to_course):
-    group = class_info['group']
     course = class_info['course']
-    year = group[0]
 
     possible_profs = [prof for prof in profs_subjects if course in profs_subjects[prof]]
 
@@ -54,13 +52,11 @@ for index, class_info in enumerate(classes_to_course):
 def is_consistent(var1, val1, var2, val2):
     class1 = classes_to_course[var1]
     group1 = class1['group']
-    course1 = class1['course']
     prof1 = val1['prof']
     timeslot1 = val1['timeslot']
 
     class2 = classes_to_course[var2]
     group2 = class2['group']
-    course2 = class2['course']
     prof2 = val2['prof']
     timeslot2 = val2['timeslot']
 
