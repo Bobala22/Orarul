@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Timetable</title>
+</head>
+<body>
+<h1 th:text="${type == null ? 'Full Timetable' : 'Timetable for ' + type + ' ' + name}"></h1>
+
+<!-- Loop through each day and create a table for each -->
+<div th:each="day : ${daysOfWeek}">
+    <h2 th:text="${day}"></h2>
+    <table border="1">
+        <tr>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Subject</th>
+            <th>Type</th>
+            <th>Group</th>
+            <th>Teacher</th>
+            <th>Teacher Role</th>
+            <th>Room</th>
+        </tr>
+        <tr th:each="entry : ${timetable}" th:if="${entry.day == day}">
+            <td th:text="${entry.startTime} + ':00'"></td>
+            <td th:text="${entry.endTime} + ':00'"></td>
+            <td><a th:href="@{/timetable(type='subject', name=${entry.subject})}" th:text="${entry.subject}"></a></td>
+            <td th:text="${entry.type}"></td>
+            <td><a th:href="@{/timetable(type='group', name=${entry.group})}" th:text="${entry.group}"></a></td>
+            <td><a th:href="@{/timetable(type='teacher', name=${entry.teacher})}" th:text="${entry.teacher}"></a></td>
+            <td th:text="${entry.teacherRole}"></td>
+            <td th:text="${entry.room}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
