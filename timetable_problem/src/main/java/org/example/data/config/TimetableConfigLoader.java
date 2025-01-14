@@ -22,11 +22,14 @@ public class TimetableConfigLoader {
         this.mapper = new ObjectMapper();
     }
 
-    public TimetableData loadConfiguration(String configFilePath) throws IOException {
-        // Read the configuration file
+    public Map<Integer, TimetableData> loadConfiguration(String configFilePath) throws IOException {
         TimetableConfig config = mapper.readValue(new File(configFilePath), TimetableConfig.class);
 
-        // Create rooms
+        // Create a map of global teachers
+        Map<String, Teacher> globalTeacherMap = config.getTeachers().stream()
+                .collect(Collectors.toMap(TeacherConfig::getName, tc -> new Teacher(tc.getName(), tc.getRole(), tc.getMaxHours()))); // Use getMaxHoursPerWeek()
+
+        // Parse the shared courseRooms and seminarRooms
         List<Room> courseRooms = config.getRooms().getCourseRooms().stream()
                 .map(name -> new Room(name, true))
                 .collect(Collectors.toList());
@@ -35,36 +38,33 @@ public class TimetableConfigLoader {
                 .map(name -> new Room(name, false))
                 .collect(Collectors.toList());
 
-        // Create teachers map
-        Map<String, Teacher> teacherMap = new HashMap<>();
-        for (TeacherConfig teacherConfig : config.getTeachers()) {
-            Teacher teacher = new Teacher(teacherConfig.getName(), teacherConfig.getRole());
-            teacherMap.put(teacher.getName(), teacher);
-        }
+        // Create the global list of teachers (needed by TimetableScheduler)
+        List<Teacher> globalTeachersList = new ArrayList<>(globalTeacherMap.values());
 
-        // Create subjects
-        List<Subject> subjects = new ArrayList<>();
-        for (SubjectConfig subjectConfig : config.getSubjects()) {
-            // Get course teacher
-            Teacher courseTeacher = teacherMap.get(subjectConfig.getCourseTeacherName());
-            if (courseTeacher == null) {
-                throw new IllegalStateException(
-                        "Course teacher not found: " + subjectConfig.getCourseTeacherName());
-            }
 
-            // Get seminar teachers
-            List<Teacher> seminarTeachers = new ArrayList<>();
-            for (String teacherName : subjectConfig.getSeminarTeacherNames()) {
-                Teacher teacher = teacherMap.get(teacherName);
-                if (teacher == null) {
-                    throw new IllegalStateException("Seminar teacher not found: " + teacherName);
+        // Parse timetable data for each year
+        Map<Integer, TimetableData> timetableDataPerYear = new HashMap<>();
+        for (Map.Entry<Integer, YearConfig> entry : config.getYears().entrySet()) {
+            Integer year = entry.getKey();
+            YearConfig yearConfig = entry.getValue();
+
+            List<Subject> subjects = new ArrayList<>();
+            for (SubjectConfig subjectConfig : yearConfig.getSubjects()) {
+                Teacher courseTeacher = globalTeacherMap.get(subjectConfig.getCourseTeacher());
+                if (courseTeacher == null || !courseTeacher.canTeachCourse()) {
+                    throw new IllegalArgumentException("Invalid course teacher: " + subjectConfig.getCourseTeacher());
                 }
-                seminarTeachers.add(teacher);
+
+                List<Teacher> seminarTeachers = subjectConfig.getSeminarTeacher().stream()
+                        .map(globalTeacherMap::get)
+                        .collect(Collectors.toList());
+
+                subjects.add(new Subject(subjectConfig.getName(), courseTeacher, seminarTeachers));
             }
 
-            subjects.add(new Subject(subjectConfig.getName(), courseTeacher, seminarTeachers));
+            timetableDataPerYear.put(year, new TimetableData(subjects, courseRooms, seminarRooms, globalTeachersList)); // Pass globalTeachersList here
         }
 
-        return new TimetableData(subjects, courseRooms, seminarRooms);
+        return timetableDataPerYear;
     }
 }

@@ -10,10 +10,10 @@ public class SubjectConfig {
     private String name;
 
     @JsonProperty("courseTeacher")
-    private String courseTeacherName;
+    private String courseTeacher;
 
-    @JsonProperty("seminarTeachers")
-    private List<String> seminarTeacherNames;
+    @JsonProperty("seminarTeacher")
+    private List<String> seminarTeacher;
 
     // Default constructor for Jackson
     public SubjectConfig() {
@@ -23,12 +23,12 @@ public class SubjectConfig {
         return name;
     }
 
-    public String getCourseTeacherName() {
-        return courseTeacherName;
+    public String getCourseTeacher() {
+        return courseTeacher;
     }
 
-    public List<String> getSeminarTeacherNames() {
-        return seminarTeacherNames;
+    public List<String> getSeminarTeacher() {
+        return seminarTeacher;
     }
 
 }

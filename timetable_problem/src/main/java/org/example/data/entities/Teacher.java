@@ -9,10 +9,13 @@ public class Teacher {
     private final String name;
     @JsonProperty("role")
     private final TeacherRole role;
+    @JsonProperty("maxHoursPerWeek")
+    private final int maxHoursPerWeek;
 
-    public Teacher(String name, TeacherRole role) {
+    public Teacher(String name, TeacherRole role,int maxHoursPerWeek) {
         this.name = name;
         this.role = role;
+        this.maxHoursPerWeek=maxHoursPerWeek;
     }
 
     public String getName() {
@@ -27,4 +30,7 @@ public class Teacher {
         return role == TeacherRole.LECTURER;
     }
 
+    public int getMaxHoursPerWeek() {
+        return maxHoursPerWeek;
+    }
 }

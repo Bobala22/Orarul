@@ -3,12 +3,13 @@ package org.example.data.config;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
+import java.util.Map;
 
 import org.example.data.entities.Room;
 import org.example.data.entities.Teacher;
 
 public class TimetableConfig {
-    
+
     @JsonProperty("teachers")
     private List<TeacherConfig> teachers;
 
@@ -18,8 +19,23 @@ public class TimetableConfig {
     @JsonProperty("rooms")
     private RoomsConfig rooms;
 
+    @JsonProperty("years")
+    private Map<Integer, YearConfig> years;
+
     // Default constructor for Jackson
     public TimetableConfig() {
+    }
+
+    public void setRooms(RoomsConfig rooms) {
+        this.rooms = rooms;
+    }
+
+    public Map<Integer, YearConfig> getYears() {
+        return years;
+    }
+
+    public void setYears(Map<Integer, YearConfig> years) {
+        this.years = years;
     }
 
     public List<TeacherConfig> getTeachers() {
@@ -33,5 +49,5 @@ public class TimetableConfig {
     public RoomsConfig getRooms() {
         return rooms;
     }
-    
+
 }

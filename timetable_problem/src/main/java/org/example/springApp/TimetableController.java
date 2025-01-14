@@ -2,6 +2,7 @@ package org.example.springApp;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.data.TimetableData;
+import org.example.data.config.TimetableConfigLoader;
 import org.example.solver.TimetableScheduler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +19,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Controller
@@ -33,48 +35,83 @@ public class TimetableController {
         public String teacher;
         public String teacherRole;
         public String room;
-    }
 
-    private static class TimetableExport {
-        public List<ScheduleEntry> schedule;
-    }
-
-    @GetMapping("/timetable")
-    public String getTimetable(@RequestParam(required = false) String type, @RequestParam(required = false) String name, Model model) throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        TimetableExport timetable = mapper.readValue(new File("timetable_output.json"), TimetableExport.class);
-
-        List<ScheduleEntry> filteredSchedule;
-        if (type == null || name == null) {
-            filteredSchedule = timetable.schedule;
-        } else {
-            switch (type) {
-                case "group":
-                    filteredSchedule = timetable.schedule.stream()
-                            .filter(entry -> entry.group.equals(name))
-                            .collect(Collectors.toList());
-                    break;
-                case "teacher":
-                    filteredSchedule = timetable.schedule.stream()
-                            .filter(entry -> entry.teacher.equals(name))
-                            .collect(Collectors.toList());
-                    break;
-                case "subject":
-                    filteredSchedule = timetable.schedule.stream()
-                            .filter(entry -> entry.subject.equals(name))
-                            .collect(Collectors.toList());
-                    break;
-                default:
-                    throw new IllegalArgumentException("Invalid type: " + type);
+        public void adjustForYear(int year) {
+            // Prefix the group and series with the year
+            if (group != null) {
+                this.group = year + this.group; // E.g., "A1" becomes "1A1" for year 1
             }
         }
 
-        model.addAttribute("timetable", filteredSchedule);
+    }
+
+
+
+    private static class TimetableExport {
+        public List<ScheduleEntry> schedule;
+    
+        public List<ScheduleEntry> getSchedule() {
+            return schedule;
+        }
+    }
+    @GetMapping("/timetable")
+    public String getYearlyTimetableLinks(Model model) throws IOException {
+        TimetableConfigLoader configLoader = new TimetableConfigLoader();
+        Map<Integer, TimetableData> timetableDataPerYear = configLoader.loadConfiguration("input.json");
+
+        model.addAttribute("years", timetableDataPerYear.keySet());
+        return "timetable_links"; // A view that displays links for each year
+    }
+
+    @GetMapping("/timetable/year")
+    public String getFilteredTimetableForYear(
+            @RequestParam("year") int year,
+            @RequestParam(value = "type", required = false) String type,
+            @RequestParam(value = "name", required = false) String name,
+            Model model) throws IOException {
+
+        // Load the timetable JSON for the given year
+        ObjectMapper mapper = new ObjectMapper();
+        TimetableExport timetable = mapper.readValue(new File("timetable_year_" + year + ".json"), TimetableExport.class);
+
+        // Adjust series and group names to include the year prefix
+        List<ScheduleEntry> adjustedEntries = timetable.getSchedule();
+        adjustedEntries.forEach(entry -> entry.adjustForYear(year));
+
+        // Filter timetable entries if a filter is provided (type + name)
+        List<ScheduleEntry> filteredEntries = adjustedEntries;
+        if (type != null && name != null) {
+            switch (type.toLowerCase()) {
+                case "subject":
+                    filteredEntries = filteredEntries.stream()
+                            .filter(entry -> name.equals(entry.subject))
+                            .collect(Collectors.toList());
+                    break;
+                case "group":
+                    filteredEntries = filteredEntries.stream()
+                            .filter(entry -> name.equals(entry.group))
+                            .collect(Collectors.toList());
+                    break;
+                case "teacher":
+                    filteredEntries = filteredEntries.stream()
+                            .filter(entry -> name.equals(entry.teacher))
+                            .collect(Collectors.toList());
+                    break;
+                default:
+                    throw new IllegalArgumentException("Invalid filter type: " + type);
+            }
+        }
+
+        // Add attributes for the view
+        model.addAttribute("year", year);
         model.addAttribute("type", type);
         model.addAttribute("name", name);
+        model.addAttribute("timetable", filteredEntries);
         model.addAttribute("daysOfWeek", Arrays.asList("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"));
-        return "timetable";
+
+        return "timetable_view"; // A view for the timetable of a specific year
     }
+
 
     @GetMapping("/newpage")
     public String getNewPage(Model model) throws IOException {
@@ -111,7 +148,7 @@ public class TimetableController {
             TimetableData data = mapper.readValue(path.toFile(), TimetableData.class);
 
             // Initialize the TimetableScheduler with the necessary data
-            TimetableScheduler scheduler = new TimetableScheduler(data.getCourseRooms(), data.getSeminarRooms());
+            TimetableScheduler scheduler = new TimetableScheduler(data.getCourseRooms(), data.getSeminarRooms(),data.getTeachers());
 
             // Generate the timetable
             if (scheduler.generateTimetable(data.getSubjects())) {
