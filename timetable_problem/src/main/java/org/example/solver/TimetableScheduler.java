@@ -96,40 +96,53 @@ public class TimetableScheduler {
             }
         }
 
-        // Try to schedule all sessions
-        for (Session session : sessionsToSchedule) {
-            boolean scheduled = false;
-            List<Room> availableRooms = session.isCourse() ? courseRooms : seminarRooms;
+        return backtrack(sessionsToSchedule, 0);
+    }
 
-            // Try all possible combinations of rooms and time slots
-            for (Room room : availableRooms) {
-                if (scheduled) break;
+    private boolean backtrack(List<Session> sessionsToSchedule, int index) {
+        if (index == sessionsToSchedule.size()) {
+            return true; // All sessions have been scheduled
+        }
 
-                for (String day : days) {
-                    if (scheduled) break;
+        Session session = sessionsToSchedule.get(index);
+        List<Room> availableRooms = session.isCourse() ? courseRooms : seminarRooms;
 
-                    for (Integer time : timeSlots) {
-                        TimeSlot timeSlot = new TimeSlot(day, time);
-                        if (isTimeSlotAvailable(room, session.getGroup(),
-                                session.getTeacher(), timeSlot)) {
+        for (Room room : availableRooms) {
+            for (String day : days) {
+                for (Integer time : timeSlots) {
+                    TimeSlot timeSlot = new TimeSlot(day, time);
+                    if (isTimeSlotAvailable(room, session.getGroup(), session.getTeacher(), timeSlot)) {
+                        session.setRoom(room);
+                        session.setTimeSlot(timeSlot);
+                        scheduleSession(session);
 
-                            session.setRoom(room);
-                            session.setTimeSlot(timeSlot);
-                            scheduleSession(session);
-                            scheduled = true;
-                            break;
+                        if (backtrack(sessionsToSchedule, index + 1)) {
+                            return true;
                         }
+
+                        // Undo the assignment
+                        unscheduleSession(session);
                     }
                 }
             }
-
-            if (!scheduled) {
-                return false; // Could not schedule all sessions
-            }
         }
 
-        return true;
+        return false; // No valid schedule found
     }
+
+    private void unscheduleSession(Session session) {
+        schedule.remove(session);
+
+        // Update room schedule
+        roomSchedule.get(session.getRoom().getName()).remove(session.getTimeSlot());
+
+        // Update group schedule
+        groupSchedule.get(session.getGroup()).remove(session.getTimeSlot());
+
+        // Update teacher schedule
+        teacherSchedule.get(session.getTeacher().getName()).remove(session.getTimeSlot());
+    }
+
     private void scheduleSession(Session session) {
         schedule.add(session);
 
@@ -222,5 +235,9 @@ public class TimetableScheduler {
         } catch (IllegalStateException e) {
             System.err.println("Configuration error: " + e.getMessage());
         }
+    }
+
+    public List<Session> getSchedule() {
+        return schedule;
     }
 }
