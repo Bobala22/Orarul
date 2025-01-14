@@ -9,7 +9,6 @@ public class Teacher {
     private final String name;
     @JsonProperty("role")
     private final TeacherRole role;
-
     public Teacher(String name, TeacherRole role) {
         this.name = name;
         this.role = role;

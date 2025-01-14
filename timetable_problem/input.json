@@ -1,38 +1,61 @@
 {
+  "teachers": [
+    {"name": "Prof. Smith", "role": "LECTURER"},
+    {"name": "Dr. Jones", "role": "LECTURER"},
+    {"name": "Mr. Brown", "role": "ASSISTANT"},
+    {"name": "Ms. Garcia", "role": "ASSISTANT"},
+    {"name": "Dr. Davis", "role": "LECTURER"},
+    {"name": "Mr. Wilson", "role": "ASSISTANT"},
+    {"name": "Prof. Miller", "role": "LECTURER"},
+    {"name": "Ms. Taylor", "role": "ASSISTANT"},
+    {"name": "Dr. Anderson", "role": "LECTURER"},
+    {"name": "Mr. Thomas", "role": "ASSISTANT"},
+    {"name": "Prof. Moore", "role": "LECTURER"},
+    {"name": "Dr. Jackson", "role": "LECTURER"},
+    {"name": "Ms. White", "role": "ASSISTANT"},
+    {"name": "Prof. Johnson", "role" :  "LECTURER"},
+    {"name": "Mr. Harris", "role": "ASSISTANT"}
+  ],
   "rooms": {
-    "courseRooms": ["C2", "C309", "C112", "C308"],
-    "seminarRooms": ["C210", "C308", "C309", "C410", "C411", "C412", "C413", "C403", "C901", "C903", "C905", "C910"]
+    "courseRooms": ["C2", "C309", "C112", "C308", "C105", "C201", "C315", "C401", "C402", "C501", "C502", "C503"],
+    "seminarRooms": ["C210", "C308", "C309", "C410", "C411", "C412", "C413", "C403", "C901", "C903", "C905", "C910", "C101", "C102", "C202", "S1", "S2", "S3", "S4", "S5", "S6"]
   },
   "years": {
     "1": {
-      "teachers": [
-        { "name": "Prof. Smith", "role": "LECTURER" },
-        { "name": "Mr. Brown", "role": "ASSISTANT" }
-      ],
       "subjects": [
-        {
-          "name": "Introduction to Programming",
-          "courseTeacher": "Prof. Smith",
-          "seminarTeachers": ["Mr. Brown"]
-        }
+        {"name": "Introduction to Programming", "courseTeacher": "Prof. Smith", "seminarTeacher": ["Mr. Brown"]},
+        {"name": "Calculus I", "courseTeacher": "Dr. Jones", "seminarTeacher": ["Ms. Garcia"]},
+        {"name": "Physics I", "courseTeacher": "Dr. Anderson", "seminarTeacher": ["Mr. Thomas"]},
+        {"name": "Chemistry I", "courseTeacher": "Prof. Moore", "seminarTeacher": ["Ms. White"]},
+        {"name": "English Composition", "courseTeacher": "Dr. Jackson", "seminarTeacher": ["Mr. Harris"]},
+        {"name": "History I", "courseTeacher": "Prof. Smith", "seminarTeacher": ["Mr. Brown", "Ms. Garcia"]}
       ],
-      "series": ["A", "B"],
-      "groups": { "A": 2, "B": 2 }
+      "series": ["A", "B", "C", "D"],
+      "groups": {"A": 3, "B": 2, "C": 2, "D": 3}
     },
     "2": {
-      "teachers": [
-        { "name": "Prof. Johnson", "role": "LECTURER" },
-        { "name": "Ms. Garcia", "role": "ASSISTANT" }
-      ],
       "subjects": [
-        {
-          "name": "Data Structures",
-          "courseTeacher": "Prof. Johnson",
-          "seminarTeachers": ["Ms. Garcia"]
-        }
+        {"name": "Data Structures", "courseTeacher": "Prof. Johnson", "seminarTeacher": ["Ms. Garcia", "Mr. Brown"]},
+        {"name": "Linear Algebra", "courseTeacher": "Dr. Davis", "seminarTeacher": ["Mr. Wilson"]},
+        {"name": "Probability and Statistics", "courseTeacher": "Dr. Anderson", "seminarTeacher": ["Mr. Thomas", "Ms. White"]},
+        {"name": "Calculus II", "courseTeacher": "Dr. Jones", "seminarTeacher": ["Ms. Garcia"]},
+        {"name": "Physics II", "courseTeacher": "Dr. Anderson", "seminarTeacher": ["Mr. Thomas"]},
+        {"name": "Differential Equations", "courseTeacher": "Dr. Davis", "seminarTeacher": ["Mr. Wilson", "Mr. Harris"]}
       ],
-      "series": ["C", "D"],
-      "groups": { "C": 2, "D": 3 }
+      "series": ["E", "F", "G", "H"],
+      "groups": {"E": 2, "F": 3, "G": 2, "H": 3}
+    },
+    "3": {
+      "subjects": [
+        {"name": "Algorithms", "courseTeacher": "Prof. Miller", "seminarTeacher": ["Ms. Taylor"]},
+        {"name": "Discrete Mathematics", "courseTeacher": "Dr. Jones", "seminarTeacher": ["Mr. Brown", "Ms. Garcia", "Ms. White"]},
+        {"name": "Operating Systems", "courseTeacher": "Prof. Smith", "seminarTeacher": ["Mr. Wilson", "Ms. Taylor"]},
+        {"name": "Database Systems", "courseTeacher": "Dr. Davis", "seminarTeacher": ["Mr. Thomas"]},
+        {"name": "Software Engineering", "courseTeacher": "Prof. Moore", "seminarTeacher": ["Mr. Harris"]},
+        {"name": "Computer Networks", "courseTeacher": "Prof. Miller", "seminarTeacher": ["Ms. Taylor", "Mr. Brown"]}
+      ],
+      "series": ["I", "J", "K", "L"],
+      "groups": {"I": 2, "J": 3, "K": 3, "L": 2}
     }
   }
 }

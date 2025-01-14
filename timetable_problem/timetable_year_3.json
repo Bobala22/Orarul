@@ -33,6 +33,36 @@
     "day" : "Friday",
     "startTime" : 8,
     "endTime" : 10,
+    "subject" : "Algorithms",
+    "type" : "Seminar",
+    "group" : "A3",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C411"
+  }, {
+    "day" : "Friday",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Computer Networks",
+    "type" : "Seminar",
+    "group" : "A4",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
+  }, {
+    "day" : "Friday",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Operating Systems",
+    "type" : "Seminar",
+    "group" : "A5",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Friday",
+    "startTime" : 8,
+    "endTime" : 10,
     "subject" : "English Composition",
     "type" : "Seminar",
     "group" : "B2",
@@ -73,12 +103,42 @@
     "day" : "Friday",
     "startTime" : 10,
     "endTime" : 12,
+    "subject" : "Computer Networks",
+    "type" : "Seminar",
+    "group" : "A3",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
+  }, {
+    "day" : "Friday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Algorithms",
+    "type" : "Seminar",
+    "group" : "A4",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C411"
+  }, {
+    "day" : "Friday",
+    "startTime" : 10,
+    "endTime" : 12,
     "subject" : "Calculus II",
     "type" : "Course",
     "group" : "B",
     "teacher" : "Dr. Jones",
     "teacherRole" : "LECTURER",
     "room" : "C2"
+  }, {
+    "day" : "Friday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Operating Systems",
+    "type" : "Seminar",
+    "group" : "B1",
+    "teacher" : "Mr. Wilson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
   }, {
     "day" : "Friday",
     "startTime" : 10,
@@ -99,6 +159,26 @@
     "teacher" : "Mr. Harris",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
+  }, {
+    "day" : "Friday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Algorithms",
+    "type" : "Seminar",
+    "group" : "A1",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C411"
+  }, {
+    "day" : "Friday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Computer Networks",
+    "type" : "Seminar",
+    "group" : "A2",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
   }, {
     "day" : "Friday",
     "startTime" : 12,
@@ -151,6 +231,46 @@
     "room" : "C410"
   }, {
     "day" : "Friday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Operating Systems",
+    "type" : "Seminar",
+    "group" : "E2",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Friday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Algorithms",
+    "type" : "Course",
+    "group" : "A",
+    "teacher" : "Prof. Miller",
+    "teacherRole" : "LECTURER",
+    "room" : "C2"
+  }, {
+    "day" : "Friday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Computer Networks",
+    "type" : "Seminar",
+    "group" : "A1",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
+  }, {
+    "day" : "Friday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Algorithms",
+    "type" : "Seminar",
+    "group" : "A2",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C411"
+  }, {
+    "day" : "Friday",
     "startTime" : 14,
     "endTime" : 16,
     "subject" : "Linear Algebra",
@@ -191,6 +311,16 @@
     "room" : "C308"
   }, {
     "day" : "Friday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Operating Systems",
+    "type" : "Seminar",
+    "group" : "E3",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Friday",
     "startTime" : 16,
     "endTime" : 18,
     "subject" : "Physics I",
@@ -203,12 +333,52 @@
     "day" : "Friday",
     "startTime" : 16,
     "endTime" : 18,
+    "subject" : "Algorithms",
+    "type" : "Course",
+    "group" : "B",
+    "teacher" : "Prof. Miller",
+    "teacherRole" : "LECTURER",
+    "room" : "C2"
+  }, {
+    "day" : "Friday",
+    "startTime" : 16,
+    "endTime" : 18,
     "subject" : "Linear Algebra",
     "type" : "Seminar",
     "group" : "B1",
     "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "C309"
+  }, {
+    "day" : "Friday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Algorithms",
+    "type" : "Seminar",
+    "group" : "B2",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C411"
+  }, {
+    "day" : "Friday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Computer Networks",
+    "type" : "Seminar",
+    "group" : "B3",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
+  }, {
+    "day" : "Friday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Operating Systems",
+    "type" : "Seminar",
+    "group" : "B4",
+    "teacher" : "Mr. Wilson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
   }, {
     "day" : "Friday",
     "startTime" : 16,
@@ -249,6 +419,46 @@
     "teacher" : "Mr. Thomas",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
+  }, {
+    "day" : "Friday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Computer Networks",
+    "type" : "Seminar",
+    "group" : "B2",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
+  }, {
+    "day" : "Friday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Algorithms",
+    "type" : "Seminar",
+    "group" : "B3",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C411"
+  }, {
+    "day" : "Friday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Algorithms",
+    "type" : "Course",
+    "group" : "E",
+    "teacher" : "Prof. Miller",
+    "teacherRole" : "LECTURER",
+    "room" : "C2"
+  }, {
+    "day" : "Friday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Operating Systems",
+    "type" : "Seminar",
+    "group" : "E1",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
   }, {
     "day" : "Friday",
     "startTime" : 18,
@@ -313,6 +523,46 @@
     "day" : "Monday",
     "startTime" : 8,
     "endTime" : 10,
+    "subject" : "Database Systems",
+    "type" : "Seminar",
+    "group" : "A4",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
+  }, {
+    "day" : "Monday",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Algorithms",
+    "type" : "Seminar",
+    "group" : "A5",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Monday",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Discrete Mathematics",
+    "type" : "Course",
+    "group" : "B",
+    "teacher" : "Dr. Jones",
+    "teacherRole" : "LECTURER",
+    "room" : "C112"
+  }, {
+    "day" : "Monday",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Computer Networks",
+    "type" : "Seminar",
+    "group" : "B1",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C403"
+  }, {
+    "day" : "Monday",
+    "startTime" : 8,
+    "endTime" : 10,
     "subject" : "Physics I",
     "type" : "Seminar",
     "group" : "B2",
@@ -329,6 +579,16 @@
     "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
+  }, {
+    "day" : "Monday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Discrete Mathematics",
+    "type" : "Course",
+    "group" : "A",
+    "teacher" : "Dr. Jones",
+    "teacherRole" : "LECTURER",
+    "room" : "C112"
   }, {
     "day" : "Monday",
     "startTime" : 10,
@@ -353,6 +613,16 @@
     "day" : "Monday",
     "startTime" : 10,
     "endTime" : 12,
+    "subject" : "Database Systems",
+    "type" : "Seminar",
+    "group" : "A3",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
+  }, {
+    "day" : "Monday",
+    "startTime" : 10,
+    "endTime" : 12,
     "subject" : "Physics II",
     "type" : "Seminar",
     "group" : "A4",
@@ -363,12 +633,32 @@
     "day" : "Monday",
     "startTime" : 10,
     "endTime" : 12,
+    "subject" : "Computer Networks",
+    "type" : "Seminar",
+    "group" : "A5",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C403"
+  }, {
+    "day" : "Monday",
+    "startTime" : 10,
+    "endTime" : 12,
     "subject" : "Introduction to Programming",
     "type" : "Course",
     "group" : "B",
     "teacher" : "Prof. Smith",
     "teacherRole" : "LECTURER",
     "room" : "C2"
+  }, {
+    "day" : "Monday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Algorithms",
+    "type" : "Seminar",
+    "group" : "B1",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
   }, {
     "day" : "Monday",
     "startTime" : 10,
@@ -393,12 +683,32 @@
     "day" : "Monday",
     "startTime" : 12,
     "endTime" : 14,
+    "subject" : "Software Engineering",
+    "type" : "Course",
+    "group" : "A",
+    "teacher" : "Prof. Moore",
+    "teacherRole" : "LECTURER",
+    "room" : "C112"
+  }, {
+    "day" : "Monday",
+    "startTime" : 12,
+    "endTime" : 14,
     "subject" : "Physics II",
     "type" : "Seminar",
     "group" : "A1",
     "teacher" : "Mr. Thomas",
     "teacherRole" : "ASSISTANT",
     "room" : "C411"
+  }, {
+    "day" : "Monday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Database Systems",
+    "type" : "Seminar",
+    "group" : "A2",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
   }, {
     "day" : "Monday",
     "startTime" : 12,
@@ -451,6 +761,26 @@
     "room" : "C410"
   }, {
     "day" : "Monday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Algorithms",
+    "type" : "Seminar",
+    "group" : "E2",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Monday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Computer Networks",
+    "type" : "Seminar",
+    "group" : "E3",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C403"
+  }, {
+    "day" : "Monday",
     "startTime" : 14,
     "endTime" : 16,
     "subject" : "Calculus I",
@@ -459,6 +789,16 @@
     "teacher" : "Dr. Jones",
     "teacherRole" : "LECTURER",
     "room" : "C2"
+  }, {
+    "day" : "Monday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Database Systems",
+    "type" : "Seminar",
+    "group" : "A1",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
   }, {
     "day" : "Monday",
     "startTime" : 14,
@@ -493,6 +833,16 @@
     "day" : "Monday",
     "startTime" : 14,
     "endTime" : 16,
+    "subject" : "Software Engineering",
+    "type" : "Course",
+    "group" : "B",
+    "teacher" : "Prof. Moore",
+    "teacherRole" : "LECTURER",
+    "room" : "C112"
+  }, {
+    "day" : "Monday",
+    "startTime" : 14,
+    "endTime" : 16,
     "subject" : "Linear Algebra",
     "type" : "Seminar",
     "group" : "B4",
@@ -509,6 +859,26 @@
     "teacher" : "Mr. Thomas",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
+  }, {
+    "day" : "Monday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Computer Networks",
+    "type" : "Seminar",
+    "group" : "E2",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C403"
+  }, {
+    "day" : "Monday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Algorithms",
+    "type" : "Seminar",
+    "group" : "E3",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
   }, {
     "day" : "Monday",
     "startTime" : 16,
@@ -549,6 +919,46 @@
     "teacher" : "Mr. Thomas",
     "teacherRole" : "ASSISTANT",
     "room" : "C411"
+  }, {
+    "day" : "Monday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Database Systems",
+    "type" : "Seminar",
+    "group" : "B3",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
+  }, {
+    "day" : "Monday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Algorithms",
+    "type" : "Seminar",
+    "group" : "B4",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Monday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Software Engineering",
+    "type" : "Course",
+    "group" : "E",
+    "teacher" : "Prof. Moore",
+    "teacherRole" : "LECTURER",
+    "room" : "C112"
+  }, {
+    "day" : "Monday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Computer Networks",
+    "type" : "Seminar",
+    "group" : "E1",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C403"
   }, {
     "day" : "Monday",
     "startTime" : 16,
@@ -593,6 +1003,16 @@
     "day" : "Monday",
     "startTime" : 18,
     "endTime" : 20,
+    "subject" : "Database Systems",
+    "type" : "Seminar",
+    "group" : "B2",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
+  }, {
+    "day" : "Monday",
+    "startTime" : 18,
+    "endTime" : 20,
     "subject" : "Physics II",
     "type" : "Seminar",
     "group" : "B3",
@@ -603,12 +1023,32 @@
     "day" : "Monday",
     "startTime" : 18,
     "endTime" : 20,
+    "subject" : "Computer Networks",
+    "type" : "Seminar",
+    "group" : "B4",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C403"
+  }, {
+    "day" : "Monday",
+    "startTime" : 18,
+    "endTime" : 20,
     "subject" : "Calculus I",
     "type" : "Course",
     "group" : "E",
     "teacher" : "Dr. Jones",
     "teacherRole" : "LECTURER",
     "room" : "C2"
+  }, {
+    "day" : "Monday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Algorithms",
+    "type" : "Seminar",
+    "group" : "E1",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
   }, {
     "day" : "Monday",
     "startTime" : 18,
@@ -659,6 +1099,16 @@
     "teacher" : "Ms. Garcia",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Operating Systems",
+    "type" : "Seminar",
+    "group" : "A3",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
   }, {
     "day" : "Thursday",
     "startTime" : 8,
@@ -683,6 +1133,16 @@
     "day" : "Thursday",
     "startTime" : 8,
     "endTime" : 10,
+    "subject" : "Software Engineering",
+    "type" : "Seminar",
+    "group" : "B1",
+    "teacher" : "Mr. Harris",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 8,
+    "endTime" : 10,
     "subject" : "Calculus I",
     "type" : "Seminar",
     "group" : "B2",
@@ -733,6 +1193,26 @@
     "day" : "Thursday",
     "startTime" : 10,
     "endTime" : 12,
+    "subject" : "Operating Systems",
+    "type" : "Seminar",
+    "group" : "A4",
+    "teacher" : "Mr. Wilson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Software Engineering",
+    "type" : "Seminar",
+    "group" : "A5",
+    "teacher" : "Mr. Harris",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 10,
+    "endTime" : 12,
     "subject" : "Data Structures",
     "type" : "Course",
     "group" : "B",
@@ -773,6 +1253,16 @@
     "day" : "Thursday",
     "startTime" : 12,
     "endTime" : 14,
+    "subject" : "Operating Systems",
+    "type" : "Seminar",
+    "group" : "A1",
+    "teacher" : "Mr. Wilson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 12,
+    "endTime" : 14,
     "subject" : "English Composition",
     "type" : "Seminar",
     "group" : "A3",
@@ -789,6 +1279,16 @@
     "teacher" : "Ms. Garcia",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Operating Systems",
+    "type" : "Course",
+    "group" : "B",
+    "teacher" : "Prof. Smith",
+    "teacherRole" : "LECTURER",
+    "room" : "C112"
   }, {
     "day" : "Thursday",
     "startTime" : 12,
@@ -829,6 +1329,16 @@
     "teacher" : "Mr. Harris",
     "teacherRole" : "ASSISTANT",
     "room" : "C411"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Software Engineering",
+    "type" : "Seminar",
+    "group" : "E3",
+    "teacher" : "Mr. Harris",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
   }, {
     "day" : "Thursday",
     "startTime" : 14,
@@ -843,6 +1353,16 @@
     "day" : "Thursday",
     "startTime" : 14,
     "endTime" : 16,
+    "subject" : "Operating Systems",
+    "type" : "Seminar",
+    "group" : "A2",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 14,
+    "endTime" : 16,
     "subject" : "Calculus II",
     "type" : "Seminar",
     "group" : "A3",
@@ -893,6 +1413,16 @@
     "day" : "Thursday",
     "startTime" : 14,
     "endTime" : 16,
+    "subject" : "Software Engineering",
+    "type" : "Seminar",
+    "group" : "E2",
+    "teacher" : "Mr. Harris",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 14,
+    "endTime" : 16,
     "subject" : "Differential Equations",
     "type" : "Seminar",
     "group" : "E3",
@@ -933,12 +1463,42 @@
     "day" : "Thursday",
     "startTime" : 16,
     "endTime" : 18,
+    "subject" : "Operating Systems",
+    "type" : "Seminar",
+    "group" : "B2",
+    "teacher" : "Ms. Taylor",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 16,
+    "endTime" : 18,
     "subject" : "Differential Equations",
     "type" : "Seminar",
     "group" : "B4",
     "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "C411"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Operating Systems",
+    "type" : "Course",
+    "group" : "E",
+    "teacher" : "Prof. Smith",
+    "teacherRole" : "LECTURER",
+    "room" : "C112"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Software Engineering",
+    "type" : "Seminar",
+    "group" : "E1",
+    "teacher" : "Mr. Harris",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
   }, {
     "day" : "Thursday",
     "startTime" : 16,
@@ -979,6 +1539,26 @@
     "teacher" : "Mr. Harris",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Operating Systems",
+    "type" : "Seminar",
+    "group" : "B3",
+    "teacher" : "Mr. Wilson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Software Engineering",
+    "type" : "Seminar",
+    "group" : "B4",
+    "teacher" : "Mr. Harris",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
   }, {
     "day" : "Thursday",
     "startTime" : 18,
@@ -1053,6 +1633,16 @@
     "day" : "Tuesday",
     "startTime" : 8,
     "endTime" : 10,
+    "subject" : "Discrete Mathematics",
+    "type" : "Seminar",
+    "group" : "A3",
+    "teacher" : "Ms. Garcia",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 8,
+    "endTime" : 10,
     "subject" : "Physics II",
     "type" : "Seminar",
     "group" : "A5",
@@ -1073,6 +1663,16 @@
     "day" : "Tuesday",
     "startTime" : 8,
     "endTime" : 10,
+    "subject" : "Database Systems",
+    "type" : "Seminar",
+    "group" : "B1",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 8,
+    "endTime" : 10,
     "subject" : "Introduction to Programming",
     "type" : "Seminar",
     "group" : "B2",
@@ -1089,6 +1689,16 @@
     "teacher" : "Ms. Garcia",
     "teacherRole" : "ASSISTANT",
     "room" : "C309"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Discrete Mathematics",
+    "type" : "Course",
+    "group" : "E",
+    "teacher" : "Dr. Jones",
+    "teacherRole" : "LECTURER",
+    "room" : "C105"
   }, {
     "day" : "Tuesday",
     "startTime" : 10,
@@ -1119,6 +1729,26 @@
     "teacher" : "Ms. White",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Discrete Mathematics",
+    "type" : "Seminar",
+    "group" : "A4",
+    "teacher" : "Ms. Garcia",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Database Systems",
+    "type" : "Seminar",
+    "group" : "A5",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
   }, {
     "day" : "Tuesday",
     "startTime" : 10,
@@ -1159,6 +1789,36 @@
     "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Computer Networks",
+    "type" : "Course",
+    "group" : "E",
+    "teacher" : "Prof. Miller",
+    "teacherRole" : "LECTURER",
+    "room" : "C105"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Database Systems",
+    "type" : "Course",
+    "group" : "A",
+    "teacher" : "Dr. Davis",
+    "teacherRole" : "LECTURER",
+    "room" : "C112"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Discrete Mathematics",
+    "type" : "Seminar",
+    "group" : "A1",
+    "teacher" : "Ms. Garcia",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
   }, {
     "day" : "Tuesday",
     "startTime" : 12,
@@ -1219,6 +1879,16 @@
     "teacher" : "Mr. Thomas",
     "teacherRole" : "ASSISTANT",
     "room" : "C411"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Database Systems",
+    "type" : "Seminar",
+    "group" : "E3",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
   }, {
     "day" : "Tuesday",
     "startTime" : 14,
@@ -1233,6 +1903,16 @@
     "day" : "Tuesday",
     "startTime" : 14,
     "endTime" : 16,
+    "subject" : "Discrete Mathematics",
+    "type" : "Seminar",
+    "group" : "A2",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 14,
+    "endTime" : 16,
     "subject" : "Probability and Statistics",
     "type" : "Seminar",
     "group" : "A3",
@@ -1273,12 +1953,32 @@
     "day" : "Tuesday",
     "startTime" : 14,
     "endTime" : 16,
+    "subject" : "Database Systems",
+    "type" : "Course",
+    "group" : "E",
+    "teacher" : "Dr. Davis",
+    "teacherRole" : "LECTURER",
+    "room" : "C105"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 14,
+    "endTime" : 16,
     "subject" : "Introduction to Programming",
     "type" : "Seminar",
     "group" : "E1",
     "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Database Systems",
+    "type" : "Seminar",
+    "group" : "E2",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
   }, {
     "day" : "Tuesday",
     "startTime" : 14,
@@ -1333,12 +2033,32 @@
     "day" : "Tuesday",
     "startTime" : 16,
     "endTime" : 18,
+    "subject" : "Discrete Mathematics",
+    "type" : "Seminar",
+    "group" : "B2",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 16,
+    "endTime" : 18,
     "subject" : "Physics II",
     "type" : "Seminar",
     "group" : "B4",
     "teacher" : "Mr. Thomas",
     "teacherRole" : "ASSISTANT",
     "room" : "C411"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Database Systems",
+    "type" : "Seminar",
+    "group" : "E1",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
   }, {
     "day" : "Tuesday",
     "startTime" : 16,
@@ -1373,12 +2093,42 @@
     "day" : "Tuesday",
     "startTime" : 18,
     "endTime" : 20,
+    "subject" : "Database Systems",
+    "type" : "Course",
+    "group" : "B",
+    "teacher" : "Dr. Davis",
+    "teacherRole" : "LECTURER",
+    "room" : "C112"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 18,
+    "endTime" : 20,
     "subject" : "Chemistry I",
     "type" : "Seminar",
     "group" : "B1",
     "teacher" : "Ms. White",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Discrete Mathematics",
+    "type" : "Seminar",
+    "group" : "B3",
+    "teacher" : "Ms. White",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Database Systems",
+    "type" : "Seminar",
+    "group" : "B4",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
   }, {
     "day" : "Tuesday",
     "startTime" : 18,
@@ -1463,6 +2213,26 @@
     "day" : "Wednesday",
     "startTime" : 8,
     "endTime" : 10,
+    "subject" : "Software Engineering",
+    "type" : "Seminar",
+    "group" : "A4",
+    "teacher" : "Mr. Harris",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Discrete Mathematics",
+    "type" : "Seminar",
+    "group" : "A5",
+    "teacher" : "Ms. White",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 8,
+    "endTime" : 10,
     "subject" : "Chemistry I",
     "type" : "Seminar",
     "group" : "B2",
@@ -1513,6 +2283,16 @@
     "day" : "Wednesday",
     "startTime" : 10,
     "endTime" : 12,
+    "subject" : "Software Engineering",
+    "type" : "Seminar",
+    "group" : "A3",
+    "teacher" : "Mr. Harris",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 10,
+    "endTime" : 12,
     "subject" : "Differential Equations",
     "type" : "Seminar",
     "group" : "A4",
@@ -1529,6 +2309,16 @@
     "teacher" : "Dr. Jackson",
     "teacherRole" : "LECTURER",
     "room" : "C2"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Discrete Mathematics",
+    "type" : "Seminar",
+    "group" : "B1",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
   }, {
     "day" : "Wednesday",
     "startTime" : 10,
@@ -1563,12 +2353,32 @@
     "day" : "Wednesday",
     "startTime" : 12,
     "endTime" : 14,
+    "subject" : "Operating Systems",
+    "type" : "Course",
+    "group" : "A",
+    "teacher" : "Prof. Smith",
+    "teacherRole" : "LECTURER",
+    "room" : "C112"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 12,
+    "endTime" : 14,
     "subject" : "Differential Equations",
     "type" : "Seminar",
     "group" : "A1",
     "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "C411"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Software Engineering",
+    "type" : "Seminar",
+    "group" : "A2",
+    "teacher" : "Mr. Harris",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
   }, {
     "day" : "Wednesday",
     "startTime" : 12,
@@ -1621,6 +2431,16 @@
     "room" : "C410"
   }, {
     "day" : "Wednesday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Discrete Mathematics",
+    "type" : "Seminar",
+    "group" : "E2",
+    "teacher" : "Ms. White",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Wednesday",
     "startTime" : 14,
     "endTime" : 16,
     "subject" : "History I",
@@ -1629,6 +2449,16 @@
     "teacher" : "Prof. Smith",
     "teacherRole" : "LECTURER",
     "room" : "C2"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Software Engineering",
+    "type" : "Seminar",
+    "group" : "A1",
+    "teacher" : "Mr. Harris",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
   }, {
     "day" : "Wednesday",
     "startTime" : 14,
@@ -1663,6 +2493,16 @@
     "day" : "Wednesday",
     "startTime" : 14,
     "endTime" : 16,
+    "subject" : "Computer Networks",
+    "type" : "Course",
+    "group" : "B",
+    "teacher" : "Prof. Miller",
+    "teacherRole" : "LECTURER",
+    "room" : "C112"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 14,
+    "endTime" : 16,
     "subject" : "Probability and Statistics",
     "type" : "Seminar",
     "group" : "B4",
@@ -1679,6 +2519,26 @@
     "teacher" : "Ms. White",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Discrete Mathematics",
+    "type" : "Seminar",
+    "group" : "E3",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Computer Networks",
+    "type" : "Course",
+    "group" : "A",
+    "teacher" : "Prof. Miller",
+    "teacherRole" : "LECTURER",
+    "room" : "C112"
   }, {
     "day" : "Wednesday",
     "startTime" : 16,
@@ -1719,6 +2579,26 @@
     "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "C411"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Software Engineering",
+    "type" : "Seminar",
+    "group" : "B3",
+    "teacher" : "Mr. Harris",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Discrete Mathematics",
+    "type" : "Seminar",
+    "group" : "B4",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
   }, {
     "day" : "Wednesday",
     "startTime" : 16,
@@ -1763,6 +2643,16 @@
     "day" : "Wednesday",
     "startTime" : 18,
     "endTime" : 20,
+    "subject" : "Software Engineering",
+    "type" : "Seminar",
+    "group" : "B2",
+    "teacher" : "Mr. Harris",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C413"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 18,
+    "endTime" : 20,
     "subject" : "Differential Equations",
     "type" : "Seminar",
     "group" : "B3",
@@ -1779,6 +2669,16 @@
     "teacher" : "Prof. Smith",
     "teacherRole" : "LECTURER",
     "room" : "C2"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Discrete Mathematics",
+    "type" : "Seminar",
+    "group" : "E1",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C412"
   }, {
     "day" : "Wednesday",
     "startTime" : 18,
