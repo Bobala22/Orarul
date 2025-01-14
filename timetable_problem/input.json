@@ -1,123 +1,38 @@
 {
   "rooms": {
     "courseRooms": ["C2", "C309", "C112", "C308"],
-    "seminarRooms": [
-      "C210", "C308", "C309", "C410", "C411", "C412",
-      "C413", "C403", "C901", "C903", "C905", "C910"
-    ]
+    "seminarRooms": ["C210", "C308", "C309", "C410", "C411", "C412", "C413", "C403", "C901", "C903", "C905", "C910"]
   },
-  "teachers": [
-    {
-      "name": "Prof. Smith",
-      "role": "LECTURER"
+  "years": {
+    "1": {
+      "teachers": [
+        { "name": "Prof. Smith", "role": "LECTURER" },
+        { "name": "Mr. Brown", "role": "ASSISTANT" }
+      ],
+      "subjects": [
+        {
+          "name": "Introduction to Programming",
+          "courseTeacher": "Prof. Smith",
+          "seminarTeachers": ["Mr. Brown"]
+        }
+      ],
+      "series": ["A", "B"],
+      "groups": { "A": 2, "B": 2 }
     },
-    {
-      "name": "Prof. Johnson",
-      "role": "LECTURER"
-    },
-    {
-      "name": "Prof. Williams",
-      "role": "LECTURER"
-    },
-    {
-      "name": "Prof. Davis",
-      "role": "LECTURER"
-    },
-    {
-      "name": "Prof. Anderson",
-      "role": "LECTURER"
-    },
-    {
-      "name": "Prof. Taylor",
-      "role": "LECTURER"
-    },
-    {
-      "name": "Prof. Martin",
-      "role": "LECTURER"
-    },
-    {
-      "name": "Mr. Brown",
-      "role": "ASSISTANT"
-    },
-    {
-      "name": "Ms. Miller",
-      "role": "ASSISTANT"
-    },
-    {
-      "name": "Mr. Wilson",
-      "role": "ASSISTANT"
-    },
-    {
-      "name": "Ms. Thompson",
-      "role": "ASSISTANT"
-    },
-    {
-      "name": "Mr. Garcia",
-      "role": "ASSISTANT"
-    },
-    {
-      "name": "Ms. Martinez",
-      "role": "ASSISTANT"
-    },
-    {
-      "name": "Mr. Robinson",
-      "role": "ASSISTANT"
-    },
-    {
-      "name": "Ms. Clark",
-      "role": "ASSISTANT"
+    "2": {
+      "teachers": [
+        { "name": "Prof. Johnson", "role": "LECTURER" },
+        { "name": "Ms. Garcia", "role": "ASSISTANT" }
+      ],
+      "subjects": [
+        {
+          "name": "Data Structures",
+          "courseTeacher": "Prof. Johnson",
+          "seminarTeachers": ["Ms. Garcia"]
+        }
+      ],
+      "series": ["C", "D"],
+      "groups": { "C": 2, "D": 3 }
     }
-  ],
-  "subjects": [
-    {
-      "name": "Computer Networks",
-      "courseTeacher": "Prof. Smith",
-      "seminarTeachers": ["Mr. Brown", "Ms. Miller", "Mr. Wilson"]
-    },
-    {
-      "name": "Database Systems",
-      "courseTeacher": "Prof. Johnson",
-      "seminarTeachers": ["Ms. Thompson", "Mr. Garcia", "Ms. Martinez"]
-    },
-    {
-      "name": "Operating Systems",
-      "courseTeacher": "Prof. Williams",
-      "seminarTeachers": ["Mr. Robinson", "Ms. Clark", "Mr. Brown"]
-    },
-    {
-      "name": "Artificial Intelligence",
-      "courseTeacher": "Prof. Davis",
-      "seminarTeachers": ["Ms. Miller", "Mr. Wilson", "Ms. Thompson"]
-    },
-    {
-      "name": "Software Engineering",
-      "courseTeacher": "Prof. Anderson",
-      "seminarTeachers": ["Mr. Garcia", "Ms. Martinez", "Mr. Robinson"]
-    },
-    {
-      "name": "Web Technologies",
-      "courseTeacher": "Prof. Taylor",
-      "seminarTeachers": ["Ms. Clark", "Mr. Brown", "Ms. Miller"]
-    },
-    {
-      "name": "Data Structures and Algorithms",
-      "courseTeacher": "Prof. Martin",
-      "seminarTeachers": ["Mr. Wilson", "Ms. Thompson", "Mr. Garcia"]
-    },
-    {
-      "name": "Computer Architecture",
-      "courseTeacher": "Prof. Smith",
-      "seminarTeachers": ["Ms. Martinez", "Mr. Robinson", "Ms. Clark"]
-    },
-    {
-      "name": "Machine Learning",
-      "courseTeacher": "Prof. Davis",
-      "seminarTeachers": ["Mr. Brown", "Ms. Miller", "Mr. Wilson"]
-    },
-    {
-      "name": "Information Security",
-      "courseTeacher": "Prof. Johnson",
-      "seminarTeachers": ["Ms. Thompson", "Mr. Garcia", "Ms. Martinez"]
-    }
-  ]
+  }
 }

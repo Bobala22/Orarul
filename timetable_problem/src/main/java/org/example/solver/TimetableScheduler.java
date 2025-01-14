@@ -47,6 +47,8 @@ public class TimetableScheduler {
         this.groupSchedule = new HashMap<>();
         this.teacherSchedule = new HashMap<>();
     }
+
+
     private boolean isTimeSlotAvailable(Room room, String group, Teacher teacher, TimeSlot timeSlot) {
         // Check if room is available
         if (roomSchedule.containsKey(room.getName())) {
@@ -64,9 +66,7 @@ public class TimetableScheduler {
 
         // Check if teacher is available
         if (teacherSchedule.containsKey(teacher.getName())) {
-            if (teacherSchedule.get(teacher.getName()).contains(timeSlot)) {
-                return false;
-            }
+            return !teacherSchedule.get(teacher.getName()).contains(timeSlot);
         }
 
         return true;
@@ -193,11 +193,7 @@ public class TimetableScheduler {
         }
 
         // Sort schedule entries
-        scheduleEntries.sort((a, b) -> {
-            int dayCompare = a.day.compareTo(b.day);
-            if (dayCompare != 0) return dayCompare;
-            return Integer.compare(a.startTime, b.startTime);
-        });
+        scheduleEntries.sort(Comparator.comparing((ScheduleEntry a) -> a.day).thenComparingInt(a -> a.startTime));
 
         // Create export object
         TimetableExport export = new TimetableExport(scheduleEntries);
@@ -210,28 +206,43 @@ public class TimetableScheduler {
     // Example usage
     public static void main(String[] args) {
         try {
-            // Load configuration from JSON file
+            // Step 1: Load timetable configuration
+            String configFilePath = "input.json"; // Path to your JSON config file
             TimetableConfigLoader configLoader = new TimetableConfigLoader();
-            TimetableData data = configLoader.loadConfiguration("input.json");
+            Map<Integer, TimetableData> timetableDataPerYear = configLoader.loadConfiguration(configFilePath);
 
-            // Create scheduler with configured rooms
+            // Step 2: Create a scheduler sharing the same rooms (global rooms from the config)
+            if (timetableDataPerYear.isEmpty()) {
+                throw new IllegalStateException("No years found in configuration.");
+            }
+
+            // Assuming rooms are shared across years, get them from the first year's data
+            TimetableData firstYearData = timetableDataPerYear.values().iterator().next(); // Get first year as a reference
             TimetableScheduler scheduler = new TimetableScheduler(
-                    data.getCourseRooms(),
-                    data.getSeminarRooms()
+                    firstYearData.getCourseRooms(),
+                    firstYearData.getSeminarRooms()
             );
 
-            // Generate timetable
-            if (scheduler.generateTimetable(data.getSubjects())) {
-                System.out.println("Successfully generated timetable:");
-                scheduler.printSchedule();
+            // Iterate through each year and generate timetables
+            for (Map.Entry<Integer, TimetableData> entry : timetableDataPerYear.entrySet()) {
+                System.out.println("\nProcessing timetable for Year " + entry.getKey());
+                TimetableData yearData = entry.getValue();
 
-                scheduler.exportToJson("timetable_output.json");
-                System.out.println("\nTimetable exported to timetable_output.json");
-            } else {
-                System.out.println("Failed to generate a valid timetable.");
+                // Step 3: Generate timetable for the year
+                if (scheduler.generateTimetable(yearData.getSubjects())) {
+                    System.out.println("Successfully generated timetable for Year " + entry.getKey());
+                    scheduler.printSchedule();
+
+                    String outputPath = "timetable_year_" + entry.getKey() + ".json";
+                    scheduler.exportToJson(outputPath);
+                    System.out.println("Exported timetable to " + outputPath);
+                } else {
+                    System.out.println("Failed to generate a valid timetable for Year " + entry.getKey());
+                }
             }
+
         } catch (IOException e) {
-            System.err.println("Error reading/writing JSON file: " + e.getMessage());
+            System.err.println("Error reading or writing JSON configuration: " + e.getMessage());
         } catch (IllegalStateException e) {
             System.err.println("Configuration error: " + e.getMessage());
         }

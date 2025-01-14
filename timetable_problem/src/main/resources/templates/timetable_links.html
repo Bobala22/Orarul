@@ -1,0 +1,8 @@
+<h1>Timetable for All Years</h1>
+<ul>
+    <li th:each="year : ${years}">
+        <a th:href="@{/timetable/year(year=${year})}">
+            Timetable for Year [[${year}]]
+        </a>
+    </li>
+</ul>

@@ -1,0 +1,153 @@
+{
+  "schedule" : [ {
+    "day" : "Monday",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Data Structures",
+    "type" : "Course",
+    "group" : "A",
+    "teacher" : "Prof. Johnson",
+    "teacherRole" : "LECTURER",
+    "room" : "C2"
+  }, {
+    "day" : "Monday",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Data Structures",
+    "type" : "Seminar",
+    "group" : "A1",
+    "teacher" : "Ms. Garcia",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C210"
+  }, {
+    "day" : "Monday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Data Structures",
+    "type" : "Course",
+    "group" : "B",
+    "teacher" : "Prof. Johnson",
+    "teacherRole" : "LECTURER",
+    "room" : "C2"
+  }, {
+    "day" : "Monday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Data Structures",
+    "type" : "Seminar",
+    "group" : "A2",
+    "teacher" : "Ms. Garcia",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C210"
+  }, {
+    "day" : "Monday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Data Structures",
+    "type" : "Course",
+    "group" : "E",
+    "teacher" : "Prof. Johnson",
+    "teacherRole" : "LECTURER",
+    "room" : "C2"
+  }, {
+    "day" : "Monday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Data Structures",
+    "type" : "Seminar",
+    "group" : "A3",
+    "teacher" : "Ms. Garcia",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C210"
+  }, {
+    "day" : "Monday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Data Structures",
+    "type" : "Seminar",
+    "group" : "A4",
+    "teacher" : "Ms. Garcia",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C210"
+  }, {
+    "day" : "Monday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Data Structures",
+    "type" : "Seminar",
+    "group" : "A5",
+    "teacher" : "Ms. Garcia",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C210"
+  }, {
+    "day" : "Monday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Data Structures",
+    "type" : "Seminar",
+    "group" : "B1",
+    "teacher" : "Ms. Garcia",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C210"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Data Structures",
+    "type" : "Seminar",
+    "group" : "B2",
+    "teacher" : "Ms. Garcia",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C210"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Data Structures",
+    "type" : "Seminar",
+    "group" : "B3",
+    "teacher" : "Ms. Garcia",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C210"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Data Structures",
+    "type" : "Seminar",
+    "group" : "B4",
+    "teacher" : "Ms. Garcia",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C210"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Data Structures",
+    "type" : "Seminar",
+    "group" : "E1",
+    "teacher" : "Ms. Garcia",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C210"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Data Structures",
+    "type" : "Seminar",
+    "group" : "E2",
+    "teacher" : "Ms. Garcia",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C210"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Data Structures",
+    "type" : "Seminar",
+    "group" : "E3",
+    "teacher" : "Ms. Garcia",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C210"
+  } ]
+}

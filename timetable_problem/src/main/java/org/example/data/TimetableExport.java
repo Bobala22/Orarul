@@ -7,7 +7,7 @@ import java.util.List;
 // Add a DTO for JSON export
 public class TimetableExport {
     @JsonProperty("schedule")
-    private final List<ScheduleEntry> schedule;
+    private List<ScheduleEntry> schedule;
 
     public TimetableExport(List<ScheduleEntry> schedule) {
         this.schedule = schedule;
@@ -15,5 +15,9 @@ public class TimetableExport {
 
     public List<ScheduleEntry> getSchedule() {
         return schedule;
+    }
+
+    public void setSchedule(List<ScheduleEntry> schedule) {
+        this.schedule = schedule;
     }
 }

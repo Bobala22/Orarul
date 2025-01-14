@@ -22,11 +22,10 @@ public class TimetableConfigLoader {
         this.mapper = new ObjectMapper();
     }
 
-    public TimetableData loadConfiguration(String configFilePath) throws IOException {
-        // Read the configuration file
+    public Map<Integer, TimetableData> loadConfiguration(String configFilePath) throws IOException {
         TimetableConfig config = mapper.readValue(new File(configFilePath), TimetableConfig.class);
 
-        // Create rooms
+        // Parse the shared courseRooms and seminarRooms
         List<Room> courseRooms = config.getRooms().getCourseRooms().stream()
                 .map(name -> new Room(name, true))
                 .collect(Collectors.toList());
@@ -35,36 +34,46 @@ public class TimetableConfigLoader {
                 .map(name -> new Room(name, false))
                 .collect(Collectors.toList());
 
-        // Create teachers map
-        Map<String, Teacher> teacherMap = new HashMap<>();
-        for (TeacherConfig teacherConfig : config.getTeachers()) {
-            Teacher teacher = new Teacher(teacherConfig.getName(), teacherConfig.getRole());
-            teacherMap.put(teacher.getName(), teacher);
-        }
+        // Parse timetable data for each year
+        Map<Integer, TimetableData> timetableDataPerYear = new HashMap<>();
 
-        // Create subjects
-        List<Subject> subjects = new ArrayList<>();
-        for (SubjectConfig subjectConfig : config.getSubjects()) {
-            // Get course teacher
-            Teacher courseTeacher = teacherMap.get(subjectConfig.getCourseTeacherName());
-            if (courseTeacher == null) {
-                throw new IllegalStateException(
-                        "Course teacher not found: " + subjectConfig.getCourseTeacherName());
+        for (Map.Entry<Integer, YearConfig> entry : config.getYears().entrySet()) {
+            Integer year = entry.getKey();
+            YearConfig yearConfig = entry.getValue();
+
+            Map<String, Teacher> teacherMap = new HashMap<>();
+            for (TeacherConfig teacherConfig : yearConfig.getTeachers()) {
+                teacherMap.put(
+                        teacherConfig.getName(),
+                        new Teacher(teacherConfig.getName(), teacherConfig.getRole())
+                );
             }
 
-            // Get seminar teachers
-            List<Teacher> seminarTeachers = new ArrayList<>();
-            for (String teacherName : subjectConfig.getSeminarTeacherNames()) {
-                Teacher teacher = teacherMap.get(teacherName);
-                if (teacher == null) {
-                    throw new IllegalStateException("Seminar teacher not found: " + teacherName);
+            List<Subject> subjects = new ArrayList<>();
+            for (SubjectConfig subjectConfig : yearConfig.getSubjects()) {
+                Teacher courseTeacher = teacherMap.get(subjectConfig.getCourseTeacherName());
+                if (courseTeacher == null || !courseTeacher.canTeachCourse()) {
+                    throw new IllegalArgumentException("Invalid course teacher: " + subjectConfig.getCourseTeacherName());
                 }
-                seminarTeachers.add(teacher);
+
+                List<Teacher> seminarTeachers = subjectConfig.getSeminarTeacherNames().stream()
+                        .map(teacherName -> {
+                            Teacher seminarTeacher = teacherMap.get(teacherName);
+                            if (seminarTeacher == null) {
+                                throw new IllegalArgumentException("Invalid seminar teacher: " + teacherName);
+                            }
+                            return seminarTeacher;
+                        }).collect(Collectors.toList());
+
+                subjects.add(new Subject(subjectConfig.getName(), courseTeacher, seminarTeachers));
             }
 
-            subjects.add(new Subject(subjectConfig.getName(), courseTeacher, seminarTeachers));
+            timetableDataPerYear.put(
+                    year,
+                    new TimetableData(subjects, courseRooms, seminarRooms)
+            );
         }
 
-        return new TimetableData(subjects, courseRooms, seminarRooms);
+        return timetableDataPerYear;
     }
 }
