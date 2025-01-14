@@ -3,1801 +3,901 @@
     "day" : "Friday",
     "startTime" : 8,
     "endTime" : 10,
-    "subject" : "Calculus II",
-    "type" : "Course",
-    "group" : "A",
-    "teacher" : "Dr. Jones",
-    "teacherRole" : "LECTURER",
-    "room" : "C2"
-  }, {
-    "day" : "Friday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Physics I",
-    "type" : "Seminar",
-    "group" : "A1",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Friday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Linear Algebra",
-    "type" : "Seminar",
-    "group" : "A2",
-    "teacher" : "Mr. Wilson",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Friday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "English Composition",
-    "type" : "Seminar",
-    "group" : "B2",
-    "teacher" : "Mr. Harris",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Friday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Calculus II",
-    "type" : "Seminar",
-    "group" : "B3",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Friday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Linear Algebra",
+    "subject" : "Mathematics I",
     "type" : "Seminar",
     "group" : "A1",
     "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
-    "room" : "C309"
+    "room" : "S101"
   }, {
     "day" : "Friday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Physics I",
-    "type" : "Seminar",
-    "group" : "A2",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Friday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Calculus II",
-    "type" : "Course",
-    "group" : "B",
-    "teacher" : "Dr. Jones",
-    "teacherRole" : "LECTURER",
-    "room" : "C2"
-  }, {
-    "day" : "Friday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Calculus II",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Mathematics II",
     "type" : "Seminar",
     "group" : "B2",
-    "teacher" : "Ms. Garcia",
+    "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
-    "room" : "C410"
+    "room" : "S102"
   }, {
     "day" : "Friday",
     "startTime" : 10,
     "endTime" : 12,
-    "subject" : "English Composition",
+    "subject" : "Mathematics I",
+    "type" : "Seminar",
+    "group" : "A2",
+    "teacher" : "Mr. Wilson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Friday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Mathematics II",
     "type" : "Seminar",
     "group" : "B3",
-    "teacher" : "Mr. Harris",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Friday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Physics I",
-    "type" : "Seminar",
-    "group" : "A3",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Friday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Linear Algebra",
-    "type" : "Seminar",
-    "group" : "A4",
     "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
-    "room" : "C309"
+    "room" : "S102"
   }, {
     "day" : "Friday",
     "startTime" : 12,
     "endTime" : 14,
-    "subject" : "English Composition",
-    "type" : "Seminar",
-    "group" : "B4",
-    "teacher" : "Mr. Harris",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Friday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Calculus II",
-    "type" : "Course",
-    "group" : "E",
-    "teacher" : "Dr. Jones",
-    "teacherRole" : "LECTURER",
-    "room" : "C2"
-  }, {
-    "day" : "Friday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Calculus II",
-    "type" : "Seminar",
-    "group" : "E1",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Friday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Linear Algebra",
+    "subject" : "Mathematics I",
     "type" : "Seminar",
     "group" : "A3",
     "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
-    "room" : "C309"
+    "room" : "S101"
   }, {
     "day" : "Friday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Physics I",
-    "type" : "Seminar",
-    "group" : "A4",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Friday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Calculus II",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Mathematics II",
     "type" : "Seminar",
     "group" : "B4",
-    "teacher" : "Ms. Garcia",
+    "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
-    "room" : "C410"
+    "room" : "S102"
   }, {
     "day" : "Friday",
     "startTime" : 14,
     "endTime" : 16,
-    "subject" : "English Composition",
+    "subject" : "Mathematics I",
+    "type" : "Seminar",
+    "group" : "A4",
+    "teacher" : "Mr. Wilson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Friday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Mathematics II",
     "type" : "Seminar",
     "group" : "E1",
-    "teacher" : "Mr. Harris",
+    "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
-    "room" : "C308"
+    "room" : "S102"
   }, {
     "day" : "Friday",
     "startTime" : 16,
     "endTime" : 18,
-    "subject" : "Physics I",
+    "subject" : "Mathematics I",
     "type" : "Seminar",
     "group" : "A5",
-    "teacher" : "Mr. Thomas",
+    "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
-    "room" : "C210"
+    "room" : "S101"
   }, {
     "day" : "Friday",
     "startTime" : 16,
     "endTime" : 18,
-    "subject" : "Linear Algebra",
-    "type" : "Seminar",
-    "group" : "B1",
-    "teacher" : "Mr. Wilson",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Friday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "English Composition",
+    "subject" : "Mathematics II",
     "type" : "Seminar",
     "group" : "E2",
-    "teacher" : "Mr. Harris",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Friday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Calculus II",
-    "type" : "Seminar",
-    "group" : "E3",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Friday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Linear Algebra",
-    "type" : "Seminar",
-    "group" : "A5",
     "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
-    "room" : "C309"
+    "room" : "S102"
   }, {
     "day" : "Friday",
     "startTime" : 18,
     "endTime" : 20,
-    "subject" : "Physics I",
+    "subject" : "Mathematics I",
     "type" : "Seminar",
     "group" : "B1",
-    "teacher" : "Mr. Thomas",
+    "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
-    "room" : "C210"
+    "room" : "S101"
   }, {
     "day" : "Friday",
     "startTime" : 18,
     "endTime" : 20,
-    "subject" : "Calculus II",
-    "type" : "Seminar",
-    "group" : "E2",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Friday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "English Composition",
+    "subject" : "Mathematics II",
     "type" : "Seminar",
     "group" : "E3",
-    "teacher" : "Mr. Harris",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
-    "room" : "C308"
+    "room" : "S102"
   }, {
     "day" : "Monday",
     "startTime" : 8,
     "endTime" : 10,
+    "subject" : "Physics Fundamentals",
+    "type" : "Course",
+    "group" : "A",
+    "teacher" : "Prof. Williams",
+    "teacherRole" : "LECTURER",
+    "room" : "C101"
+  }, {
+    "day" : "Monday",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Physics Fundamentals",
+    "type" : "Seminar",
+    "group" : "A1",
+    "teacher" : "Ms. Davis",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Monday",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Software Engineering",
+    "type" : "Seminar",
+    "group" : "A2",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S103"
+  }, {
+    "day" : "Monday",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Mathematics I",
+    "type" : "Seminar",
+    "group" : "B2",
+    "teacher" : "Mr. Wilson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S102"
+  }, {
+    "day" : "Monday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Software Engineering",
+    "type" : "Seminar",
+    "group" : "A1",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S103"
+  }, {
+    "day" : "Monday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Physics Fundamentals",
+    "type" : "Seminar",
+    "group" : "A2",
+    "teacher" : "Ms. Davis",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Monday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Physics Fundamentals",
+    "type" : "Course",
+    "group" : "B",
+    "teacher" : "Prof. Williams",
+    "teacherRole" : "LECTURER",
+    "room" : "C101"
+  }, {
+    "day" : "Monday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Mathematics I",
+    "type" : "Seminar",
+    "group" : "B3",
+    "teacher" : "Mr. Wilson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S102"
+  }, {
+    "day" : "Monday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Physics Fundamentals",
+    "type" : "Seminar",
+    "group" : "A3",
+    "teacher" : "Ms. Davis",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Monday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Software Engineering",
+    "type" : "Seminar",
+    "group" : "A4",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S103"
+  }, {
+    "day" : "Monday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Mathematics I",
+    "type" : "Seminar",
+    "group" : "B4",
+    "teacher" : "Mr. Wilson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S102"
+  }, {
+    "day" : "Monday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Physics Fundamentals",
+    "type" : "Course",
+    "group" : "E",
+    "teacher" : "Prof. Williams",
+    "teacherRole" : "LECTURER",
+    "room" : "C101"
+  }, {
+    "day" : "Monday",
+    "startTime" : 14,
+    "endTime" : 16,
     "subject" : "Introduction to Programming",
     "type" : "Course",
     "group" : "A",
     "teacher" : "Prof. Smith",
     "teacherRole" : "LECTURER",
-    "room" : "C2"
+    "room" : "C101"
   }, {
     "day" : "Monday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "A1",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Monday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "History I",
-    "type" : "Seminar",
-    "group" : "A2",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Monday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Physics II",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "A3",
     "teacher" : "Mr. Thomas",
     "teacherRole" : "ASSISTANT",
-    "room" : "C411"
+    "room" : "S103"
   }, {
     "day" : "Monday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Physics I",
-    "type" : "Seminar",
-    "group" : "B2",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Monday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Linear Algebra",
-    "type" : "Seminar",
-    "group" : "B3",
-    "teacher" : "Mr. Wilson",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Monday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "History I",
-    "type" : "Seminar",
-    "group" : "A1",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Monday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "A2",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Monday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Physics II",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Physics Fundamentals",
     "type" : "Seminar",
     "group" : "A4",
-    "teacher" : "Mr. Thomas",
+    "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
-    "room" : "C411"
+    "room" : "S101"
   }, {
     "day" : "Monday",
-    "startTime" : 10,
-    "endTime" : 12,
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Mathematics I",
+    "type" : "Seminar",
+    "group" : "E1",
+    "teacher" : "Ms. Jackson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S102"
+  }, {
+    "day" : "Monday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Physics Fundamentals",
+    "type" : "Seminar",
+    "group" : "A5",
+    "teacher" : "Ms. Davis",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Monday",
+    "startTime" : 16,
+    "endTime" : 18,
     "subject" : "Introduction to Programming",
     "type" : "Course",
     "group" : "B",
     "teacher" : "Prof. Smith",
     "teacherRole" : "LECTURER",
-    "room" : "C2"
+    "room" : "C101"
   }, {
     "day" : "Monday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Linear Algebra",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Software Engineering",
     "type" : "Seminar",
-    "group" : "B2",
-    "teacher" : "Mr. Wilson",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Monday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Physics I",
-    "type" : "Seminar",
-    "group" : "B3",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Monday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Physics II",
-    "type" : "Seminar",
-    "group" : "A1",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Monday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "A3",
+    "group" : "B1",
     "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
-    "room" : "C210"
+    "room" : "S103"
   }, {
     "day" : "Monday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "History I",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Mathematics I",
     "type" : "Seminar",
-    "group" : "A4",
-    "teacher" : "Ms. Garcia",
+    "group" : "E2",
+    "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
-    "room" : "C309"
+    "room" : "S102"
   }, {
     "day" : "Monday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Physics I",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Software Engineering",
     "type" : "Seminar",
-    "group" : "B4",
-    "teacher" : "Mr. Thomas",
+    "group" : "A5",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
-    "room" : "C308"
+    "room" : "S103"
   }, {
     "day" : "Monday",
-    "startTime" : 12,
-    "endTime" : 14,
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Physics Fundamentals",
+    "type" : "Seminar",
+    "group" : "B1",
+    "teacher" : "Ms. Davis",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Monday",
+    "startTime" : 18,
+    "endTime" : 20,
     "subject" : "Introduction to Programming",
     "type" : "Course",
     "group" : "E",
     "teacher" : "Prof. Smith",
     "teacherRole" : "LECTURER",
-    "room" : "C2"
+    "room" : "C101"
   }, {
     "day" : "Monday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Linear Algebra",
-    "type" : "Seminar",
-    "group" : "E1",
-    "teacher" : "Mr. Wilson",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Monday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Calculus I",
-    "type" : "Course",
-    "group" : "A",
-    "teacher" : "Dr. Jones",
-    "teacherRole" : "LECTURER",
-    "room" : "C2"
-  }, {
-    "day" : "Monday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Physics II",
-    "type" : "Seminar",
-    "group" : "A2",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Monday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "History I",
-    "type" : "Seminar",
-    "group" : "A3",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Monday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "A4",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Monday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Linear Algebra",
-    "type" : "Seminar",
-    "group" : "B4",
-    "teacher" : "Mr. Wilson",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Monday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Physics I",
-    "type" : "Seminar",
-    "group" : "E1",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Monday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "A5",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Monday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Calculus I",
-    "type" : "Course",
-    "group" : "B",
-    "teacher" : "Dr. Jones",
-    "teacherRole" : "LECTURER",
-    "room" : "C2"
-  }, {
-    "day" : "Monday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "History I",
-    "type" : "Seminar",
-    "group" : "B1",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Monday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Physics II",
-    "type" : "Seminar",
-    "group" : "B2",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Monday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Physics I",
-    "type" : "Seminar",
-    "group" : "E2",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Monday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Linear Algebra",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Mathematics I",
     "type" : "Seminar",
     "group" : "E3",
-    "teacher" : "Mr. Wilson",
+    "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Monday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "History I",
-    "type" : "Seminar",
-    "group" : "A5",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Monday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "B1",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Monday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Physics II",
-    "type" : "Seminar",
-    "group" : "B3",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Monday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Calculus I",
-    "type" : "Course",
-    "group" : "E",
-    "teacher" : "Dr. Jones",
-    "teacherRole" : "LECTURER",
-    "room" : "C2"
-  }, {
-    "day" : "Monday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Linear Algebra",
-    "type" : "Seminar",
-    "group" : "E2",
-    "teacher" : "Mr. Wilson",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Monday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Physics I",
-    "type" : "Seminar",
-    "group" : "E3",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
+    "room" : "S102"
   }, {
     "day" : "Thursday",
     "startTime" : 8,
     "endTime" : 10,
-    "subject" : "Data Structures",
+    "subject" : "Mathematics II",
+    "type" : "Seminar",
+    "group" : "A1",
+    "teacher" : "Mr. Wilson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S102"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Introduction to Programming",
+    "type" : "Seminar",
+    "group" : "B2",
+    "teacher" : "Ms. Davis",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Mathematics II",
+    "type" : "Seminar",
+    "group" : "A2",
+    "teacher" : "Ms. Jackson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S102"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Introduction to Programming",
+    "type" : "Seminar",
+    "group" : "B3",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Mathematics II",
+    "type" : "Seminar",
+    "group" : "A3",
+    "teacher" : "Mr. Wilson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S102"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Introduction to Programming",
+    "type" : "Seminar",
+    "group" : "B4",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Mathematics II",
+    "type" : "Seminar",
+    "group" : "A4",
+    "teacher" : "Mr. Wilson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S102"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Introduction to Programming",
+    "type" : "Seminar",
+    "group" : "E1",
+    "teacher" : "Ms. Davis",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Mathematics II",
+    "type" : "Seminar",
+    "group" : "A5",
+    "teacher" : "Ms. Jackson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S102"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Introduction to Programming",
+    "type" : "Seminar",
+    "group" : "E2",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Mathematics II",
+    "type" : "Seminar",
+    "group" : "B1",
+    "teacher" : "Ms. Jackson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S102"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Introduction to Programming",
+    "type" : "Seminar",
+    "group" : "E3",
+    "teacher" : "Ms. Davis",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Mathematics I",
     "type" : "Course",
     "group" : "A",
     "teacher" : "Prof. Johnson",
     "teacherRole" : "LECTURER",
-    "room" : "C2"
+    "room" : "C101"
   }, {
-    "day" : "Thursday",
+    "day" : "Tuesday",
     "startTime" : 8,
     "endTime" : 10,
-    "subject" : "English Composition",
+    "subject" : "Data Structures",
     "type" : "Seminar",
     "group" : "A1",
-    "teacher" : "Mr. Harris",
+    "teacher" : "Mr. Thomas",
     "teacherRole" : "ASSISTANT",
-    "room" : "C308"
+    "room" : "S102"
   }, {
-    "day" : "Thursday",
+    "day" : "Tuesday",
     "startTime" : 8,
     "endTime" : 10,
-    "subject" : "Calculus II",
-    "type" : "Seminar",
-    "group" : "A2",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Differential Equations",
-    "type" : "Seminar",
-    "group" : "A5",
-    "teacher" : "Mr. Wilson",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Physics II",
-    "type" : "Course",
-    "group" : "B",
-    "teacher" : "Dr. Anderson",
-    "teacherRole" : "LECTURER",
-    "room" : "C112"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Calculus I",
+    "subject" : "Physics Fundamentals",
     "type" : "Seminar",
     "group" : "B2",
-    "teacher" : "Ms. Garcia",
+    "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
-    "room" : "C210"
+    "room" : "S101"
   }, {
-    "day" : "Thursday",
+    "day" : "Tuesday",
     "startTime" : 8,
     "endTime" : 10,
-    "subject" : "Data Structures",
+    "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "B3",
-    "teacher" : "Ms. Garcia",
+    "teacher" : "Mr. Thomas",
     "teacherRole" : "ASSISTANT",
-    "room" : "C309"
+    "room" : "S103"
   }, {
-    "day" : "Thursday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Physics II",
-    "type" : "Course",
-    "group" : "A",
-    "teacher" : "Dr. Anderson",
-    "teacherRole" : "LECTURER",
-    "room" : "C112"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Calculus II",
-    "type" : "Seminar",
-    "group" : "A1",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "English Composition",
-    "type" : "Seminar",
-    "group" : "A2",
-    "teacher" : "Mr. Harris",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Thursday",
+    "day" : "Tuesday",
     "startTime" : 10,
     "endTime" : 12,
     "subject" : "Data Structures",
+    "type" : "Seminar",
+    "group" : "A2",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S102"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Mathematics I",
     "type" : "Course",
     "group" : "B",
     "teacher" : "Prof. Johnson",
     "teacherRole" : "LECTURER",
-    "room" : "C2"
+    "room" : "C101"
   }, {
-    "day" : "Thursday",
+    "day" : "Tuesday",
     "startTime" : 10,
     "endTime" : 12,
-    "subject" : "Differential Equations",
-    "type" : "Seminar",
-    "group" : "B1",
-    "teacher" : "Mr. Harris",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Data Structures",
+    "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "B2",
-    "teacher" : "Ms. Garcia",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
-    "room" : "C309"
+    "room" : "S103"
   }, {
-    "day" : "Thursday",
+    "day" : "Tuesday",
     "startTime" : 10,
     "endTime" : 12,
-    "subject" : "Calculus I",
+    "subject" : "Physics Fundamentals",
     "type" : "Seminar",
     "group" : "B3",
-    "teacher" : "Ms. Garcia",
+    "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
-    "room" : "C210"
+    "room" : "S101"
   }, {
-    "day" : "Thursday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "English Composition",
-    "type" : "Seminar",
-    "group" : "A3",
-    "teacher" : "Mr. Harris",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Calculus II",
-    "type" : "Seminar",
-    "group" : "A4",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Calculus I",
-    "type" : "Seminar",
-    "group" : "B4",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Thursday",
+    "day" : "Tuesday",
     "startTime" : 12,
     "endTime" : 14,
     "subject" : "Data Structures",
+    "type" : "Seminar",
+    "group" : "A3",
+    "teacher" : "Prof. Taylor",
+    "teacherRole" : "LECTURER",
+    "room" : "S102"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Physics Fundamentals",
+    "type" : "Seminar",
+    "group" : "B4",
+    "teacher" : "Ms. Davis",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Mathematics I",
     "type" : "Course",
     "group" : "E",
     "teacher" : "Prof. Johnson",
     "teacherRole" : "LECTURER",
-    "room" : "C2"
+    "room" : "C101"
   }, {
-    "day" : "Thursday",
+    "day" : "Tuesday",
     "startTime" : 12,
     "endTime" : 14,
-    "subject" : "Data Structures",
+    "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "E1",
-    "teacher" : "Ms. Garcia",
+    "teacher" : "Mr. Thomas",
     "teacherRole" : "ASSISTANT",
-    "room" : "C309"
+    "room" : "S103"
   }, {
-    "day" : "Thursday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Differential Equations",
-    "type" : "Seminar",
-    "group" : "E2",
-    "teacher" : "Mr. Harris",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Thursday",
+    "day" : "Tuesday",
     "startTime" : 14,
     "endTime" : 16,
-    "subject" : "Linear Algebra",
+    "subject" : "Data Structures",
     "type" : "Course",
     "group" : "A",
-    "teacher" : "Dr. Davis",
+    "teacher" : "Prof. Taylor",
     "teacherRole" : "LECTURER",
-    "room" : "C2"
+    "room" : "C101"
   }, {
-    "day" : "Thursday",
+    "day" : "Tuesday",
     "startTime" : 14,
     "endTime" : 16,
-    "subject" : "Calculus II",
-    "type" : "Seminar",
-    "group" : "A3",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "English Composition",
+    "subject" : "Data Structures",
     "type" : "Seminar",
     "group" : "A4",
-    "teacher" : "Mr. Harris",
+    "teacher" : "Mr. Thomas",
     "teacherRole" : "ASSISTANT",
-    "room" : "C308"
+    "room" : "S102"
   }, {
-    "day" : "Thursday",
+    "day" : "Tuesday",
     "startTime" : 14,
     "endTime" : 16,
-    "subject" : "Data Structures",
+    "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "B4",
-    "teacher" : "Ms. Garcia",
+    "teacher" : "Mr. Thomas",
     "teacherRole" : "ASSISTANT",
-    "room" : "C309"
+    "room" : "S103"
   }, {
-    "day" : "Thursday",
+    "day" : "Tuesday",
     "startTime" : 14,
     "endTime" : 16,
-    "subject" : "Physics II",
-    "type" : "Course",
-    "group" : "E",
-    "teacher" : "Dr. Anderson",
-    "teacherRole" : "LECTURER",
-    "room" : "C112"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Calculus I",
+    "subject" : "Physics Fundamentals",
     "type" : "Seminar",
     "group" : "E1",
-    "teacher" : "Ms. Garcia",
+    "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
-    "room" : "C210"
+    "room" : "S101"
   }, {
-    "day" : "Thursday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Differential Equations",
-    "type" : "Seminar",
-    "group" : "E3",
-    "teacher" : "Mr. Harris",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Thursday",
+    "day" : "Tuesday",
     "startTime" : 16,
     "endTime" : 18,
-    "subject" : "English Composition",
+    "subject" : "Data Structures",
     "type" : "Seminar",
     "group" : "A5",
-    "teacher" : "Mr. Harris",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
+    "teacher" : "Prof. Taylor",
+    "teacherRole" : "LECTURER",
+    "room" : "S102"
   }, {
-    "day" : "Thursday",
+    "day" : "Tuesday",
     "startTime" : 16,
     "endTime" : 18,
-    "subject" : "Linear Algebra",
+    "subject" : "Data Structures",
     "type" : "Course",
     "group" : "B",
-    "teacher" : "Dr. Davis",
+    "teacher" : "Prof. Taylor",
     "teacherRole" : "LECTURER",
-    "room" : "C2"
+    "room" : "C101"
   }, {
-    "day" : "Thursday",
+    "day" : "Tuesday",
     "startTime" : 16,
     "endTime" : 18,
-    "subject" : "Calculus II",
-    "type" : "Seminar",
-    "group" : "B1",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Differential Equations",
-    "type" : "Seminar",
-    "group" : "B4",
-    "teacher" : "Mr. Wilson",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Calculus I",
+    "subject" : "Physics Fundamentals",
     "type" : "Seminar",
     "group" : "E2",
-    "teacher" : "Ms. Garcia",
+    "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
-    "room" : "C210"
+    "room" : "S101"
   }, {
-    "day" : "Thursday",
+    "day" : "Tuesday",
     "startTime" : 16,
     "endTime" : 18,
-    "subject" : "Data Structures",
+    "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "E3",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Calculus II",
-    "type" : "Seminar",
-    "group" : "A5",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "English Composition",
-    "type" : "Seminar",
-    "group" : "B1",
-    "teacher" : "Mr. Harris",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Linear Algebra",
-    "type" : "Course",
-    "group" : "E",
-    "teacher" : "Dr. Davis",
-    "teacherRole" : "LECTURER",
-    "room" : "C2"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Differential Equations",
-    "type" : "Seminar",
-    "group" : "E1",
-    "teacher" : "Mr. Wilson",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Data Structures",
-    "type" : "Seminar",
-    "group" : "E2",
     "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
-    "room" : "C309"
+    "room" : "S103"
   }, {
-    "day" : "Thursday",
+    "day" : "Tuesday",
     "startTime" : 18,
     "endTime" : 20,
-    "subject" : "Calculus I",
+    "subject" : "Data Structures",
+    "type" : "Seminar",
+    "group" : "B1",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S102"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Data Structures",
+    "type" : "Course",
+    "group" : "E",
+    "teacher" : "Prof. Taylor",
+    "teacherRole" : "LECTURER",
+    "room" : "C101"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Software Engineering",
+    "type" : "Seminar",
+    "group" : "E2",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S103"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Physics Fundamentals",
     "type" : "Seminar",
     "group" : "E3",
-    "teacher" : "Ms. Garcia",
+    "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
-    "room" : "C210"
+    "room" : "S101"
   }, {
-    "day" : "Tuesday",
+    "day" : "Wednesday",
     "startTime" : 8,
     "endTime" : 10,
-    "subject" : "Physics I",
+    "subject" : "Mathematics II",
     "type" : "Course",
     "group" : "A",
-    "teacher" : "Dr. Anderson",
+    "teacher" : "Prof. Anderson",
     "teacherRole" : "LECTURER",
-    "room" : "C2"
+    "room" : "C101"
   }, {
-    "day" : "Tuesday",
+    "day" : "Wednesday",
     "startTime" : 8,
     "endTime" : 10,
-    "subject" : "Chemistry I",
+    "subject" : "Introduction to Programming",
     "type" : "Seminar",
     "group" : "A1",
-    "teacher" : "Ms. White",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Probability and Statistics",
-    "type" : "Seminar",
-    "group" : "A2",
-    "teacher" : "Ms. White",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Physics II",
-    "type" : "Seminar",
-    "group" : "A5",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Differential Equations",
-    "type" : "Course",
-    "group" : "B",
-    "teacher" : "Dr. Davis",
-    "teacherRole" : "LECTURER",
-    "room" : "C112"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "B2",
     "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "History I",
-    "type" : "Seminar",
-    "group" : "B3",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Differential Equations",
-    "type" : "Course",
-    "group" : "A",
-    "teacher" : "Dr. Davis",
-    "teacherRole" : "LECTURER",
-    "room" : "C112"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Probability and Statistics",
-    "type" : "Seminar",
-    "group" : "A1",
-    "teacher" : "Ms. White",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Chemistry I",
-    "type" : "Seminar",
-    "group" : "A2",
-    "teacher" : "Ms. White",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Physics I",
-    "type" : "Course",
-    "group" : "B",
-    "teacher" : "Dr. Anderson",
-    "teacherRole" : "LECTURER",
-    "room" : "C2"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Physics II",
-    "type" : "Seminar",
-    "group" : "B1",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "History I",
-    "type" : "Seminar",
-    "group" : "B2",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "B3",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Chemistry I",
-    "type" : "Seminar",
-    "group" : "A3",
-    "teacher" : "Ms. White",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Probability and Statistics",
-    "type" : "Seminar",
-    "group" : "A4",
-    "teacher" : "Ms. White",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "B4",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Physics I",
-    "type" : "Course",
-    "group" : "E",
-    "teacher" : "Dr. Anderson",
-    "teacherRole" : "LECTURER",
-    "room" : "C2"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "History I",
-    "type" : "Seminar",
-    "group" : "E1",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Physics II",
-    "type" : "Seminar",
-    "group" : "E2",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Chemistry I",
-    "type" : "Course",
-    "group" : "A",
-    "teacher" : "Prof. Moore",
-    "teacherRole" : "LECTURER",
-    "room" : "C2"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Probability and Statistics",
-    "type" : "Seminar",
-    "group" : "A3",
-    "teacher" : "Ms. White",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Chemistry I",
-    "type" : "Seminar",
-    "group" : "A4",
-    "teacher" : "Ms. White",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Probability and Statistics",
-    "type" : "Course",
-    "group" : "B",
-    "teacher" : "Dr. Anderson",
-    "teacherRole" : "LECTURER",
-    "room" : "C112"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "History I",
-    "type" : "Seminar",
-    "group" : "B4",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "E1",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Physics II",
-    "type" : "Seminar",
-    "group" : "E3",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Probability and Statistics",
-    "type" : "Course",
-    "group" : "A",
-    "teacher" : "Dr. Anderson",
-    "teacherRole" : "LECTURER",
-    "room" : "C112"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Chemistry I",
-    "type" : "Seminar",
-    "group" : "A5",
-    "teacher" : "Ms. White",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Chemistry I",
-    "type" : "Course",
-    "group" : "B",
-    "teacher" : "Prof. Moore",
-    "teacherRole" : "LECTURER",
-    "room" : "C2"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Probability and Statistics",
-    "type" : "Seminar",
-    "group" : "B1",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Physics II",
-    "type" : "Seminar",
-    "group" : "B4",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "E2",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "History I",
-    "type" : "Seminar",
-    "group" : "E3",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Probability and Statistics",
-    "type" : "Seminar",
-    "group" : "A5",
-    "teacher" : "Ms. White",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Chemistry I",
-    "type" : "Seminar",
-    "group" : "B1",
-    "teacher" : "Ms. White",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Chemistry I",
-    "type" : "Course",
-    "group" : "E",
-    "teacher" : "Prof. Moore",
-    "teacherRole" : "LECTURER",
-    "room" : "C2"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Physics II",
-    "type" : "Seminar",
-    "group" : "E1",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "History I",
-    "type" : "Seminar",
-    "group" : "E2",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "E3",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "English Composition",
-    "type" : "Course",
-    "group" : "A",
-    "teacher" : "Dr. Jackson",
-    "teacherRole" : "LECTURER",
-    "room" : "C2"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Calculus I",
-    "type" : "Seminar",
-    "group" : "A1",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
+    "room" : "S101"
   }, {
     "day" : "Wednesday",
     "startTime" : 8,
     "endTime" : 10,
     "subject" : "Data Structures",
-    "type" : "Seminar",
-    "group" : "A2",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Differential Equations",
-    "type" : "Seminar",
-    "group" : "A3",
-    "teacher" : "Mr. Wilson",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Chemistry I",
-    "type" : "Seminar",
-    "group" : "B2",
-    "teacher" : "Ms. White",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Probability and Statistics",
-    "type" : "Seminar",
-    "group" : "B3",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Probability and Statistics",
-    "type" : "Course",
-    "group" : "E",
-    "teacher" : "Dr. Anderson",
-    "teacherRole" : "LECTURER",
-    "room" : "C112"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Data Structures",
-    "type" : "Seminar",
-    "group" : "A1",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Calculus I",
-    "type" : "Seminar",
-    "group" : "A2",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Differential Equations",
-    "type" : "Seminar",
-    "group" : "A4",
-    "teacher" : "Mr. Harris",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "English Composition",
-    "type" : "Course",
-    "group" : "B",
-    "teacher" : "Dr. Jackson",
-    "teacherRole" : "LECTURER",
-    "room" : "C2"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Probability and Statistics",
     "type" : "Seminar",
     "group" : "B2",
     "teacher" : "Mr. Thomas",
     "teacherRole" : "ASSISTANT",
-    "room" : "C410"
+    "room" : "S102"
   }, {
     "day" : "Wednesday",
     "startTime" : 10,
     "endTime" : 12,
-    "subject" : "Chemistry I",
+    "subject" : "Introduction to Programming",
+    "type" : "Seminar",
+    "group" : "A2",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Mathematics II",
+    "type" : "Course",
+    "group" : "B",
+    "teacher" : "Prof. Anderson",
+    "teacherRole" : "LECTURER",
+    "room" : "C101"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Data Structures",
     "type" : "Seminar",
     "group" : "B3",
-    "teacher" : "Ms. White",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Differential Equations",
-    "type" : "Course",
-    "group" : "E",
-    "teacher" : "Dr. Davis",
+    "teacher" : "Prof. Taylor",
     "teacherRole" : "LECTURER",
-    "room" : "C112"
+    "room" : "S102"
   }, {
     "day" : "Wednesday",
     "startTime" : 12,
     "endTime" : 14,
-    "subject" : "Differential Equations",
-    "type" : "Seminar",
-    "group" : "A1",
-    "teacher" : "Mr. Wilson",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Calculus I",
+    "subject" : "Introduction to Programming",
     "type" : "Seminar",
     "group" : "A3",
-    "teacher" : "Ms. Garcia",
+    "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
-    "room" : "C210"
+    "room" : "S101"
   }, {
     "day" : "Wednesday",
     "startTime" : 12,
     "endTime" : 14,
     "subject" : "Data Structures",
     "type" : "Seminar",
-    "group" : "A4",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Chemistry I",
-    "type" : "Seminar",
     "group" : "B4",
-    "teacher" : "Ms. White",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
+    "teacher" : "Prof. Taylor",
+    "teacherRole" : "LECTURER",
+    "room" : "S102"
   }, {
     "day" : "Wednesday",
     "startTime" : 12,
     "endTime" : 14,
-    "subject" : "English Composition",
+    "subject" : "Mathematics II",
     "type" : "Course",
     "group" : "E",
-    "teacher" : "Dr. Jackson",
+    "teacher" : "Prof. Anderson",
     "teacherRole" : "LECTURER",
-    "room" : "C2"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Probability and Statistics",
-    "type" : "Seminar",
-    "group" : "E1",
-    "teacher" : "Ms. White",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
+    "room" : "C101"
   }, {
     "day" : "Wednesday",
     "startTime" : 14,
     "endTime" : 16,
-    "subject" : "History I",
+    "subject" : "Software Engineering",
     "type" : "Course",
     "group" : "A",
     "teacher" : "Prof. Smith",
     "teacherRole" : "LECTURER",
-    "room" : "C2"
+    "room" : "C101"
   }, {
     "day" : "Wednesday",
     "startTime" : 14,
     "endTime" : 16,
-    "subject" : "Differential Equations",
+    "subject" : "Introduction to Programming",
     "type" : "Seminar",
-    "group" : "A2",
-    "teacher" : "Mr. Harris",
+    "group" : "A4",
+    "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
-    "room" : "C411"
+    "room" : "S101"
   }, {
     "day" : "Wednesday",
     "startTime" : 14,
     "endTime" : 16,
     "subject" : "Data Structures",
     "type" : "Seminar",
-    "group" : "A3",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Calculus I",
-    "type" : "Seminar",
-    "group" : "A4",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Probability and Statistics",
-    "type" : "Seminar",
-    "group" : "B4",
+    "group" : "E1",
     "teacher" : "Mr. Thomas",
     "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Chemistry I",
-    "type" : "Seminar",
-    "group" : "E1",
-    "teacher" : "Ms. White",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
+    "room" : "S102"
   }, {
     "day" : "Wednesday",
     "startTime" : 16,
     "endTime" : 18,
-    "subject" : "Calculus I",
+    "subject" : "Introduction to Programming",
     "type" : "Seminar",
     "group" : "A5",
-    "teacher" : "Ms. Garcia",
+    "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
-    "room" : "C210"
+    "room" : "S101"
   }, {
     "day" : "Wednesday",
     "startTime" : 16,
     "endTime" : 18,
-    "subject" : "History I",
+    "subject" : "Software Engineering",
     "type" : "Course",
     "group" : "B",
     "teacher" : "Prof. Smith",
     "teacherRole" : "LECTURER",
-    "room" : "C2"
+    "room" : "C101"
   }, {
     "day" : "Wednesday",
     "startTime" : 16,
     "endTime" : 18,
     "subject" : "Data Structures",
-    "type" : "Seminar",
-    "group" : "B1",
-    "teacher" : "Ms. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Differential Equations",
-    "type" : "Seminar",
-    "group" : "B2",
-    "teacher" : "Mr. Wilson",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Chemistry I",
     "type" : "Seminar",
     "group" : "E2",
-    "teacher" : "Ms. White",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Probability and Statistics",
-    "type" : "Seminar",
-    "group" : "E3",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
+    "teacher" : "Prof. Taylor",
+    "teacherRole" : "LECTURER",
+    "room" : "S102"
   }, {
     "day" : "Wednesday",
     "startTime" : 18,
     "endTime" : 20,
-    "subject" : "Data Structures",
-    "type" : "Seminar",
-    "group" : "A5",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Calculus I",
+    "subject" : "Introduction to Programming",
     "type" : "Seminar",
     "group" : "B1",
-    "teacher" : "Ms. Garcia",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
-    "room" : "C210"
+    "room" : "S101"
   }, {
     "day" : "Wednesday",
     "startTime" : 18,
     "endTime" : 20,
-    "subject" : "Differential Equations",
-    "type" : "Seminar",
-    "group" : "B3",
-    "teacher" : "Mr. Wilson",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C411"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "History I",
+    "subject" : "Software Engineering",
     "type" : "Course",
     "group" : "E",
     "teacher" : "Prof. Smith",
     "teacherRole" : "LECTURER",
-    "room" : "C2"
+    "room" : "C101"
   }, {
     "day" : "Wednesday",
     "startTime" : 18,
     "endTime" : 20,
-    "subject" : "Probability and Statistics",
-    "type" : "Seminar",
-    "group" : "E2",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Chemistry I",
+    "subject" : "Data Structures",
     "type" : "Seminar",
     "group" : "E3",
-    "teacher" : "Ms. White",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
+    "teacher" : "Prof. Taylor",
+    "teacherRole" : "LECTURER",
+    "room" : "S102"
   } ]
 }

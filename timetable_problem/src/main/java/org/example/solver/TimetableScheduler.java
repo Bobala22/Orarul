@@ -26,7 +26,8 @@ public class TimetableScheduler {
     private final Map<String, Set<TimeSlot>> groupSchedule;
     private final Map<String, Set<TimeSlot>> teacherSchedule;
     private Map<Teacher, Integer> teacherHours;
-
+    private long startTime;
+    private static final long TIMEOUT = 10000; // 10 seconds
 
     public TimetableScheduler(List<Room> courseRooms, List<Room> seminarRooms, List<Teacher> teachers) {
         this.days = Arrays.asList("Monday", "Tuesday", "Wednesday", "Thursday", "Friday");
@@ -82,8 +83,8 @@ public class TimetableScheduler {
     }
 
     public boolean generateTimetable(List<Subject> subjects) {
+        startTime = System.currentTimeMillis();
         List<Session> sessionsToSchedule = new ArrayList<>();
-
         // Create all required sessions
         for (Subject subject : subjects) {
             // Create course sessions (one per series)
@@ -105,10 +106,23 @@ public class TimetableScheduler {
             }
         }
 
-        return backtrack(sessionsToSchedule, 0);
+        // Sort sessions by the number of available teachers (fewer teachers first)
+        sessionsToSchedule.sort(Comparator.comparingInt(s -> s.getSubject().getSeminarTeachers().size()));
+
+        boolean solutionFound = backtrack(sessionsToSchedule, 0);
+
+        if (!solutionFound) {
+            System.err.println("Error: No valid timetable could be generated. Please adjust constraints or resources.");
+        }
+
+        return solutionFound;
     }
 
     private boolean backtrack(List<Session> sessionsToSchedule, int index) {
+        if (System.currentTimeMillis() - startTime > TIMEOUT) {
+            return false; // Timeout
+        }
+
         if (index == sessionsToSchedule.size()) {
             return true; // All sessions have been scheduled
         }
@@ -240,19 +254,37 @@ public class TimetableScheduler {
 
             // Iterate through each year and generate timetables
             for (Map.Entry<Integer, TimetableData> entry : timetableDataPerYear.entrySet()) {
-                System.out.println("\nProcessing timetable for Year " + entry.getKey());
+                Integer year = entry.getKey();
+                System.out.println("\nProcessing timetable for Year " + year);
                 TimetableData yearData = entry.getValue();
+
+
+                // Delete any existing timetable files that are not part of the current run
+                Set<Integer> yearsToProcess = timetableDataPerYear.keySet();
+
+                File currentDir = new File(".");
+                File[] files = currentDir.listFiles((dir, name) -> name.startsWith("timetable_year_") && name.endsWith(".json"));
+                if (files != null) {
+                    for (File file : files) {
+                        String fileName = file.getName();
+                        int yearToProcess = Integer.parseInt(fileName.replaceAll("\\D", ""));
+                        if (!yearsToProcess.contains(yearToProcess)) {
+                            file.delete();
+                        }
+                    }
+                }
+
+                String outputPath = "timetable_year_" + year + ".json";
 
                 // Step 3: Generate timetable for the year
                 if (scheduler.generateTimetable(yearData.getSubjects())) {
-                    System.out.println("Successfully generated timetable for Year " + entry.getKey());
+                    System.out.println("Successfully generated timetable for Year " + year);
                     scheduler.printSchedule();
 
-                    String outputPath = "timetable_year_" + entry.getKey() + ".json";
                     scheduler.exportToJson(outputPath);
                     System.out.println("Exported timetable to " + outputPath);
                 } else {
-                    System.out.println("Failed to generate a valid timetable for Year " + entry.getKey());
+                    System.out.println("Failed to generate a valid timetable for Year " + year);
                 }
             }
 
