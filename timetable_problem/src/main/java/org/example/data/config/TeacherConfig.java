@@ -12,6 +12,9 @@ public class TeacherConfig {
     @JsonProperty("role")
     private TeacherRole role;
 
+    @JsonProperty("maxHoursPerWeek")
+    private int maxHoursPerWeek;
+
     // Default constructor for Jackson
     public TeacherConfig() {
     }
@@ -23,5 +26,7 @@ public class TeacherConfig {
     public TeacherRole getRole() {
         return role;
     }
+
+    public int getMaxHours() {return maxHoursPerWeek;}
 
 }

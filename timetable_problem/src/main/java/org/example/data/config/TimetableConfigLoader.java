@@ -27,7 +27,7 @@ public class TimetableConfigLoader {
 
         // Create a map of global teachers
         Map<String, Teacher> globalTeacherMap = config.getTeachers().stream()
-                .collect(Collectors.toMap(TeacherConfig::getName, tc -> new Teacher(tc.getName(), tc.getRole())));
+                .collect(Collectors.toMap(TeacherConfig::getName, tc -> new Teacher(tc.getName(), tc.getRole(), tc.getMaxHours()))); // Use getMaxHoursPerWeek()
 
         // Parse the shared courseRooms and seminarRooms
         List<Room> courseRooms = config.getRooms().getCourseRooms().stream()
@@ -38,6 +38,9 @@ public class TimetableConfigLoader {
                 .map(name -> new Room(name, false))
                 .collect(Collectors.toList());
 
+        // Create the global list of teachers (needed by TimetableScheduler)
+        List<Teacher> globalTeachersList = new ArrayList<>(globalTeacherMap.values());
+
 
         // Parse timetable data for each year
         Map<Integer, TimetableData> timetableDataPerYear = new HashMap<>();
@@ -47,20 +50,19 @@ public class TimetableConfigLoader {
 
             List<Subject> subjects = new ArrayList<>();
             for (SubjectConfig subjectConfig : yearConfig.getSubjects()) {
-                Teacher courseTeacher = globalTeacherMap.get(subjectConfig.getCourseTeacher()); // Get from the global map
+                Teacher courseTeacher = globalTeacherMap.get(subjectConfig.getCourseTeacher());
                 if (courseTeacher == null || !courseTeacher.canTeachCourse()) {
                     throw new IllegalArgumentException("Invalid course teacher: " + subjectConfig.getCourseTeacher());
                 }
 
-
                 List<Teacher> seminarTeachers = subjectConfig.getSeminarTeacher().stream()
-                        .map(globalTeacherMap::get) // Directly get teachers from the global map
+                        .map(globalTeacherMap::get)
                         .collect(Collectors.toList());
 
                 subjects.add(new Subject(subjectConfig.getName(), courseTeacher, seminarTeachers));
             }
 
-            timetableDataPerYear.put(year, new TimetableData(subjects, courseRooms, seminarRooms));
+            timetableDataPerYear.put(year, new TimetableData(subjects, courseRooms, seminarRooms, globalTeachersList)); // Pass globalTeachersList here
         }
 
         return timetableDataPerYear;

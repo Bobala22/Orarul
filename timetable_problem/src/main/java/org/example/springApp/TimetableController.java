@@ -148,7 +148,7 @@ public class TimetableController {
             TimetableData data = mapper.readValue(path.toFile(), TimetableData.class);
 
             // Initialize the TimetableScheduler with the necessary data
-            TimetableScheduler scheduler = new TimetableScheduler(data.getCourseRooms(), data.getSeminarRooms());
+            TimetableScheduler scheduler = new TimetableScheduler(data.getCourseRooms(), data.getSeminarRooms(),data.getTeachers());
 
             // Generate the timetable
             if (scheduler.generateTimetable(data.getSubjects())) {

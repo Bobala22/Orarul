@@ -25,8 +25,10 @@ public class TimetableScheduler {
     private final Map<String, Set<TimeSlot>> roomSchedule;
     private final Map<String, Set<TimeSlot>> groupSchedule;
     private final Map<String, Set<TimeSlot>> teacherSchedule;
+    private Map<Teacher, Integer> teacherHours;
 
-    public TimetableScheduler(List<Room> courseRooms, List<Room> seminarRooms) {
+
+    public TimetableScheduler(List<Room> courseRooms, List<Room> seminarRooms, List<Teacher> teachers) {
         this.days = Arrays.asList("Monday", "Tuesday", "Wednesday", "Thursday", "Friday");
         this.timeSlots = new ArrayList<>();
         for (int i = 8; i < 20; i += 2) {
@@ -46,6 +48,10 @@ public class TimetableScheduler {
         this.roomSchedule = new HashMap<>();
         this.groupSchedule = new HashMap<>();
         this.teacherSchedule = new HashMap<>();
+        this.teacherHours = new HashMap<>();
+        for (Teacher teacher : teachers) {
+            teacherHours.put(teacher, 0);
+        }
     }
 
 
@@ -64,9 +70,12 @@ public class TimetableScheduler {
             }
         }
 
-        // Check if teacher is available
-        if (teacherSchedule.containsKey(teacher.getName())) {
-            return !teacherSchedule.get(teacher.getName()).contains(timeSlot);
+        // Check teacher availability and hours
+        if (teacher != null && teacherHours.containsKey(teacher)) {
+            int currentHours = teacherHours.get(teacher);
+            if (currentHours + 2 > teacher.getMaxHoursPerWeek()) {
+                return false; // Teacher is over their weekly limit
+            }
         }
 
         return true;
@@ -140,7 +149,10 @@ public class TimetableScheduler {
         groupSchedule.get(session.getGroup()).remove(session.getTimeSlot());
 
         // Update teacher schedule
-        teacherSchedule.get(session.getTeacher().getName()).remove(session.getTimeSlot());
+        Teacher teacher = session.getTeacher();
+        if (teacher != null) { // Check if the session has a teacher
+            teacherHours.put(teacher, teacherHours.get(teacher) - 2);
+        }
     }
 
     private void scheduleSession(Session session) {
@@ -154,9 +166,11 @@ public class TimetableScheduler {
         groupSchedule.computeIfAbsent(session.getGroup(), k -> new HashSet<>())
                     .add(session.getTimeSlot());
 
-        // Update teacher schedule
-        teacherSchedule.computeIfAbsent(session.getSubject().getTeacher(), k -> new HashSet<>())
-                      .add(session.getTimeSlot());
+        // Update teacher schedule AND HOURS
+        Teacher teacher = session.getTeacher();
+        if (teacher != null) { // Check if the session has a teacher (e.g., course sessions might not)
+            teacherHours.put(teacher, teacherHours.get(teacher) + 2);
+        }
     }
 
     public void printSchedule() {
@@ -220,7 +234,8 @@ public class TimetableScheduler {
             TimetableData firstYearData = timetableDataPerYear.values().iterator().next(); // Get first year as a reference
             TimetableScheduler scheduler = new TimetableScheduler(
                     firstYearData.getCourseRooms(),
-                    firstYearData.getSeminarRooms()
+                    firstYearData.getSeminarRooms(),
+                    firstYearData.getTeachers()
             );
 
             // Iterate through each year and generate timetables

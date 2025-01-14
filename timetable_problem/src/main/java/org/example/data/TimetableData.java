@@ -2,6 +2,7 @@ package org.example.data;
 
 import org.example.data.entities.Room;
 import org.example.data.entities.Subject;
+import org.example.data.entities.Teacher;
 
 import java.util.List;
 import java.util.Map;
@@ -13,7 +14,7 @@ public class TimetableData {
     private  List<Room> seminarRooms;
     private List<String> series; // Add series
     private Map<String, Integer> groupsPerSeries; // Add groupsPerSeries
-
+    private List<Teacher> teachers;
     // Getters and setters for courseRooms
     public List<Room> getCourseRooms() {
         return courseRooms;
@@ -59,9 +60,14 @@ public class TimetableData {
         this.groupsPerSeries = groupsPerSeries;
     }
 
-    public TimetableData(List<Subject> subjects, List<Room> courseRooms, List<Room> seminarRooms) {
+    public TimetableData(List<Subject> subjects, List<Room> courseRooms, List<Room> seminarRooms, List<Teacher> teachers) {
         this.subjects = subjects;
         this.courseRooms = courseRooms;
         this.seminarRooms = seminarRooms;
+        this.teachers = teachers;
+    }
+
+    public List<Teacher> getTeachers() {
+        return teachers;
     }
 }
