@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Main Page</title>
+    <title>Timetable generator</title>
 </head>
 <body>
-<h1>Upload Timetable Data</h1>
+<h1>Timetable generator</h1>
 <form th:action="@{/generate}" method="post">
     <div>
         <label>Upload JSON file:</label>
@@ -14,6 +14,7 @@
         <label for="subjectCount">Number of Subjects:</label>
         <input type="number" id="subjectCount" min="0" />
         <button type="button" onclick="generateSubjectFields()">Generate Subject Fields</button>
+        <button type="button" onclick="addField('subject')">Add Field</button>
     </div>
     <div id="subjectsContainer">
         <!-- Subject fields will appear here -->
@@ -23,6 +24,7 @@
         <label for="teacherCount">Number of Teachers:</label>
         <input type="number" id="teacherCount" min="0" />
         <button type="button" onclick="generateTeacherFields()">Generate Teacher Fields</button>
+        <button type="button" onclick="addField('teacher')">Add Field</button>
     </div>
     <div id="teachersContainer">
         <!-- Teacher fields will appear here -->
@@ -32,6 +34,7 @@
         <label for="courseRoomsCount">Number of Course Rooms:</label>
         <input type="number" id="courseRoomsCount" min="0" />
         <button type="button" onclick="generateCourseRoomsFields()">Generate Course Rooms Fields</button>
+        <button type="button" onclick="addField('courseRoom')">Add Field</button>
     </div>
     <div id="courseRoomsContainer">
         <!-- Course room fields will appear here -->
@@ -41,12 +44,14 @@
         <label for="seminarRoomsCount">Number of Seminar Rooms:</label>
         <input type="number" id="seminarRoomsCount" min="0" />
         <button type="button" onclick="generateSeminarRoomsFields()">Generate Seminar Rooms Fields</button>
+        <button type="button" onclick="addField('seminarRoom')">Add Field</button>
     </div>
     <div id="seminarRoomsContainer">
         <!-- Seminar room fields will appear here -->
     </div>
     <hr/>
     <button type="button" onclick="buildJson()">Build JSON</button>
+    <button type="button" onclick="saveJson()">Save JSON</button>
     <br/><br/>
     <textarea id="resultJson" rows="10" cols="80" readonly></textarea>
     <button type="submit">Generate timetable</button>
@@ -210,6 +215,27 @@ function buildJson() {
     document.getElementById('resultJson').value = JSON.stringify(jsonData, null, 2);
 }
 
+function saveJson() {
+    const jsonContent = document.getElementById('resultJson').value;
+    if (!jsonContent) {
+        alert('Please build the JSON first!');
+        return;
+    }
+
+    // Create blob from JSON
+    const blob = new Blob([jsonContent], { type: 'application/json' });
+    
+    // Create temporary link element
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'timetable_input.json';
+    
+    // Append link, click it, and remove it
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
 function handleJsonFile(event) {
     const file = event.target.files[0];
     if (!file) return;
@@ -284,6 +310,60 @@ function parseAndPopulate(jsonData) {
         if (teacherSubjects[i]) teacherSubjects[i].value = teacherSubjectMap[t.name] || '';
         if (teacherRoles[i]) teacherRoles[i].value = t.role;
     });
+}
+
+function addField(type) {
+    let container, currentFields, newIndex;
+    
+    switch(type) {
+        case 'subject':
+            container = document.getElementById('subjectsContainer');
+            currentFields = container.getElementsByClassName('subjectName');
+            newIndex = currentFields.length + 1;
+            const newSubjectDiv = document.createElement('div');
+            newSubjectDiv.innerHTML = 'Subject ' + newIndex + 
+                ': <input type="text" class="subjectName" placeholder="Subject name"/>';
+            container.appendChild(newSubjectDiv);
+            document.getElementById('subjectCount').value = newIndex;
+            break;
+            
+        case 'teacher':
+            container = document.getElementById('teachersContainer');
+            currentFields = container.getElementsByClassName('teacherName');
+            newIndex = currentFields.length + 1;
+            const newTeacherDiv = document.createElement('div');
+            newTeacherDiv.innerHTML = 'Teacher ' + newIndex + 
+                ': <input type="text" class="teacherName" placeholder="Teacher name"/>' +
+                ' teaches <input type="text" class="teacherSubject" placeholder="Subject" onblur="validateSubjectField(this)"/>' +
+                ' <span class="subjectErrorMsg" style="color:red"></span>' +
+                ' role <input type="text" class="teacherRole" placeholder="Role" onblur="validateRoleField(this)"/>' +
+                ' <span class="roleErrorMsg" style="color:red"></span>';
+            container.appendChild(newTeacherDiv);
+            document.getElementById('teacherCount').value = newIndex;
+            break;
+            
+        case 'courseRoom':
+            container = document.getElementById('courseRoomsContainer');
+            currentFields = container.getElementsByClassName('courseRoomName');
+            newIndex = currentFields.length + 1;
+            const newCourseRoomDiv = document.createElement('div');
+            newCourseRoomDiv.innerHTML = 'Course Room ' + newIndex +
+                ': <input type="text" class="courseRoomName" placeholder="Course room"/>';
+            container.appendChild(newCourseRoomDiv);
+            document.getElementById('courseRoomsCount').value = newIndex;
+            break;
+            
+        case 'seminarRoom':
+            container = document.getElementById('seminarRoomsContainer');
+            currentFields = container.getElementsByClassName('seminarRoomName');
+            newIndex = currentFields.length + 1;
+            const newSeminarRoomDiv = document.createElement('div');
+            newSeminarRoomDiv.innerHTML = 'Seminar Room ' + newIndex + 
+                ': <input type="text" class="seminarRoomName" placeholder="Seminar room"/>';
+            container.appendChild(newSeminarRoomDiv);
+            document.getElementById('seminarRoomsCount').value = newIndex;
+            break;
+    }
 }
 </script>
 </body>
