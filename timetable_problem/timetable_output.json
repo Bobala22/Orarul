@@ -16,7 +16,7 @@
     "subject" : "Operating Systems",
     "type" : "Seminar",
     "group" : "A1",
-    "teacher" : "Ms. Clark",
+    "teacher" : "Mr. Robinson",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -36,7 +36,7 @@
     "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "B2",
-    "teacher" : "Mr. Garcia",
+    "teacher" : "Mr. Robinson",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   }, {
@@ -46,7 +46,7 @@
     "subject" : "Information Security",
     "type" : "Seminar",
     "group" : "B3",
-    "teacher" : "Mr. Garcia",
+    "teacher" : "Ms. Thompson",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
   }, {
@@ -96,7 +96,7 @@
     "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "B3",
-    "teacher" : "Mr. Robinson",
+    "teacher" : "Ms. Martinez",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   }, {
@@ -106,7 +106,7 @@
     "subject" : "Operating Systems",
     "type" : "Seminar",
     "group" : "A3",
-    "teacher" : "Mr. Brown",
+    "teacher" : "Mr. Robinson",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -116,7 +116,7 @@
     "subject" : "Computer Architecture",
     "type" : "Seminar",
     "group" : "A4",
-    "teacher" : "Ms. Martinez",
+    "teacher" : "Ms. Clark",
     "teacherRole" : "ASSISTANT",
     "room" : "C309"
   }, {
@@ -126,7 +126,7 @@
     "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "B4",
-    "teacher" : "Mr. Robinson",
+    "teacher" : "Mr. Garcia",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   }, {
@@ -176,7 +176,7 @@
     "subject" : "Operating Systems",
     "type" : "Seminar",
     "group" : "A4",
-    "teacher" : "Ms. Clark",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -186,7 +186,7 @@
     "subject" : "Information Security",
     "type" : "Seminar",
     "group" : "B4",
-    "teacher" : "Ms. Thompson",
+    "teacher" : "Ms. Martinez",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
   }, {
@@ -206,7 +206,7 @@
     "subject" : "Operating Systems",
     "type" : "Seminar",
     "group" : "A5",
-    "teacher" : "Mr. Robinson",
+    "teacher" : "Ms. Clark",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -236,7 +236,7 @@
     "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "E2",
-    "teacher" : "Ms. Martinez",
+    "teacher" : "Mr. Garcia",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   }, {
@@ -266,7 +266,7 @@
     "subject" : "Operating Systems",
     "type" : "Seminar",
     "group" : "B1",
-    "teacher" : "Ms. Clark",
+    "teacher" : "Mr. Robinson",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -286,7 +286,7 @@
     "subject" : "Information Security",
     "type" : "Seminar",
     "group" : "E2",
-    "teacher" : "Ms. Thompson",
+    "teacher" : "Ms. Martinez",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
   }, {
@@ -296,7 +296,7 @@
     "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "E3",
-    "teacher" : "Ms. Martinez",
+    "teacher" : "Mr. Robinson",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   }, {
@@ -316,7 +316,7 @@
     "subject" : "Computer Networks",
     "type" : "Seminar",
     "group" : "A1",
-    "teacher" : "Ms. Miller",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -326,7 +326,7 @@
     "subject" : "Web Technologies",
     "type" : "Seminar",
     "group" : "A2",
-    "teacher" : "Mr. Brown",
+    "teacher" : "Ms. Clark",
     "teacherRole" : "ASSISTANT",
     "room" : "C309"
   }, {
@@ -336,7 +336,7 @@
     "subject" : "Operating Systems",
     "type" : "Seminar",
     "group" : "B2",
-    "teacher" : "Mr. Robinson",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   }, {
@@ -346,7 +346,7 @@
     "subject" : "Computer Architecture",
     "type" : "Seminar",
     "group" : "B3",
-    "teacher" : "Ms. Martinez",
+    "teacher" : "Mr. Robinson",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
   }, {
@@ -396,7 +396,7 @@
     "subject" : "Operating Systems",
     "type" : "Seminar",
     "group" : "B3",
-    "teacher" : "Ms. Clark",
+    "teacher" : "Mr. Robinson",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   }, {
@@ -406,7 +406,7 @@
     "subject" : "Computer Networks",
     "type" : "Seminar",
     "group" : "A3",
-    "teacher" : "Mr. Brown",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -426,7 +426,7 @@
     "subject" : "Operating Systems",
     "type" : "Seminar",
     "group" : "B4",
-    "teacher" : "Mr. Brown",
+    "teacher" : "Ms. Clark",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   }, {
@@ -446,7 +446,7 @@
     "subject" : "Computer Architecture",
     "type" : "Seminar",
     "group" : "E1",
-    "teacher" : "Ms. Clark",
+    "teacher" : "Ms. Martinez",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
   }, {
@@ -466,7 +466,7 @@
     "subject" : "Web Technologies",
     "type" : "Seminar",
     "group" : "A3",
-    "teacher" : "Ms. Miller",
+    "teacher" : "Ms. Clark",
     "teacherRole" : "ASSISTANT",
     "room" : "C309"
   }, {
@@ -476,7 +476,7 @@
     "subject" : "Computer Networks",
     "type" : "Seminar",
     "group" : "A4",
-    "teacher" : "Ms. Miller",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -526,7 +526,7 @@
     "subject" : "Web Technologies",
     "type" : "Seminar",
     "group" : "B1",
-    "teacher" : "Ms. Miller",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "C309"
   }, {
@@ -536,7 +536,7 @@
     "subject" : "Operating Systems",
     "type" : "Seminar",
     "group" : "E2",
-    "teacher" : "Mr. Robinson",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   }, {
@@ -546,7 +546,7 @@
     "subject" : "Computer Architecture",
     "type" : "Seminar",
     "group" : "E3",
-    "teacher" : "Ms. Martinez",
+    "teacher" : "Mr. Robinson",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
   }, {
@@ -556,7 +556,7 @@
     "subject" : "Web Technologies",
     "type" : "Seminar",
     "group" : "A5",
-    "teacher" : "Ms. Miller",
+    "teacher" : "Ms. Clark",
     "teacherRole" : "ASSISTANT",
     "room" : "C309"
   }, {
@@ -566,7 +566,7 @@
     "subject" : "Computer Networks",
     "type" : "Seminar",
     "group" : "B1",
-    "teacher" : "Mr. Wilson",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -586,7 +586,7 @@
     "subject" : "Computer Architecture",
     "type" : "Seminar",
     "group" : "E2",
-    "teacher" : "Ms. Clark",
+    "teacher" : "Ms. Martinez",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
   }, {
@@ -596,7 +596,7 @@
     "subject" : "Operating Systems",
     "type" : "Seminar",
     "group" : "E3",
-    "teacher" : "Mr. Robinson",
+    "teacher" : "Ms. Clark",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   }, {
@@ -616,7 +616,7 @@
     "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "A1",
-    "teacher" : "Mr. Robinson",
+    "teacher" : "Mr. Garcia",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   }, {
@@ -636,7 +636,7 @@
     "subject" : "Database Systems",
     "type" : "Seminar",
     "group" : "B2",
-    "teacher" : "Ms. Thompson",
+    "teacher" : "Ms. Martinez",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -656,7 +656,7 @@
     "subject" : "Information Security",
     "type" : "Seminar",
     "group" : "A1",
-    "teacher" : "Mr. Garcia",
+    "teacher" : "Ms. Martinez",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
   }, {
@@ -666,7 +666,7 @@
     "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "A2",
-    "teacher" : "Mr. Robinson",
+    "teacher" : "Mr. Garcia",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   }, {
@@ -696,7 +696,7 @@
     "subject" : "Database Systems",
     "type" : "Seminar",
     "group" : "B3",
-    "teacher" : "Mr. Garcia",
+    "teacher" : "Ms. Thompson",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -706,7 +706,7 @@
     "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "A3",
-    "teacher" : "Ms. Martinez",
+    "teacher" : "Mr. Garcia",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   }, {
@@ -726,7 +726,7 @@
     "subject" : "Database Systems",
     "type" : "Seminar",
     "group" : "B4",
-    "teacher" : "Ms. Martinez",
+    "teacher" : "Mr. Garcia",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -746,7 +746,7 @@
     "subject" : "Data Structures and Algorithms",
     "type" : "Seminar",
     "group" : "E1",
-    "teacher" : "Mr. Wilson",
+    "teacher" : "Mr. Garcia",
     "teacherRole" : "ASSISTANT",
     "room" : "C309"
   }, {
@@ -766,7 +766,7 @@
     "subject" : "Information Security",
     "type" : "Seminar",
     "group" : "A3",
-    "teacher" : "Ms. Martinez",
+    "teacher" : "Ms. Thompson",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
   }, {
@@ -776,7 +776,7 @@
     "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "A4",
-    "teacher" : "Ms. Martinez",
+    "teacher" : "Mr. Robinson",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   }, {
@@ -786,7 +786,7 @@
     "subject" : "Data Structures and Algorithms",
     "type" : "Seminar",
     "group" : "B4",
-    "teacher" : "Mr. Wilson",
+    "teacher" : "Mr. Garcia",
     "teacherRole" : "ASSISTANT",
     "room" : "C309"
   }, {
@@ -826,7 +826,7 @@
     "subject" : "Information Security",
     "type" : "Seminar",
     "group" : "B1",
-    "teacher" : "Mr. Garcia",
+    "teacher" : "Ms. Martinez",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
   }, {
@@ -836,7 +836,7 @@
     "subject" : "Database Systems",
     "type" : "Seminar",
     "group" : "E2",
-    "teacher" : "Mr. Garcia",
+    "teacher" : "Ms. Martinez",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -846,7 +846,7 @@
     "subject" : "Data Structures and Algorithms",
     "type" : "Seminar",
     "group" : "E3",
-    "teacher" : "Ms. Thompson",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "C309"
   }, {
@@ -856,7 +856,7 @@
     "subject" : "Information Security",
     "type" : "Seminar",
     "group" : "A5",
-    "teacher" : "Ms. Thompson",
+    "teacher" : "Mr. Garcia",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
   }, {
@@ -886,7 +886,7 @@
     "subject" : "Data Structures and Algorithms",
     "type" : "Seminar",
     "group" : "E2",
-    "teacher" : "Mr. Garcia",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "C309"
   }, {
@@ -896,7 +896,7 @@
     "subject" : "Database Systems",
     "type" : "Seminar",
     "group" : "E3",
-    "teacher" : "Ms. Thompson",
+    "teacher" : "Ms. Martinez",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -916,7 +916,7 @@
     "subject" : "Artificial Intelligence",
     "type" : "Seminar",
     "group" : "A1",
-    "teacher" : "Ms. Thompson",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   }, {
@@ -926,7 +926,7 @@
     "subject" : "Machine Learning",
     "type" : "Seminar",
     "group" : "A2",
-    "teacher" : "Mr. Brown",
+    "teacher" : "Ms. Miller",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
   }, {
@@ -946,7 +946,7 @@
     "subject" : "Web Technologies",
     "type" : "Seminar",
     "group" : "B3",
-    "teacher" : "Ms. Clark",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "C309"
   }, {
@@ -986,7 +986,7 @@
     "subject" : "Web Technologies",
     "type" : "Seminar",
     "group" : "B2",
-    "teacher" : "Ms. Miller",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "C309"
   }, {
@@ -996,7 +996,7 @@
     "subject" : "Computer Networks",
     "type" : "Seminar",
     "group" : "B3",
-    "teacher" : "Mr. Wilson",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -1006,7 +1006,7 @@
     "subject" : "Artificial Intelligence",
     "type" : "Seminar",
     "group" : "A3",
-    "teacher" : "Ms. Miller",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   }, {
@@ -1016,7 +1016,7 @@
     "subject" : "Machine Learning",
     "type" : "Seminar",
     "group" : "A4",
-    "teacher" : "Mr. Wilson",
+    "teacher" : "Ms. Miller",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
   }, {
@@ -1066,7 +1066,7 @@
     "subject" : "Machine Learning",
     "type" : "Seminar",
     "group" : "A3",
-    "teacher" : "Mr. Brown",
+    "teacher" : "Ms. Miller",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
   }, {
@@ -1076,7 +1076,7 @@
     "subject" : "Artificial Intelligence",
     "type" : "Seminar",
     "group" : "A4",
-    "teacher" : "Mr. Wilson",
+    "teacher" : "Ms. Thompson",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   }, {
@@ -1126,7 +1126,7 @@
     "subject" : "Machine Learning",
     "type" : "Seminar",
     "group" : "B1",
-    "teacher" : "Mr. Wilson",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
   }, {
@@ -1136,7 +1136,7 @@
     "subject" : "Computer Networks",
     "type" : "Seminar",
     "group" : "E2",
-    "teacher" : "Mr. Wilson",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -1146,6 +1146,46 @@
     "subject" : "Web Technologies",
     "type" : "Seminar",
     "group" : "E3",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C309"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Machine Learning",
+    "type" : "Seminar",
+    "group" : "A5",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C410"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Artificial Intelligence",
+    "type" : "Seminar",
+    "group" : "B1",
+    "teacher" : "Mr. Wilson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C308"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Artificial Intelligence",
+    "type" : "Course",
+    "group" : "E",
+    "teacher" : "Prof. Davis",
+    "teacherRole" : "LECTURER",
+    "room" : "C2"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Web Technologies",
+    "type" : "Seminar",
+    "group" : "E2",
     "teacher" : "Ms. Clark",
     "teacherRole" : "ASSISTANT",
     "room" : "C309"
@@ -1153,50 +1193,10 @@
     "day" : "Tuesday",
     "startTime" : 18,
     "endTime" : 20,
-    "subject" : "Machine Learning",
-    "type" : "Seminar",
-    "group" : "A5",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Artificial Intelligence",
-    "type" : "Seminar",
-    "group" : "B1",
-    "teacher" : "Ms. Thompson",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Artificial Intelligence",
-    "type" : "Course",
-    "group" : "E",
-    "teacher" : "Prof. Davis",
-    "teacherRole" : "LECTURER",
-    "room" : "C2"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Web Technologies",
-    "type" : "Seminar",
-    "group" : "E2",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 18,
-    "endTime" : 20,
     "subject" : "Computer Networks",
     "type" : "Seminar",
     "group" : "E3",
-    "teacher" : "Mr. Brown",
+    "teacher" : "Ms. Miller",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -1216,7 +1216,7 @@
     "subject" : "Database Systems",
     "type" : "Seminar",
     "group" : "A1",
-    "teacher" : "Ms. Thompson",
+    "teacher" : "Mr. Garcia",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -1246,7 +1246,7 @@
     "subject" : "Machine Learning",
     "type" : "Seminar",
     "group" : "B3",
-    "teacher" : "Mr. Brown",
+    "teacher" : "Ms. Miller",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
   }, {
@@ -1256,7 +1256,7 @@
     "subject" : "Data Structures and Algorithms",
     "type" : "Seminar",
     "group" : "A1",
-    "teacher" : "Ms. Thompson",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "C309"
   }, {
@@ -1286,7 +1286,7 @@
     "subject" : "Machine Learning",
     "type" : "Seminar",
     "group" : "B2",
-    "teacher" : "Ms. Miller",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
   }, {
@@ -1306,111 +1306,111 @@
     "subject" : "Database Systems",
     "type" : "Seminar",
     "group" : "A3",
+    "teacher" : "Mr. Garcia",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C210"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Data Structures and Algorithms",
+    "type" : "Seminar",
+    "group" : "A4",
+    "teacher" : "Mr. Garcia",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C309"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Artificial Intelligence",
+    "type" : "Seminar",
+    "group" : "B4",
+    "teacher" : "Ms. Miller",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C308"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Software Engineering",
+    "type" : "Course",
+    "group" : "E",
+    "teacher" : "Prof. Anderson",
+    "teacherRole" : "LECTURER",
+    "room" : "C2"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Machine Learning",
+    "type" : "Seminar",
+    "group" : "E1",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C410"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Web Technologies",
+    "type" : "Course",
+    "group" : "A",
+    "teacher" : "Prof. Taylor",
+    "teacherRole" : "LECTURER",
+    "room" : "C2"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Data Structures and Algorithms",
+    "type" : "Seminar",
+    "group" : "A3",
+    "teacher" : "Ms. Thompson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C309"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Database Systems",
+    "type" : "Seminar",
+    "group" : "A4",
+    "teacher" : "Ms. Thompson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C210"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Machine Learning",
+    "type" : "Seminar",
+    "group" : "B4",
+    "teacher" : "Ms. Miller",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C410"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Artificial Intelligence",
+    "type" : "Seminar",
+    "group" : "E1",
+    "teacher" : "Ms. Thompson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "C308"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Database Systems",
+    "type" : "Seminar",
+    "group" : "A5",
     "teacher" : "Ms. Martinez",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
     "day" : "Wednesday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Data Structures and Algorithms",
-    "type" : "Seminar",
-    "group" : "A4",
-    "teacher" : "Mr. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Artificial Intelligence",
-    "type" : "Seminar",
-    "group" : "B4",
-    "teacher" : "Ms. Miller",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Software Engineering",
-    "type" : "Course",
-    "group" : "E",
-    "teacher" : "Prof. Anderson",
-    "teacherRole" : "LECTURER",
-    "room" : "C2"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Machine Learning",
-    "type" : "Seminar",
-    "group" : "E1",
-    "teacher" : "Ms. Miller",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Web Technologies",
-    "type" : "Course",
-    "group" : "A",
-    "teacher" : "Prof. Taylor",
-    "teacherRole" : "LECTURER",
-    "room" : "C2"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Data Structures and Algorithms",
-    "type" : "Seminar",
-    "group" : "A3",
-    "teacher" : "Mr. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C309"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Database Systems",
-    "type" : "Seminar",
-    "group" : "A4",
-    "teacher" : "Mr. Garcia",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Machine Learning",
-    "type" : "Seminar",
-    "group" : "B4",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C410"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Artificial Intelligence",
-    "type" : "Seminar",
-    "group" : "E1",
-    "teacher" : "Ms. Miller",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C308"
-  }, {
-    "day" : "Wednesday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Database Systems",
-    "type" : "Seminar",
-    "group" : "A5",
-    "teacher" : "Ms. Thompson",
-    "teacherRole" : "ASSISTANT",
-    "room" : "C210"
-  }, {
-    "day" : "Wednesday",
     "startTime" : 16,
     "endTime" : 18,
     "subject" : "Web Technologies",
@@ -1426,7 +1426,7 @@
     "subject" : "Data Structures and Algorithms",
     "type" : "Seminar",
     "group" : "B1",
-    "teacher" : "Mr. Garcia",
+    "teacher" : "Ms. Thompson",
     "teacherRole" : "ASSISTANT",
     "room" : "C309"
   }, {
@@ -1436,7 +1436,7 @@
     "subject" : "Artificial Intelligence",
     "type" : "Seminar",
     "group" : "E2",
-    "teacher" : "Mr. Wilson",
+    "teacher" : "Ms. Miller",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   }, {
@@ -1446,7 +1446,7 @@
     "subject" : "Machine Learning",
     "type" : "Seminar",
     "group" : "E3",
-    "teacher" : "Ms. Miller",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "C410"
   }, {
@@ -1466,7 +1466,7 @@
     "subject" : "Database Systems",
     "type" : "Seminar",
     "group" : "B1",
-    "teacher" : "Mr. Garcia",
+    "teacher" : "Ms. Martinez",
     "teacherRole" : "ASSISTANT",
     "room" : "C210"
   }, {
@@ -1496,7 +1496,7 @@
     "subject" : "Artificial Intelligence",
     "type" : "Seminar",
     "group" : "E3",
-    "teacher" : "Ms. Miller",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "C308"
   } ]

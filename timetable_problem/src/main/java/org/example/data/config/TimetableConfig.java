@@ -4,7 +4,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
+import org.example.data.entities.Room;
+import org.example.data.entities.Teacher;
+
 public class TimetableConfig {
+    
     @JsonProperty("teachers")
     private List<TeacherConfig> teachers;
 
@@ -29,4 +33,5 @@ public class TimetableConfig {
     public RoomsConfig getRooms() {
         return rooms;
     }
+    
 }
