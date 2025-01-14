@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>NL Test Page</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            margin: 10px 0;
+            padding: 10px;
+            font-family: monospace;
+        }
+        .output {
+            white-space: pre-wrap;
+            font-family: monospace;
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .error {
+          color: #721c24;
+          background-color: #f8d7da;
+          border: 1px solid #f5c6cb;
+          padding: 15px;
+          border-radius: 4px;
+          margin: 10px 0;
+          white-space: pre-wrap;
+          font-family: monospace;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Timetable JSON Input Generator</h1>
+        <p>Enter your requirements in natural language. For example:</p>
+        <ul>
+            <li>"Create a timetable with 3 teachers: John, Mary, and Peter"</li>
+            <li>"I need a schedule for Computer Science department with 5 classrooms"</li>
+        </ul>
+        
+        <form action="/nlptest" method="post">
+            <textarea 
+                name="userInput" 
+                placeholder="Enter your timetable requirements in detail..."
+                rows="5"
+            ></textarea>
+            <button type="submit">Generate Timetable</button>
+        </form>
+        
+        <div th:if="${generatedTimetable}">
+          <h2>Generated Timetable</h2>
+          <div th:class="${#strings.startsWith(generatedTimetable, 'Error:') ? 'error' : 'output'}"
+               th:text="${generatedTimetable}">
+          </div>
+      </div>
+    </div>
+</body>
+</html>
