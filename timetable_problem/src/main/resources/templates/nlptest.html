@@ -1,20 +1,75 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>NL Test Page</title>
+    <title>Timetable Generator</title>
     <style>
-        .container {
-            max-width: 800px;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+        }
+
+        .page-container {
+            max-width: 1600px;
             margin: 20px auto;
             padding: 20px;
+            display: flex;
+            gap: 40px;
         }
+
+        .form-section {
+            flex: 1;
+            min-width: 0;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
         textarea {
             width: 100%;
             min-height: 100px;
             margin: 10px 0;
             padding: 10px;
             font-family: monospace;
+            border: 1px solid #ddd;
+            border-radius: 4px;
         }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
         .output {
             white-space: pre-wrap;
             font-family: monospace;
@@ -23,53 +78,660 @@
             border-radius: 4px;
             border: 1px solid #ddd;
         }
-        button {
-            padding: 10px 20px;
-            background: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #45a049;
-        }
+
         .error {
-          color: #721c24;
-          background-color: #f8d7da;
-          border: 1px solid #f5c6cb;
-          padding: 15px;
-          border-radius: 4px;
-          margin: 10px 0;
-          white-space: pre-wrap;
-          font-family: monospace;
-      }
+            color: #721c24;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 10px 0;
+            white-space: pre-wrap;
+            font-family: monospace;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 1px solid #ddd;
+        }
+
+        .container > div {
+            margin-bottom: 15px;
+        }
+
+        .subjectErrorMsg, .roleErrorMsg {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Timetable JSON Input Generator</h1>
+<div class="page-container">
+    <!-- Left side - Manual Input Form -->
+    <section class="form-section">
+        <h1>Manual Timetable Configuration</h1>
+        <form th:action="@{/generate}" method="post">
+            <div>
+                <label>Upload JSON file:</label>
+                <input type="file" id="jsonFile" accept=".json" onchange="handleJsonFile(event)" />
+            </div>
+            <hr/>
+            <!-- Year Section -->
+            <div>
+                <label for="yearCount">Number of Years (1-4):</label>
+                <input type="number" id="yearCount" min="1" max="4" />
+                <button type="button" onclick="generateYearFields()">Generate Year Fields</button>
+                <button type="button" onclick="addField('year')">Add Year</button>
+                <button type="button" onclick="removeField('year')">Remove Year</button>
+            </div>
+            <div id="yearsContainer"></div>
+            <hr/>
+            <!-- Teachers Section -->
+            <div>
+                <label for="teacherCount">Number of Teachers:</label>
+                <input type="number" id="teacherCount" min="0" />
+                <button type="button" onclick="generateTeacherFields()">Generate Teacher Fields</button>
+                <button type="button" onclick="addField('teacher')">Add Field</button>
+                <button type="button" onclick="removeField('teacher')">Remove Field</button>
+            </div>
+            <div id="teachersContainer"></div>
+            <hr/>
+            <!-- Course Rooms Section -->
+            <div>
+                <label for="courseRoomsCount">Number of Course Rooms:</label>
+                <input type="number" id="courseRoomsCount" min="0" />
+                <button type="button" onclick="generateCourseRoomsFields()">Generate Course Rooms Fields</button>
+                <button type="button" onclick="addField('courseRoom')">Add Field</button>
+                <button type="button" onclick="removeField('courseRoom')">Remove Field</button>
+            </div>
+            <div id="courseRoomsContainer"></div>
+            <hr/>
+            <!-- Seminar Rooms Section -->
+            <div>
+                <label for="seminarRoomsCount">Number of Seminar Rooms:</label>
+                <input type="number" id="seminarRoomsCount" min="0" />
+                <button type="button" onclick="generateSeminarRoomsFields()">Generate Seminar Rooms Fields</button>
+                <button type="button" onclick="addField('seminarRoom')">Add Field</button>
+                <button type="button" onclick="removeField('seminarRoom')">Remove Field</button>
+            </div>
+            <div id="seminarRoomsContainer"></div>
+            <hr/>
+            <button type="button" onclick="buildJson()">Build JSON</button>
+            <button type="button" onclick="saveJson()">Save JSON</button>
+            <textarea id="resultJson" rows="10" readonly></textarea>
+            <button type="submit">Generate Timetable</button>
+        </form>
+    </section>
+
+    <!-- Right side - NLP Input Form -->
+    <section class="form-section">
+        <h1>Natural Language Input</h1>
         <p>Enter your requirements in natural language. For example:</p>
         <ul>
             <li>"Create a timetable with 3 teachers: John, Mary, and Peter"</li>
             <li>"I need a schedule for Computer Science department with 5 classrooms"</li>
         </ul>
-        
+
         <form action="/nlptest" method="post">
-            <textarea 
-                name="userInput" 
-                placeholder="Enter your timetable requirements in detail..."
-                rows="5"
-            ></textarea>
+                <textarea
+                        name="userInput"
+                        placeholder="Enter your timetable requirements in detail..."
+                        rows="5"
+                ></textarea>
             <button type="submit">Generate Timetable</button>
         </form>
-        
+
         <div th:if="${generatedTimetable}">
-          <h2>Generated Timetable</h2>
-          <div th:class="${#strings.startsWith(generatedTimetable, 'Error:') ? 'error' : 'output'}"
-               th:text="${generatedTimetable}">
-          </div>
-      </div>
-    </div>
+            <h2>Generated Timetable</h2>
+            <div th:class="${#strings.startsWith(generatedTimetable, 'Error:') ? 'error' : 'output'}"
+                 th:text="${generatedTimetable}">
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Hidden input for raw JSON data -->
+<input
+        type="hidden"
+        id="rawJsonData"
+        th:value="${rawJsonData}"
+        th:if="${rawJsonData != null}"
+/>
+
+<!-- Script section - functions to be defined -->
+<script>
+    function validateSubjectField(input) {
+        // Gather all year-based subject names instead of old subjectName fields
+        const allYearSubjects = Array.from(document.getElementsByClassName('yearSubjectName'))
+            .map(el => el.value.trim());
+        const subjectName = input.value.trim();
+        const errorSpan = input.parentNode.querySelector('.subjectErrorMsg');
+
+        // Split subjects by comma and validate each
+        const subjects = subjectName.split(',').map(s => s.trim());
+        const invalidSubjects = subjects.filter(subj =>
+            subj !== '' && !allYearSubjects.includes(subj)
+        );
+
+        if (invalidSubjects.length > 0) {
+            errorSpan.textContent = 'These Subjects do not exist: ' + invalidSubjects.join(', ');
+        } else {
+            errorSpan.textContent = '';
+        }
+    }
+
+    function buildJson() {
+        const errors = document.getElementsByClassName('subjectErrorMsg');
+        for (let i = 0; i < errors.length; i++) {
+            if (errors[i].textContent.trim() !== '') {
+                alert(errors[i].textContent);
+                return; // Stop generating JSON
+            }
+        }
+        const roleErrors = document.getElementsByClassName('roleErrorMsg');
+        for (let i = 0; i < roleErrors.length; i++) {
+            if (roleErrors[i].textContent.trim() !== '') {
+                alert(roleErrors[i].textContent);
+                return; // Stop generating JSON
+            }
+        }
+
+        const courseRooms = Array.from(document.getElementsByClassName('courseRoomName'))
+            .map(el => el.value.trim())
+            .filter(value => value !== '');
+
+        const seminarRooms = Array.from(document.getElementsByClassName('seminarRoomName'))
+            .map(el => el.value.trim())
+            .filter(value => value !== '');
+
+        // Collect teacher-subject relationships from all year-based subjects
+        const yearCount = parseInt(document.getElementById('yearCount').value) || 0;
+        const yearsObj = {};
+        let allSubjectsMap = {};
+        for (let y = 1; y <= yearCount; y++) {
+            const yearSubjectInputs = document.querySelectorAll(`.yearSubjectName[data-year="${y}"]`);
+            const subjects = Array.from(yearSubjectInputs).map(el => ({
+                name: el.value,
+                courseTeacher: '',
+                seminarTeacher: []
+            }));
+            subjects.forEach(s => { allSubjectsMap[s.name] = s; });
+
+            const seriesVal = document.querySelector(`.yearSeries[data-year="${y}"]`).value || '';
+            const seriesArr = seriesVal.split(',').map(s => s.trim()).filter(x => x !== '');
+            const groupsVal = document.querySelector(`.yearGroups[data-year="${y}"]`).value || '';
+            const groupsObj = {};
+            groupsVal.split(',').forEach(pair => {
+                const [k, v] = pair.split('=').map(s => s.trim());
+                if (k && v) groupsObj[k] = parseInt(v) || 0;
+            });
+            yearsObj[y] = {
+                subjects,
+                series: seriesArr,
+                groups: groupsObj
+            };
+        }
+
+        // Assign teachers to subjects in allSubjectsMap
+        const teacherMaxHours = document.getElementsByClassName('teacherMaxHours');
+        const teacherUnavailableTimes = document.getElementsByClassName('teacherUnavailableTimes');
+        const teachers = Array.from(document.getElementsByClassName('teacherName'))
+            .map((el, i) => {
+                const roleValue = document.getElementsByClassName('teacherRole')[i].value.trim().toUpperCase();
+                const subjectsStr = document.getElementsByClassName('teacherSubject')[i].value;
+                const teacherSubjects = subjectsStr.split(',').map(s => s.trim()).filter(s => s !== '');
+
+                // Assign teacher to all their subjects
+                teacherSubjects.forEach(subj => {
+                    if (allSubjectsMap[subj]) {
+                        if (roleValue === 'LECTURER') {
+                            allSubjectsMap[subj].courseTeacher = el.value;
+                        } else {
+                            allSubjectsMap[subj].seminarTeacher.push(el.value);
+                        }
+                    }
+                });
+
+                return {
+                    name: el.value,
+                    role: roleValue,
+                    maxHoursPerWeek: parseInt(teacherMaxHours[i].value) || 0,
+                    unavailableTimes: teacherUnavailableTimes[i].value
+                      .split(',')
+                      .map(s => s.trim())
+                      .filter(x => x),
+                    subjects: teacherSubjects
+                };
+            });
+
+        // Save year-based updates into jsonData
+        const jsonData = {
+            teachers: teachers.map(t => ({
+                name: t.name,
+                role: t.role,
+                maxHoursPerWeek: t.maxHoursPerWeek,
+                unavailableTimes: t.unavailableTimes
+            })),
+            rooms: {
+                courseRooms: courseRooms,
+                seminarRooms: seminarRooms
+            },
+            years: yearsObj
+        };
+
+        console.log('Generated JSON:', jsonData); // Debug log
+        document.getElementById('resultJson').value = JSON.stringify(jsonData, null, 2);
+    }
+
+    function saveJson() {
+        const jsonContent = document.getElementById('resultJson').value;
+        if (!jsonContent) {
+            alert('Please build the JSON first!');
+            return;
+        }
+
+        // Create blob from JSON
+        const blob = new Blob([jsonContent], { type: 'application/json' });
+
+        // Create temporary link element
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'timetable_input.json';
+
+        // Append link, click it, and remove it
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    function handleJsonFile(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                console.log('File content:', e.target.result); // Debug log
+                const data = JSON.parse(e.target.result);
+                console.log('Parsed data:', data); // Debug log
+                parseAndPopulate(data);
+            } catch (err) {
+                console.error('Parse error:', err); // Debug log
+                alert('Invalid JSON file: ' + err.message);
+            }
+        };
+        reader.readAsText(file);
+    }
+
+    function parseAndPopulate(jsonData) {
+        // Rooms
+        document.getElementById('courseRoomsCount').value = jsonData.rooms.courseRooms.length;
+        generateCourseRoomsFields();
+        const courseRoomInputs = document.getElementsByClassName('courseRoomName');
+        jsonData.rooms.courseRooms.forEach((room, i) => {
+            if (courseRoomInputs[i]) courseRoomInputs[i].value = room;
+        });
+
+        document.getElementById('seminarRoomsCount').value = jsonData.rooms.seminarRooms.length;
+        generateSeminarRoomsFields();
+        const seminarRoomInputs = document.getElementsByClassName('seminarRoomName');
+        jsonData.rooms.seminarRooms.forEach((room, i) => {
+            if (seminarRoomInputs[i]) seminarRoomInputs[i].value = room;
+        });
+
+        // Remove old subjectCount references:
+        // document.getElementById('subjectCount').value = ...
+        // generateSubjectFields();
+        // Remove any code that populates top-level subject fields
+
+        // Teachers with subject assignments
+        document.getElementById('teacherCount').value = jsonData.teachers.length;
+        generateTeacherFields();
+        const teacherNames = document.getElementsByClassName('teacherName');
+        const teacherSubjects = document.getElementsByClassName('teacherSubject');
+        const teacherRoles = document.getElementsByClassName('teacherRole');
+        const teacherMaxHours = document.getElementsByClassName('teacherMaxHours');
+        const teacherUnavailableTimes = document.getElementsByClassName('teacherUnavailableTimes');
+
+        // Build teacherSubjectMap from each year's subjects
+        const teacherSubjectMap = {};
+        Object.keys(jsonData.years || {}).forEach(yKey => {
+            jsonData.years[yKey].subjects.forEach(subject => {
+                if (subject.courseTeacher) {
+                    teacherSubjectMap[subject.courseTeacher] =
+                        teacherSubjectMap[subject.courseTeacher]
+                            ? teacherSubjectMap[subject.courseTeacher] + ', ' + subject.name
+                            : subject.name;
+                }
+                if (subject.seminarTeacher) {
+                    subject.seminarTeacher.forEach(teacher => {
+                        teacherSubjectMap[teacher] =
+                            teacherSubjectMap[teacher]
+                                ? teacherSubjectMap[teacher] + ', ' + subject.name
+                                : subject.name;
+                    });
+                }
+            });
+        });
+
+        // Populate teacher fields with teacherSubjectMap
+        jsonData.teachers.forEach((t, i) => {
+            if (teacherNames[i]) teacherNames[i].value = t.name;
+            if (teacherSubjects[i]) {
+                teacherSubjects[i].value = teacherSubjectMap[t.name] || '';
+            }
+            if (teacherRoles[i]) teacherRoles[i].value = t.role;
+            if (teacherMaxHours[i]) teacherMaxHours[i].value = t.maxHoursPerWeek;
+            if (teacherUnavailableTimes[i]) teacherUnavailableTimes[i].value = (t.unavailableTimes || []).join(', ');
+        });
+
+        // Years
+        const yearKeys = Object.keys(jsonData.years || {});
+        document.getElementById('yearCount').value = yearKeys.length;
+        generateYearFields();
+        yearKeys.forEach(y => {
+            const yearData = jsonData.years[y];
+            // Fill year subject fields
+            const subjectCountInput = document.querySelector(`.yearSubjectCount[data-year="${y}"]`);
+            subjectCountInput.value = yearData.subjects.length;
+            generateYearSubjectFields(y);
+            const subjectInputs = document.querySelectorAll(`.yearSubjectName[data-year="${y}"]`);
+            yearData.subjects.forEach((subj, i) => {
+                if (subjectInputs[i]) subjectInputs[i].value = subj.name;
+            });
+            // Fill series
+            const seriesInput = document.querySelector(`.yearSeries[data-year="${y}"]`);
+            seriesInput.value = (yearData.series || []).join(', ');
+            // Fill groups
+            const groupsInput = document.querySelector(`.yearGroups[data-year="${y}"]`);
+            const groupsArr = [];
+            Object.keys(yearData.groups || {}).forEach(k => {
+                groupsArr.push(`${k}=${yearData.groups[k]}`);
+            });
+            groupsInput.value = groupsArr.join(', ');
+        });
+    }
+
+    function generateTeacherFields() {
+        const container = document.getElementById('teachersContainer');
+        container.innerHTML = '';
+        const count = parseInt(document.getElementById('teacherCount').value) || 0;
+        for (let i = 0; i < count; i++) {
+            container.innerHTML +=
+               '<div>Teacher ' + (i+1) +
+               ': <input type="text" class="teacherName" placeholder="Teacher name"/>' +
+               ' teaches <input type="text" class="teacherSubject" placeholder="Subject" onblur="validateSubjectField(this)"/>' +
+               ' <span class="subjectErrorMsg" style="color:red"></span></div>' +
+               ' role <input type="text" class="teacherRole" placeholder="Role" onblur="validateRoleField(this)"/>' +
+               ' <span class="roleErrorMsg" style="color:red"></span>' +
+               ' max hours <input type="number" class="teacherMaxHours" placeholder="Max hours per week"/>' +
+               ' unavailable times <input type="text" class="teacherUnavailableTimes" placeholder="Monday 9-11, Wednesday 14-16"/>' +
+               '</div>';
+        }
+    }
+
+    function generateCourseRoomsFields() {
+        const container = document.getElementById('courseRoomsContainer');
+        container.innerHTML = '';
+        const count = parseInt(document.getElementById('courseRoomsCount').value) || 0;
+        for (let i = 0; i < count; i++) {
+            container.innerHTML +=
+              '<div>Course Room ' + (i+1) +
+              ': <input type="text" class="courseRoomName" placeholder="Course room"/>' +
+              '</div>';
+        }
+    }
+
+    function generateSeminarRoomsFields() {
+        const container = document.getElementById('seminarRoomsContainer');
+        container.innerHTML = '';
+        const count = parseInt(document.getElementById('seminarRoomsCount').value) || 0;
+        for (let i = 0; i < count; i++) {
+            container.innerHTML +=
+              '<div>Seminar Room ' + (i+1) +
+              ': <input type="text" class="seminarRoomName" placeholder="Seminar room"/>' +
+              '</div>';
+        }
+    }
+
+    function addSubject(year) {
+        const subjectCountInput = document.querySelector(`.yearSubjectCount[data-year="${year}"]`);
+        const currentCount = parseInt(subjectCountInput.value) || 0;
+        const newIndex = currentCount + 1;
+        subjectCountInput.value = newIndex;
+        appendYearSubjectField(year, newIndex);
+    }
+
+    function appendYearSubjectField(year, index) {
+        const container = document.getElementById(`year${year}SubjectsContainer`);
+        container.insertAdjacentHTML('beforeend', `
+            <div>Year ${year} Subject ${index}:
+                <input type="text" class="yearSubjectName" data-year="${year}" placeholder="Subject name"/>
+            </div>
+        `);
+    }
+
+    function generateYearFields() {
+        const container = document.getElementById('yearsContainer');
+        container.innerHTML = '';
+        const count = parseInt(document.getElementById('yearCount').value) || 0;
+        for (let y = 1; y <= count; y++) {
+            container.innerHTML += `
+                <div>
+                    <h3>Year ${y}</h3>
+                    <label>Number of Subjects for Year ${y}:</label>
+                    <input type="number" class="yearSubjectCount" data-year="${y}" min="0" />
+                    <button type="button" onclick="generateYearSubjectFields(${y})">Generate Year ${y} Subject Fields</button>
+                    <button type="button" onclick="addSubject(${y})">Add Subject</button>
+                    <button type="button" onclick="removeSubject(${y})">Remove Subject</button>
+                    <div id="year${y}SubjectsContainer"></div>
+                    <label>Series (comma-separated):</label>
+                    <input type="text" class="yearSeries" data-year="${y}" />
+                    <label>Groups (format: A=2, B=3, ...):</label>
+                    <input type="text" class="yearGroups" data-year="${y}" />
+                    <hr/>
+                </div>`;
+        }
+    }
+
+    function generateYearSubjectFields(year) {
+        const subjectCountInput = document.querySelector(`.yearSubjectCount[data-year="${year}"]`);
+        const container = document.getElementById(`year${year}SubjectsContainer`);
+        container.innerHTML = '';
+        const count = parseInt(subjectCountInput.value) || 0;
+        for (let i = 0; i < count; i++) {
+            container.innerHTML += `
+                <div>Year ${year} Subject ${i+1}:
+                    <input type="text" class="yearSubjectName" data-year="${year}" placeholder="Subject name"/>
+                </div>`;
+        }
+    }
+
+    function validateRoleField(input) {
+        const allowedRoles = ['LECTURER', 'ASSISTANT'];
+        const roleValue = input.value.trim().toUpperCase();
+        const errorSpan = input.parentNode.querySelector('.roleErrorMsg');
+        if (roleValue !== '' && !allowedRoles.includes(roleValue)) {
+            errorSpan.textContent = 'Invalid role. Must be LECTURER or ASSISTANT.';
+        } else {
+            errorSpan.textContent = '';
+        }
+    }
+
+    function appendYearField(y) {
+        const container = document.getElementById('yearsContainer');
+        container.insertAdjacentHTML('beforeend', `
+            <div>
+                <h3>Year ${y}</h3>
+                <label>Number of Subjects for Year ${y}:</label>
+                <input type="number" class="yearSubjectCount" data-year="${y}" min="0" />
+                <button type="button" onclick="generateYearSubjectFields(${y})">Generate Year ${y} Subject Fields</button>
+                <button type="button" onclick="addSubject(${y})">Add Subject</button>
+                <button type="button" onclick="removeSubject(${y})">Remove Subject</button>
+                <div id="year${y}SubjectsContainer"></div>
+                <label>Series (comma-separated):</label>
+                <input type="text" class="yearSeries" data-year="${y}" />
+                <label>Groups (format: A=2, B=3, ...):</label>
+                <input type="text" class="yearGroups" data-year="${y}" />
+                <hr/>
+            </div>
+        `);
+    }
+
+    function addField(type) {
+        let container, currentFields, newIndex;
+
+        switch(type) {
+            case 'year':
+                const yearCountInput = document.getElementById('yearCount');
+                const count = parseInt(yearCountInput.value) || 0;
+                if (count < 4) {
+                    const newYear = count + 1;
+                    yearCountInput.value = newYear;
+                    appendYearField(newYear);
+                }
+                break;
+            case 'subject':
+                container = document.getElementById('subjectsContainer');
+                currentFields = container.getElementsByClassName('subjectName');
+                newIndex = currentFields.length + 1;
+                const newSubjectDiv = document.createElement('div');
+                newSubjectDiv.innerHTML = 'Subject ' + newIndex +
+                    ': <input type="text" class="subjectName" placeholder="Subject name"/>';
+                container.appendChild(newSubjectDiv);
+                document.getElementById('subjectCount').value = newIndex;
+                break;
+
+            case 'teacher':
+                container = document.getElementById('teachersContainer');
+                currentFields = container.getElementsByClassName('teacherName');
+                newIndex = currentFields.length + 1;
+                const newTeacherDiv = document.createElement('div');
+                newTeacherDiv.innerHTML = 'Teacher ' + newIndex +
+                    ': <input type="text" class="teacherName" placeholder="Teacher name"/>' +
+                    ' teaches <input type="text" class="teacherSubject" placeholder="Subject" onblur="validateSubjectField(this)"/>' +
+                    ' <span class="subjectErrorMsg" style="color:red"></span>' +
+                    ' role <input type="text" class="teacherRole" placeholder="Role" onblur="validateRoleField(this)"/>' +
+                    ' <span class="roleErrorMsg" style="color:red"></span>' +
+                    ' max hours <input type="number" class="teacherMaxHours" placeholder="Max hours per week"/>' +
+                    ' unavailable times <input type="text" class="teacherUnavailableTimes" placeholder="Monday 9-11, Wednesday 14-16"/>';
+                container.appendChild(newTeacherDiv);
+                document.getElementById('teacherCount').value = newIndex;
+                break;
+
+            case 'courseRoom':
+                container = document.getElementById('courseRoomsContainer');
+                currentFields = container.getElementsByClassName('courseRoomName');
+                newIndex = currentFields.length + 1;
+                const newCourseRoomDiv = document.createElement('div');
+                newCourseRoomDiv.innerHTML = 'Course Room ' + newIndex +
+                    ': <input type="text" class="courseRoomName" placeholder="Course room"/>';
+                container.appendChild(newCourseRoomDiv);
+                document.getElementById('courseRoomsCount').value = newIndex;
+                break;
+
+            case 'seminarRoom':
+                container = document.getElementById('seminarRoomsContainer');
+                currentFields = container.getElementsByClassName('seminarRoomName');
+                newIndex = currentFields.length + 1;
+                const newSeminarRoomDiv = document.createElement('div');
+                newSeminarRoomDiv.innerHTML = 'Seminar Room ' + newIndex +
+                    ': <input type="text" class="seminarRoomName" placeholder="Seminar room"/>';
+                container.appendChild(newSeminarRoomDiv);
+                document.getElementById('seminarRoomsCount').value = newIndex;
+                break;
+        }
+    }
+
+    function removeField(type) {
+        let container, currentFields, countInput;
+        switch(type) {
+            case 'year':
+                const yearCountInput = document.getElementById('yearCount');
+                let yearCount = parseInt(yearCountInput.value) || 0;
+                if(yearCount > 0) {
+                    const yearContainer = document.getElementById('yearsContainer');
+                    const lastYear = yearContainer.lastElementChild;
+                    if(lastYear) {
+                        yearContainer.removeChild(lastYear);
+                        yearCountInput.value = yearCount - 1;
+                    }
+                }
+                break;
+            case 'teacher':
+                container = document.getElementById('teachersContainer');
+                currentFields = container.lastElementChild;
+                if(currentFields) {
+                    container.removeChild(currentFields);
+                    countInput = document.getElementById('teacherCount');
+                    countInput.value = (parseInt(countInput.value) || 0) - 1;
+                }
+                break;
+            case 'courseRoom':
+                container = document.getElementById('courseRoomsContainer');
+                currentFields = container.lastElementChild;
+                if(currentFields) {
+                    container.removeChild(currentFields);
+                    countInput = document.getElementById('courseRoomsCount');
+                    countInput.value = (parseInt(countInput.value) || 0) - 1;
+                }
+                break;
+            case 'seminarRoom':
+                container = document.getElementById('seminarRoomsContainer');
+                currentFields = container.lastElementChild;
+                if(currentFields) {
+                    container.removeChild(currentFields);
+                    countInput = document.getElementById('seminarRoomsCount');
+                    countInput.value = (parseInt(countInput.value) || 0) - 1;
+                }
+                break;
+        }
+    }
+
+    function removeSubject(year) {
+        const container = document.getElementById(`year${year}SubjectsContainer`);
+        const lastSubject = container.lastElementChild;
+        if(lastSubject) {
+            container.removeChild(lastSubject);
+            const subjectCountInput = document.querySelector(`.yearSubjectCount[data-year="${year}"]`);
+            const currentCount = parseInt(subjectCountInput.value) || 0;
+            if(currentCount > 0) {
+                subjectCountInput.value = currentCount - 1;
+            }
+        }
+    }
+
+    function autoPopulateFromNLP() {
+        const rawJsonElement = document.getElementById('rawJsonData');
+        if (rawJsonElement && rawJsonElement.value) {
+            try {
+                // Parse the JSON data
+                const jsonData = JSON.parse(rawJsonElement.value);
+
+                // Populate the form using the existing parseAndPopulate function
+                parseAndPopulate(jsonData);
+
+                // Trigger the build JSON button click
+                setTimeout(() => {
+                    const buildJsonButton = document.querySelector('button[onclick="buildJson()"]');
+                    if (buildJsonButton) {
+                        buildJsonButton.click();
+                    }
+                }, 500); // Small delay to ensure form is populated first
+
+                // Scroll to the JSON result
+                const resultJson = document.getElementById('resultJson');
+                if (resultJson) {
+                    resultJson.scrollIntoView({ behavior: 'smooth' });
+                }
+            } catch (error) {
+                console.error('Error auto-populating form:', error);
+            }
+        }
+    }
+
+    window.addEventListener('load', autoPopulateFromNLP);
+</script>
 </body>
 </html>

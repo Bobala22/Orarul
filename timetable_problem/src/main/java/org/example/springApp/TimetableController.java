@@ -206,54 +206,58 @@ public class TimetableController {
     private String callOpenAiForTimetable(String userInput) throws IOException {
         // Store schema as a regular string to avoid escaping issues
         String schema = """
-            {
-                "type": "object",
-                "properties": {
-                    "teachers": {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "name": {"type": "string"},
-                                "role": {"type": "string: LECTURER or ASSISTANT"},
-                                "maxHoursPerWeek": {"type": "number"}
-                            }
-                        }
-                    },
-                    "rooms": {
+        {
+            "type": "object",
+            "properties": {
+                "teachers": {
+                    "type": "array",
+                    "items": {
                         "type": "object",
                         "properties": {
-                            "courseRooms": {"type": "array", "items": {"type": "string"}},
-                            "seminarRooms": {"type": "array", "items": {"type": "string"}}
+                            "name": {"type": "string"},
+                            "role": {"type": "string: LECTURER or ASSISTANT"},
+                            "maxHoursPerWeek": {"type": "number"},
+                            "unavailableTimes": {
+                                "type": "array",
+                                "items": {"type": "string", example: ["Monday 9-11", "Wednesday 14-16"]}
+                            }
                         }
-                    },
-                    "years": {
-                        "type": "number",
-                        "additionalProperties": {
-                            "type": "object",
-                            "properties": {
-                                "subjects": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "object",
-                                        "properties": {
-                                            "name": {"type": "string"},
-                                            "courseTeacher": {"type": "string"},
-                                            "seminarTeacher": {"type": "array", "items": {"type": "string"}}
-                                        }
-                                    }
-                                },
-                                "series": {"type": "array", "items": {"type": "string: A, B, C, etc."}},
-                                "groups": {
+                    }
+                },
+                "rooms": {
+                    "type": "object",
+                    "properties": {
+                        "courseRooms": {"type": "array", "items": {"type": "string"}},
+                        "seminarRooms": {"type": "array", "items": {"type": "string"}}
+                    }
+                },
+                "years": {
+                    "type": "number",
+                    "additionalProperties": {
+                        "type": "object",
+                        "properties": {
+                            "subjects": {
+                                "type": "array",
+                                "items": {
                                     "type": "object",
-                                    "additionalProperties": {"type": "number"}
+                                    "properties": {
+                                        "name": {"type": "string"},
+                                        "courseTeacher": {"type": "string"},
+                                        "seminarTeacher": {"type": "array", "items": {"type": "string"}}
+                                    }
                                 }
+                            },
+                            "series": {"type": "array", "items": {"type": "string: A, B, C, etc."}},
+                            "groups": {
+                                "type": "object",
+                                "additionalProperties": {"type": "number"}
                             }
                         }
                     }
                 }
             }
-            """;
+        }
+        """;
 
         // Create the messages array as a JsonNode to ensure proper JSON structure
         ObjectMapper mapper = new ObjectMapper();
@@ -324,9 +328,15 @@ public class TimetableController {
             ObjectMapper mapper = new ObjectMapper();
             JsonNode root = mapper.readTree(openAiResponse);
             String content = root.path("choices").path(0).path("message").path("content").asText();
-            model.addAttribute("generatedTimetable", 
-                mapper.writerWithDefaultPrettyPrinter()
-                    .writeValueAsString(mapper.readValue(content, Object.class)));
+
+            // Format the JSON for display
+            String prettyJson = mapper.writerWithDefaultPrettyPrinter()
+                    .writeValueAsString(mapper.readValue(content, Object.class));
+
+            // Add both raw and formatted JSON to the model
+            model.addAttribute("generatedTimetable", prettyJson);
+            model.addAttribute("rawJsonData", content); // This will be used by JavaScript to populate the form
+
         } catch (Exception e) {
             model.addAttribute("generatedTimetable", "Error: " + e.getMessage());
         }
