@@ -2,6 +2,9 @@ package org.example.data.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Teacher {
 
 
@@ -11,11 +14,15 @@ public class Teacher {
     private final TeacherRole role;
     @JsonProperty("maxHoursPerWeek")
     private final int maxHoursPerWeek;
+    @JsonProperty("unavailableTimes")
+    private final List<TimeSlot> unavailableTimes;
 
-    public Teacher(String name, TeacherRole role,int maxHoursPerWeek) {
+
+    public Teacher(String name, TeacherRole role, int maxHoursPerWeek, List<TimeSlot> unavailableTimeSlots) {
         this.name = name;
         this.role = role;
-        this.maxHoursPerWeek=maxHoursPerWeek;
+        this.maxHoursPerWeek = maxHoursPerWeek;
+        this.unavailableTimes = unavailableTimeSlots != null ? unavailableTimeSlots : new ArrayList<>();
     }
 
     public String getName() {
@@ -26,11 +33,20 @@ public class Teacher {
         return role;
     }
 
-    public boolean canTeachCourse() {
-        return role == TeacherRole.LECTURER;
-    }
-
     public int getMaxHoursPerWeek() {
         return maxHoursPerWeek;
+    }
+
+    public List<TimeSlot> getUnavailableTimeSlots() {
+        return unavailableTimes;
+    }
+
+    public boolean isAvailableAt(TimeSlot timeSlot) {
+        return unavailableTimes.stream()
+                .noneMatch(unavailable -> unavailable.overlaps(timeSlot));
+    }
+
+    public boolean canTeachCourse() {
+        return role == TeacherRole.LECTURER;
     }
 }

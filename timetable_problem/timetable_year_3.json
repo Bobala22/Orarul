@@ -16,7 +16,7 @@
     "subject" : "Artificial Intelligence",
     "type" : "Seminar",
     "group" : "A1",
-    "teacher" : "Ms. Jackson",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -36,7 +36,7 @@
     "subject" : "Artificial Intelligence",
     "type" : "Seminar",
     "group" : "A2",
-    "teacher" : "Ms. Jackson",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -56,7 +56,7 @@
     "subject" : "Artificial Intelligence",
     "type" : "Seminar",
     "group" : "A3",
-    "teacher" : "Ms. Jackson",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -126,8 +126,8 @@
     "subject" : "Advanced Mathematics",
     "type" : "Seminar",
     "group" : "B2",
-    "teacher" : "Ms. Jackson",
-    "teacherRole" : "ASSISTANT",
+    "teacher" : "Prof. Williams",
+    "teacherRole" : "LECTURER",
     "room" : "S101"
   }, {
     "day" : "Thursday",
@@ -146,7 +146,7 @@
     "subject" : "Advanced Mathematics",
     "type" : "Seminar",
     "group" : "B4",
-    "teacher" : "Ms. Davis",
+    "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -156,7 +156,7 @@
     "subject" : "Advanced Mathematics",
     "type" : "Seminar",
     "group" : "E1",
-    "teacher" : "Ms. Davis",
+    "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -166,7 +166,7 @@
     "subject" : "Advanced Mathematics",
     "type" : "Seminar",
     "group" : "E2",
-    "teacher" : "Ms. Jackson",
+    "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -216,7 +216,7 @@
     "subject" : "Artificial Intelligence",
     "type" : "Seminar",
     "group" : "E1",
-    "teacher" : "Ms. Jackson",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -226,7 +226,7 @@
     "subject" : "Artificial Intelligence",
     "type" : "Seminar",
     "group" : "E2",
-    "teacher" : "Ms. Jackson",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -246,8 +246,8 @@
     "subject" : "Advanced Mathematics",
     "type" : "Seminar",
     "group" : "A1",
-    "teacher" : "Prof. Williams",
-    "teacherRole" : "LECTURER",
+    "teacher" : "Ms. Davis",
+    "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
     "day" : "Wednesday",
@@ -256,7 +256,7 @@
     "subject" : "Advanced Mathematics",
     "type" : "Seminar",
     "group" : "A2",
-    "teacher" : "Ms. Jackson",
+    "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -276,7 +276,7 @@
     "subject" : "Advanced Mathematics",
     "type" : "Seminar",
     "group" : "A4",
-    "teacher" : "Ms. Davis",
+    "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -286,8 +286,8 @@
     "subject" : "Advanced Mathematics",
     "type" : "Seminar",
     "group" : "A5",
-    "teacher" : "Ms. Davis",
-    "teacherRole" : "ASSISTANT",
+    "teacher" : "Prof. Williams",
+    "teacherRole" : "LECTURER",
     "room" : "S101"
   }, {
     "day" : "Wednesday",

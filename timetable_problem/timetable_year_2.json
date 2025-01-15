@@ -5,32 +5,32 @@
     "endTime" : 10,
     "subject" : "Software Engineering",
     "type" : "Seminar",
-    "group" : "A1",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "S101"
-  }, {
-    "day" : "Friday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Software Engineering",
-    "type" : "Seminar",
-    "group" : "A2",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
-    "room" : "S101"
-  }, {
-    "day" : "Friday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Software Engineering",
-    "type" : "Seminar",
     "group" : "A3",
     "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
     "day" : "Friday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Software Engineering",
+    "type" : "Seminar",
+    "group" : "A1",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Friday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Software Engineering",
+    "type" : "Seminar",
+    "group" : "A2",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Friday",
     "startTime" : 14,
     "endTime" : 16,
     "subject" : "Software Engineering",
@@ -56,7 +56,7 @@
     "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "B1",
-    "teacher" : "Mr. Thomas",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -76,8 +76,8 @@
     "subject" : "Data Structures",
     "type" : "Seminar",
     "group" : "A1",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
+    "teacher" : "Prof. Taylor",
+    "teacherRole" : "LECTURER",
     "room" : "S101"
   }, {
     "day" : "Monday",
@@ -116,7 +116,7 @@
     "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "B3",
-    "teacher" : "Mr. Thomas",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "S102"
   }, {
@@ -136,8 +136,8 @@
     "subject" : "Data Structures",
     "type" : "Seminar",
     "group" : "A3",
-    "teacher" : "Prof. Taylor",
-    "teacherRole" : "LECTURER",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
     "day" : "Monday",
@@ -206,7 +206,7 @@
     "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "E2",
-    "teacher" : "Mr. Thomas",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "S102"
   }, {
@@ -216,8 +216,8 @@
     "subject" : "Data Structures",
     "type" : "Seminar",
     "group" : "B1",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
+    "teacher" : "Prof. Taylor",
+    "teacherRole" : "LECTURER",
     "room" : "S101"
   }, {
     "day" : "Monday",
@@ -236,7 +236,7 @@
     "subject" : "Software Engineering",
     "type" : "Seminar",
     "group" : "E3",
-    "teacher" : "Mr. Thomas",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "S102"
   }, {
@@ -246,7 +246,7 @@
     "subject" : "Mathematics II",
     "type" : "Seminar",
     "group" : "B2",
-    "teacher" : "Ms. Jackson",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -296,7 +296,7 @@
     "subject" : "Mathematics II",
     "type" : "Seminar",
     "group" : "E3",
-    "teacher" : "Mr. Wilson",
+    "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -306,8 +306,8 @@
     "subject" : "Data Structures",
     "type" : "Seminar",
     "group" : "B2",
-    "teacher" : "Prof. Taylor",
-    "teacherRole" : "LECTURER",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
     "day" : "Tuesday",
@@ -366,8 +366,8 @@
     "subject" : "Data Structures",
     "type" : "Seminar",
     "group" : "E1",
-    "teacher" : "Prof. Taylor",
-    "teacherRole" : "LECTURER",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
     "day" : "Tuesday",
@@ -376,8 +376,8 @@
     "subject" : "Data Structures",
     "type" : "Seminar",
     "group" : "E2",
-    "teacher" : "Prof. Taylor",
-    "teacherRole" : "LECTURER",
+    "teacher" : "Mr. Thomas",
+    "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
     "day" : "Tuesday",
@@ -386,8 +386,8 @@
     "subject" : "Data Structures",
     "type" : "Seminar",
     "group" : "E3",
-    "teacher" : "Mr. Thomas",
-    "teacherRole" : "ASSISTANT",
+    "teacher" : "Prof. Taylor",
+    "teacherRole" : "LECTURER",
     "room" : "S101"
   }, {
     "day" : "Wednesday",
@@ -396,7 +396,7 @@
     "subject" : "Mathematics II",
     "type" : "Seminar",
     "group" : "A1",
-    "teacher" : "Mr. Wilson",
+    "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -405,7 +405,7 @@
     "endTime" : 12,
     "subject" : "Mathematics II",
     "type" : "Seminar",
-    "group" : "A2",
+    "group" : "A3",
     "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
@@ -415,7 +415,7 @@
     "endTime" : 14,
     "subject" : "Mathematics II",
     "type" : "Seminar",
-    "group" : "A3",
+    "group" : "A2",
     "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
@@ -426,7 +426,7 @@
     "subject" : "Mathematics II",
     "type" : "Seminar",
     "group" : "A4",
-    "teacher" : "Ms. Jackson",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -436,7 +436,7 @@
     "subject" : "Mathematics II",
     "type" : "Seminar",
     "group" : "A5",
-    "teacher" : "Ms. Jackson",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -446,7 +446,7 @@
     "subject" : "Mathematics II",
     "type" : "Seminar",
     "group" : "B1",
-    "teacher" : "Mr. Wilson",
+    "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   } ]

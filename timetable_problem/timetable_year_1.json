@@ -6,7 +6,7 @@
     "subject" : "Mathematics I",
     "type" : "Seminar",
     "group" : "A1",
-    "teacher" : "Ms. Jackson",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -36,7 +36,7 @@
     "subject" : "Mathematics I",
     "type" : "Seminar",
     "group" : "A4",
-    "teacher" : "Mr. Wilson",
+    "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -46,7 +46,7 @@
     "subject" : "Mathematics I",
     "type" : "Seminar",
     "group" : "A5",
-    "teacher" : "Mr. Wilson",
+    "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -56,7 +56,7 @@
     "subject" : "Mathematics I",
     "type" : "Seminar",
     "group" : "B1",
-    "teacher" : "Ms. Jackson",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -103,10 +103,10 @@
     "day" : "Monday",
     "startTime" : 10,
     "endTime" : 12,
-    "subject" : "Physics Fundamentals",
+    "subject" : "Introduction to Programming",
     "type" : "Seminar",
-    "group" : "A2",
-    "teacher" : "Ms. Davis",
+    "group" : "A1",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -116,7 +116,7 @@
     "subject" : "Mathematics I",
     "type" : "Seminar",
     "group" : "B3",
-    "teacher" : "Mr. Wilson",
+    "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
     "room" : "S102"
   }, {
@@ -133,10 +133,10 @@
     "day" : "Monday",
     "startTime" : 12,
     "endTime" : 14,
-    "subject" : "Physics Fundamentals",
+    "subject" : "Introduction to Programming",
     "type" : "Seminar",
-    "group" : "A3",
-    "teacher" : "Ms. Davis",
+    "group" : "A4",
+    "teacher" : "Mr. Brown",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -155,7 +155,7 @@
     "endTime" : 16,
     "subject" : "Physics Fundamentals",
     "type" : "Seminar",
-    "group" : "A4",
+    "group" : "A2",
     "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
@@ -176,13 +176,133 @@
     "subject" : "Mathematics I",
     "type" : "Seminar",
     "group" : "E1",
-    "teacher" : "Ms. Jackson",
+    "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "S102"
   }, {
     "day" : "Monday",
     "startTime" : 16,
     "endTime" : 18,
+    "subject" : "Physics Fundamentals",
+    "type" : "Seminar",
+    "group" : "A3",
+    "teacher" : "Ms. Davis",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Monday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Introduction to Programming",
+    "type" : "Course",
+    "group" : "B",
+    "teacher" : "Prof. Smith",
+    "teacherRole" : "LECTURER",
+    "room" : "C101"
+  }, {
+    "day" : "Monday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Mathematics I",
+    "type" : "Seminar",
+    "group" : "E2",
+    "teacher" : "Mr. Wilson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S102"
+  }, {
+    "day" : "Monday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Physics Fundamentals",
+    "type" : "Seminar",
+    "group" : "A4",
+    "teacher" : "Ms. Davis",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Monday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Introduction to Programming",
+    "type" : "Course",
+    "group" : "E",
+    "teacher" : "Prof. Smith",
+    "teacherRole" : "LECTURER",
+    "room" : "C101"
+  }, {
+    "day" : "Monday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Mathematics I",
+    "type" : "Seminar",
+    "group" : "E3",
+    "teacher" : "Mr. Wilson",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S102"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Introduction to Programming",
+    "type" : "Seminar",
+    "group" : "B3",
+    "teacher" : "Ms. Davis",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Introduction to Programming",
+    "type" : "Seminar",
+    "group" : "B2",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Introduction to Programming",
+    "type" : "Seminar",
+    "group" : "B4",
+    "teacher" : "Ms. Davis",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Introduction to Programming",
+    "type" : "Seminar",
+    "group" : "E1",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 16,
+    "endTime" : 18,
+    "subject" : "Introduction to Programming",
+    "type" : "Seminar",
+    "group" : "E2",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Thursday",
+    "startTime" : 18,
+    "endTime" : 20,
+    "subject" : "Introduction to Programming",
+    "type" : "Seminar",
+    "group" : "E3",
+    "teacher" : "Mr. Brown",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 8,
+    "endTime" : 10,
     "subject" : "Physics Fundamentals",
     "type" : "Seminar",
     "group" : "A5",
@@ -190,126 +310,6 @@
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
-    "day" : "Monday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Introduction to Programming",
-    "type" : "Course",
-    "group" : "B",
-    "teacher" : "Prof. Smith",
-    "teacherRole" : "LECTURER",
-    "room" : "C101"
-  }, {
-    "day" : "Monday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Mathematics I",
-    "type" : "Seminar",
-    "group" : "E2",
-    "teacher" : "Ms. Jackson",
-    "teacherRole" : "ASSISTANT",
-    "room" : "S102"
-  }, {
-    "day" : "Monday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Physics Fundamentals",
-    "type" : "Seminar",
-    "group" : "B1",
-    "teacher" : "Ms. Davis",
-    "teacherRole" : "ASSISTANT",
-    "room" : "S101"
-  }, {
-    "day" : "Monday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Introduction to Programming",
-    "type" : "Course",
-    "group" : "E",
-    "teacher" : "Prof. Smith",
-    "teacherRole" : "LECTURER",
-    "room" : "C101"
-  }, {
-    "day" : "Monday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Mathematics I",
-    "type" : "Seminar",
-    "group" : "E3",
-    "teacher" : "Ms. Jackson",
-    "teacherRole" : "ASSISTANT",
-    "room" : "S102"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "B2",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "S101"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "B3",
-    "teacher" : "Ms. Davis",
-    "teacherRole" : "ASSISTANT",
-    "room" : "S101"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "B4",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "S101"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "E1",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "S101"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "E2",
-    "teacher" : "Ms. Davis",
-    "teacherRole" : "ASSISTANT",
-    "room" : "S101"
-  }, {
-    "day" : "Thursday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "E3",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "S101"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 8,
-    "endTime" : 10,
-    "subject" : "Physics Fundamentals",
-    "type" : "Seminar",
-    "group" : "B2",
-    "teacher" : "Ms. Davis",
-    "teacherRole" : "ASSISTANT",
-    "room" : "S101"
-  }, {
     "day" : "Tuesday",
     "startTime" : 8,
     "endTime" : 10,
@@ -325,27 +325,17 @@
     "endTime" : 12,
     "subject" : "Physics Fundamentals",
     "type" : "Seminar",
-    "group" : "B3",
+    "group" : "B1",
     "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
-  }, {
-    "day" : "Tuesday",
-    "startTime" : 10,
-    "endTime" : 12,
-    "subject" : "Mathematics I",
-    "type" : "Course",
-    "group" : "B",
-    "teacher" : "Prof. Johnson",
-    "teacherRole" : "LECTURER",
-    "room" : "C101"
   }, {
     "day" : "Tuesday",
     "startTime" : 12,
     "endTime" : 14,
     "subject" : "Physics Fundamentals",
     "type" : "Seminar",
-    "group" : "B4",
+    "group" : "B2",
     "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
@@ -355,7 +345,7 @@
     "endTime" : 14,
     "subject" : "Mathematics I",
     "type" : "Course",
-    "group" : "E",
+    "group" : "B",
     "teacher" : "Prof. Johnson",
     "teacherRole" : "LECTURER",
     "room" : "C101"
@@ -365,17 +355,27 @@
     "endTime" : 16,
     "subject" : "Physics Fundamentals",
     "type" : "Seminar",
-    "group" : "E1",
+    "group" : "B3",
     "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 14,
+    "endTime" : 16,
+    "subject" : "Mathematics I",
+    "type" : "Course",
+    "group" : "E",
+    "teacher" : "Prof. Johnson",
+    "teacherRole" : "LECTURER",
+    "room" : "C101"
   }, {
     "day" : "Tuesday",
     "startTime" : 16,
     "endTime" : 18,
     "subject" : "Physics Fundamentals",
     "type" : "Seminar",
-    "group" : "E2",
+    "group" : "B4",
     "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
@@ -385,7 +385,7 @@
     "endTime" : 20,
     "subject" : "Physics Fundamentals",
     "type" : "Seminar",
-    "group" : "E3",
+    "group" : "E1",
     "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
@@ -393,9 +393,9 @@
     "day" : "Wednesday",
     "startTime" : 8,
     "endTime" : 10,
-    "subject" : "Introduction to Programming",
+    "subject" : "Physics Fundamentals",
     "type" : "Seminar",
-    "group" : "A1",
+    "group" : "E2",
     "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
@@ -403,6 +403,16 @@
     "day" : "Wednesday",
     "startTime" : 10,
     "endTime" : 12,
+    "subject" : "Physics Fundamentals",
+    "type" : "Seminar",
+    "group" : "E3",
+    "teacher" : "Ms. Davis",
+    "teacherRole" : "ASSISTANT",
+    "room" : "S101"
+  }, {
+    "day" : "Wednesday",
+    "startTime" : 12,
+    "endTime" : 14,
     "subject" : "Introduction to Programming",
     "type" : "Seminar",
     "group" : "A2",
@@ -411,22 +421,12 @@
     "room" : "S101"
   }, {
     "day" : "Wednesday",
-    "startTime" : 12,
-    "endTime" : 14,
-    "subject" : "Introduction to Programming",
-    "type" : "Seminar",
-    "group" : "A3",
-    "teacher" : "Mr. Brown",
-    "teacherRole" : "ASSISTANT",
-    "room" : "S101"
-  }, {
-    "day" : "Wednesday",
     "startTime" : 14,
     "endTime" : 16,
     "subject" : "Introduction to Programming",
     "type" : "Seminar",
-    "group" : "A4",
-    "teacher" : "Mr. Brown",
+    "group" : "A3",
+    "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
