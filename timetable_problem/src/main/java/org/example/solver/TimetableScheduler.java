@@ -82,9 +82,24 @@ public class TimetableScheduler {
         return true;
     }
 
+    private void resetScheduler() {
+        schedule.clear();
+        roomSchedule.clear();
+        groupSchedule.clear();
+        teacherSchedule.clear();
+        // Reset teacher hours
+        for (Teacher teacher : teacherHours.keySet()) {
+            teacherHours.put(teacher, 0);
+        }
+    }
+
     public boolean generateTimetable(List<Subject> subjects) {
+        // Reset the scheduler state before generating new timetable
+        resetScheduler();
+
         startTime = System.currentTimeMillis();
         List<Session> sessionsToSchedule = new ArrayList<>();
+
         // Create all required sessions
         for (Subject subject : subjects) {
             // Create course sessions (one per series)
@@ -171,7 +186,6 @@ public class TimetableScheduler {
 
     private void scheduleSession(Session session) {
         schedule.add(session);
-
         // Update room schedule
         roomSchedule.computeIfAbsent(session.getRoom().getName(), k -> new HashSet<>())
                    .add(session.getTimeSlot());
@@ -222,6 +236,7 @@ public class TimetableScheduler {
 
         // Sort schedule entries
         scheduleEntries.sort(Comparator.comparing((ScheduleEntry a) -> a.day).thenComparingInt(a -> a.startTime));
+
 
         // Create export object
         TimetableExport export = new TimetableExport(scheduleEntries);
@@ -277,9 +292,11 @@ public class TimetableScheduler {
                 String outputPath = "timetable_year_" + year + ".json";
 
                 // Step 3: Generate timetable for the year
+
                 if (scheduler.generateTimetable(yearData.getSubjects())) {
                     System.out.println("Successfully generated timetable for Year " + year);
-                    scheduler.printSchedule();
+
+                    System.out.println(scheduler.getSchedule());
 
                     scheduler.exportToJson(outputPath);
                     System.out.println("Exported timetable to " + outputPath);

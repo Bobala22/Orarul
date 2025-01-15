@@ -61,4 +61,9 @@ public class Session {
     public void setTimeSlot(TimeSlot timeSlot) {
         this.timeSlot = timeSlot;
     }
+
+    @Override
+    public String toString() {
+        return subject.getName() + " (" + (isCourse ? "Course" : "Seminar") + ") - " + group;
+    }
 }

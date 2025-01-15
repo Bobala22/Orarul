@@ -63,7 +63,7 @@
         {
           "name": "Artificial Intelligence",
           "courseTeacher": "Prof. Johnson",
-          "seminarTeacher": ["Mr. Wilson"]
+          "seminarTeacher": ["Mr. Wilson","Ms. Jackson"]
         },
         {
           "name": "Advanced Mathematics",

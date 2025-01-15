@@ -62,7 +62,7 @@ public class TimetableConfigLoader {
                 subjects.add(new Subject(subjectConfig.getName(), courseTeacher, seminarTeachers));
             }
 
-            timetableDataPerYear.put(year, new TimetableData(subjects, courseRooms, seminarRooms, globalTeachersList)); // Pass globalTeachersList here
+            timetableDataPerYear.put(year, new TimetableData(subjects, courseRooms, seminarRooms, globalTeachersList));
         }
 
         return timetableDataPerYear;
