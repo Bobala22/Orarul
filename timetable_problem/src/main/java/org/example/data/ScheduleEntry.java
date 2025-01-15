@@ -25,6 +25,7 @@ public class ScheduleEntry {
     @JsonProperty("room")
     private final String room;
 
+
     public ScheduleEntry( Session session) {
         this.day = session.getTimeSlot().getDay();
         this.startTime = session.getTimeSlot().getStartTime();
@@ -36,4 +37,20 @@ public class ScheduleEntry {
         this.teacherRole = session.getTeacher().getRole();
         this.room = session.getRoom().getName();
     }
+
+    @Override
+    public String toString() {
+        return "ScheduleEntry{" +
+                "day='" + day + '\'' +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", subject='" + subject + '\'' +
+                ", type='" + type + '\'' +
+                ", group='" + group + '\'' +
+                ", teacher='" + teacher + '\'' +
+                ", teacherRole=" + teacherRole +
+                ", room='" + room + '\'' +
+                '}';
+    }
+
 }

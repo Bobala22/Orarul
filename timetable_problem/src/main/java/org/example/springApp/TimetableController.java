@@ -93,9 +93,28 @@ public class TimetableController {
                             .collect(Collectors.toList());
                     break;
                 case "group":
-                    filteredEntries = filteredEntries.stream()
-                            .filter(entry -> name.equals(entry.group))
-                            .collect(Collectors.toList());
+                    String yearPrefix = String.valueOf(year);
+                    if (name.length() == 2 && name.startsWith(yearPrefix)) {
+                        // Series filter (e.g., "1A")
+                        String series = name.substring(1); // Get "A" from "1A"
+                        filteredEntries = filteredEntries.stream()
+                                .filter(entry ->
+                                        // Include exact series match (for courses)
+                                        name.equals(entry.group) ||
+                                                // Include all groups of this series (e.g., 1A1, 1A2, etc.)
+                                                (entry.group != null && entry.group.startsWith(name)))
+                                .collect(Collectors.toList());
+                    } else {
+                        // Specific group filter (e.g., "1A1", "2B3", etc.)
+                        String series = name.substring(0, 2); // Get "1A" from "1A1" or "2B" from "2B3"
+                        filteredEntries = filteredEntries.stream()
+                                .filter(entry ->
+                                        // Include the specific group's sessions
+                                        name.equals(entry.group) ||
+                                                // Include the corresponding series courses
+                                                series.equals(entry.group))
+                                .collect(Collectors.toList());
+                    }
                     break;
                 case "teacher":
                     filteredEntries = filteredEntries.stream()
@@ -114,7 +133,7 @@ public class TimetableController {
         model.addAttribute("timetable", filteredEntries);
         model.addAttribute("daysOfWeek", Arrays.asList("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"));
 
-        return "timetable_view"; // A view for the timetable of a specific year
+        return "timetable_view";
     }
 
 

@@ -27,7 +27,7 @@ public class TimetableConfigLoader {
 
         // Create a map of global teachers
         Map<String, Teacher> globalTeacherMap = config.getTeachers().stream()
-                .collect(Collectors.toMap(TeacherConfig::getName, tc -> new Teacher(tc.getName(), tc.getRole(), tc.getMaxHours()))); // Use getMaxHoursPerWeek()
+                .collect(Collectors.toMap(TeacherConfig::getName, tc -> new Teacher(tc.getName(), tc.getRole(), tc.getMaxHours(),tc.getUnavailableTimeSlots()))); // Use getMaxHoursPerWeek()
 
         // Parse the shared courseRooms and seminarRooms
         List<Room> courseRooms = config.getRooms().getCourseRooms().stream()
@@ -62,7 +62,7 @@ public class TimetableConfigLoader {
                 subjects.add(new Subject(subjectConfig.getName(), courseTeacher, seminarTeachers));
             }
 
-            timetableDataPerYear.put(year, new TimetableData(subjects, courseRooms, seminarRooms, globalTeachersList)); // Pass globalTeachersList here
+            timetableDataPerYear.put(year, new TimetableData(subjects, courseRooms, seminarRooms, globalTeachersList));
         }
 
         return timetableDataPerYear;

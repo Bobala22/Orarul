@@ -29,6 +29,10 @@ public class TimetableScheduler {
     private long startTime;
     private static final long TIMEOUT = 10000; // 10 seconds
 
+    private static final double UNAVAILABLE_TIME_PENALTY = 0.8; // Penalty factor for scheduling during unavailable times
+    private double currentScore = 0.0;
+    private double bestScore = Double.NEGATIVE_INFINITY;
+
     public TimetableScheduler(List<Room> courseRooms, List<Room> seminarRooms, List<Teacher> teachers) {
         this.days = Arrays.asList("Monday", "Tuesday", "Wednesday", "Thursday", "Friday");
         this.timeSlots = new ArrayList<>();
@@ -82,9 +86,38 @@ public class TimetableScheduler {
         return true;
     }
 
+    private double calculateTimeSlotScore(Room room, String group, Teacher teacher, TimeSlot timeSlot) {
+        double score = 1.0; // Base score
+
+        // Apply penalty if teacher is scheduled during their unavailable times
+        if (teacher != null && !teacher.isAvailableAt(timeSlot)) {
+            score *= UNAVAILABLE_TIME_PENALTY;
+        }
+
+        return score;
+    }
+
+
+    private void resetScheduler() {
+        schedule.clear();
+        roomSchedule.clear();
+        groupSchedule.clear();
+        teacherSchedule.clear();
+        // Reset teacher hours
+        for (Teacher teacher : teacherHours.keySet()) {
+            teacherHours.put(teacher, 0);
+        }
+    }
+
     public boolean generateTimetable(List<Subject> subjects) {
+        resetScheduler();
+        startTime = System.currentTimeMillis();
+        currentScore = 0.0;
+        bestScore = Double.NEGATIVE_INFINITY;
+
         startTime = System.currentTimeMillis();
         List<Session> sessionsToSchedule = new ArrayList<>();
+
         // Create all required sessions
         for (Subject subject : subjects) {
             // Create course sessions (one per series)
@@ -124,34 +157,53 @@ public class TimetableScheduler {
         }
 
         if (index == sessionsToSchedule.size()) {
-            return true; // All sessions have been scheduled
+            return currentScore > bestScore; // Found a better solution
         }
 
         Session session = sessionsToSchedule.get(index);
         List<Room> availableRooms = session.isCourse() ? courseRooms : seminarRooms;
+
+        double bestLocalScore = Double.NEGATIVE_INFINITY;
+        Room bestRoom = null;
+        TimeSlot bestTimeSlot = null;
 
         for (Room room : availableRooms) {
             for (String day : days) {
                 for (Integer time : timeSlots) {
                     TimeSlot timeSlot = new TimeSlot(day, time);
                     if (isTimeSlotAvailable(room, session.getGroup(), session.getTeacher(), timeSlot)) {
-                        session.setRoom(room);
-                        session.setTimeSlot(timeSlot);
-                        scheduleSession(session);
+                        double score = calculateTimeSlotScore(room, session.getGroup(), session.getTeacher(), timeSlot);
 
-                        if (backtrack(sessionsToSchedule, index + 1)) {
-                            return true;
+                        if (score > bestLocalScore) {
+                            bestLocalScore = score;
+                            bestRoom = room;
+                            bestTimeSlot = timeSlot;
                         }
-
-                        // Undo the assignment
-                        unscheduleSession(session);
                     }
                 }
             }
         }
 
-        return false; // No valid schedule found
+        if (bestRoom != null) {
+            session.setRoom(bestRoom);
+            session.setTimeSlot(bestTimeSlot);
+            double previousScore = currentScore;
+            currentScore += bestLocalScore;
+            scheduleSession(session);
+
+            if (backtrack(sessionsToSchedule, index + 1)) {
+                bestScore = currentScore;
+                return true;
+            }
+
+            // Undo the assignment
+            unscheduleSession(session);
+            currentScore = previousScore;
+        }
+
+        return false;
     }
+
 
     private void unscheduleSession(Session session) {
         schedule.remove(session);
@@ -171,7 +223,6 @@ public class TimetableScheduler {
 
     private void scheduleSession(Session session) {
         schedule.add(session);
-
         // Update room schedule
         roomSchedule.computeIfAbsent(session.getRoom().getName(), k -> new HashSet<>())
                    .add(session.getTimeSlot());
@@ -222,6 +273,7 @@ public class TimetableScheduler {
 
         // Sort schedule entries
         scheduleEntries.sort(Comparator.comparing((ScheduleEntry a) -> a.day).thenComparingInt(a -> a.startTime));
+
 
         // Create export object
         TimetableExport export = new TimetableExport(scheduleEntries);
@@ -277,9 +329,11 @@ public class TimetableScheduler {
                 String outputPath = "timetable_year_" + year + ".json";
 
                 // Step 3: Generate timetable for the year
+
                 if (scheduler.generateTimetable(yearData.getSubjects())) {
                     System.out.println("Successfully generated timetable for Year " + year);
-                    scheduler.printSchedule();
+
+                    System.out.println(scheduler.getSchedule());
 
                     scheduler.exportToJson(outputPath);
                     System.out.println("Exported timetable to " + outputPath);

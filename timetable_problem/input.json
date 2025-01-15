@@ -1,15 +1,15 @@
 {
   "teachers": [
-    {"name": "Prof. Smith", "role": "LECTURER", "maxHoursPerWeek": 50},
-    {"name": "Prof. Johnson", "role": "LECTURER", "maxHoursPerWeek": 50},
-    {"name": "Prof. Williams", "role": "LECTURER", "maxHoursPerWeek": 50},
-    {"name": "Mr. Brown", "role": "ASSISTANT", "maxHoursPerWeek": 50},
-    {"name": "Ms. Davis", "role": "ASSISTANT", "maxHoursPerWeek": 50},
-    {"name": "Mr. Wilson", "role": "ASSISTANT", "maxHoursPerWeek": 50},
-    {"name": "Prof. Taylor", "role": "LECTURER", "maxHoursPerWeek": 50},
-    {"name": "Prof. Anderson", "role": "LECTURER", "maxHoursPerWeek": 50},
-    {"name": "Mr. Thomas", "role": "ASSISTANT", "maxHoursPerWeek": 50},
-    {"name": "Ms. Jackson", "role": "ASSISTANT", "maxHoursPerWeek": 50}
+    {"name": "Prof. Smith", "role": "LECTURER", "maxHoursPerWeek": 50, "unavailableTimes": ["Monday 9-11", "Wednesday 14-16"]},
+    {"name": "Prof. Johnson", "role": "LECTURER", "maxHoursPerWeek": 50, "unavailableTimes": ["Tuesday 10-12"]},
+    {"name": "Prof. Williams", "role": "LECTURER", "maxHoursPerWeek": 50, "unavailableTimes": ["Friday 13-15"]},
+    {"name": "Mr. Brown", "role": "ASSISTANT", "maxHoursPerWeek": 50, "unavailableTimes": ["Thursday 8-10"]},
+    {"name": "Ms. Davis", "role": "ASSISTANT", "maxHoursPerWeek": 50, "unavailableTimes": ["Monday 11-13"]},
+    {"name": "Mr. Wilson", "role": "ASSISTANT", "maxHoursPerWeek": 50, "unavailableTimes": ["Wednesday 9-11"]},
+    {"name": "Prof. Taylor", "role": "LECTURER", "maxHoursPerWeek": 50, "unavailableTimes": ["Tuesday 14-16"]},
+    {"name": "Prof. Anderson", "role": "LECTURER", "maxHoursPerWeek": 50, "unavailableTimes": ["Thursday 10-12"]},
+    {"name": "Mr. Thomas", "role": "ASSISTANT", "maxHoursPerWeek": 50, "unavailableTimes": ["Friday 8-10"]},
+    {"name": "Ms. Jackson", "role": "ASSISTANT", "maxHoursPerWeek": 50, "unavailableTimes": ["Monday 14-16"]}
   ],
   "rooms": {
     "courseRooms": ["C101", "C102", "C201", "C202", "C301", "C302", "C303", "C304"],
@@ -26,7 +26,7 @@
         {
           "name": "Mathematics I",
           "courseTeacher": "Prof. Johnson",
-          "seminarTeacher": ["Mr. Wilson","Ms. Jackson"]
+          "seminarTeacher": ["Mr. Wilson", "Ms. Jackson"]
         },
         {
           "name": "Physics Fundamentals",
@@ -35,14 +35,14 @@
         }
       ],
       "series": ["A", "B", "C"],
-      "groups": {"A": 2, "B": 2, "C": 1}
+      "groups": {"A": 2, "B": 2, "E": 1}
     },
     "2": {
       "subjects": [
         {
           "name": "Data Structures",
           "courseTeacher": "Prof. Taylor",
-          "seminarTeacher": ["Mr. Thomas","Prof. Taylor"]
+          "seminarTeacher": ["Mr. Thomas", "Prof. Taylor"]
         },
         {
           "name": "Mathematics II",
@@ -52,7 +52,7 @@
         {
           "name": "Software Engineering",
           "courseTeacher": "Prof. Smith",
-          "seminarTeacher": ["Mr. Brown","Mr. Thomas"]
+          "seminarTeacher": ["Mr. Brown", "Mr. Thomas"]
         }
       ],
       "series": ["A", "B"],
@@ -68,7 +68,7 @@
         {
           "name": "Advanced Mathematics",
           "courseTeacher": "Prof. Williams",
-          "seminarTeacher": ["Ms. Davis","Ms. Jackson","Prof. Williams"]
+          "seminarTeacher": ["Ms. Davis", "Ms. Jackson", "Prof. Williams"]
         }
       ],
       "series": ["A"],
