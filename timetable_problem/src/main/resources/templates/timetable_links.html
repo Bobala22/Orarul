@@ -1,8 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Timetable for All Years</title>
+</head>
+<body>
 <h1>Timetable for All Years</h1>
-<ul>
+<div th:if="${errorMessage}">
+    <p th:text="${errorMessage}" style="color: red;"></p>
+</div>
+<ul th:if="${years}">
     <li th:each="year : ${years}">
         <a th:href="@{/timetable/year(year=${year})}">
             Timetable for Year [[${year}]]
         </a>
     </li>
 </ul>
+</body>
+</html>

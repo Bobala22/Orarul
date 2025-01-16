@@ -8,6 +8,8 @@ import okhttp3.*;
 import org.example.data.TimetableData;
 import org.example.data.config.TimetableConfigLoader;
 import org.example.solver.TimetableScheduler;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -60,12 +62,48 @@ public class TimetableController {
         }
     }
     @GetMapping("/timetable")
-    public String getYearlyTimetableLinks(Model model) throws IOException {
-        TimetableConfigLoader configLoader = new TimetableConfigLoader();
-        Map<Integer, TimetableData> timetableDataPerYear = configLoader.loadConfiguration("input.json");
+    public String getYearlyTimetableLinks(Model model) {
+        try {
+            // Step 1: Load timetable configuration
+            String configFilePath = "input.json"; // Path to your JSON config file
+            TimetableConfigLoader configLoader = new TimetableConfigLoader();
+            Map<Integer, TimetableData> timetableDataPerYear = configLoader.loadConfiguration(configFilePath);
 
-        model.addAttribute("years", timetableDataPerYear.keySet());
-        return "timetable_links"; // A view that displays links for each year
+            // Step 2: Create a scheduler sharing the same rooms (global rooms from the config)
+            if (timetableDataPerYear.isEmpty()) {
+                throw new IllegalStateException("No years found in configuration.");
+            }
+
+            // Assuming rooms are shared across years, get them from the first year's data
+            TimetableData firstYearData = timetableDataPerYear.values().iterator().next(); // Get first year as a reference
+            TimetableScheduler scheduler = new TimetableScheduler(
+                    firstYearData.getCourseRooms(),
+                    firstYearData.getSeminarRooms(),
+                    firstYearData.getTeachers()
+            );
+
+            // Iterate through each year and generate timetables
+            for (Map.Entry<Integer, TimetableData> entry : timetableDataPerYear.entrySet()) {
+                Integer year = entry.getKey();
+                TimetableData yearData = entry.getValue();
+                String outputPath = "timetable_year_" + year + ".json";
+
+                // Step 3: Generate timetable for the year
+                if (scheduler.generateTimetable(yearData.getSubjects())) {
+                    scheduler.exportToJson(outputPath);
+                } else {
+                    model.addAttribute("errorMessage", "Failed to generate a valid timetable for Year " + year);
+                    return "timetable_links"; // Return the view with the error message
+                }
+            }
+
+            model.addAttribute("years", timetableDataPerYear.keySet());
+            return "timetable_links"; // A view that displays links for each year
+
+        } catch (IOException | IllegalStateException e) {
+            model.addAttribute("errorMessage", "Error: " + e.getMessage());
+            return "timetable_links"; // Return the view with the error message
+        }
     }
 
     @GetMapping("/timetable/year")
@@ -196,7 +234,7 @@ public class TimetableController {
         return "nlptest";
     }
 
-    private static final String OPENAI_API_KEY = "bruh";
+    private static final String OPENAI_API_KEY = "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";
     private final OkHttpClient client = new OkHttpClient.Builder()
             .connectTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
@@ -342,4 +380,16 @@ public class TimetableController {
         }
         return "nlptest";
     }
+
+    @PostMapping("/saveJson")
+    public ResponseEntity<String> saveJson(@org.springframework.web.bind.annotation.RequestBody String jsonContent) {
+        try {
+            Path path = Paths.get("input.json");
+            Files.write(path, jsonContent.getBytes());
+            return ResponseEntity.ok("JSON file saved successfully.");
+        } catch (IOException e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to save JSON file.");
+        }
+    }
+
 }

@@ -71,16 +71,6 @@
     "room" : "S101"
   }, {
     "day" : "Monday",
-    "startTime" : 14,
-    "endTime" : 16,
-    "subject" : "Advanced Mathematics",
-    "type" : "Course",
-    "group" : "A",
-    "teacher" : "Prof. Williams",
-    "teacherRole" : "LECTURER",
-    "room" : "C101"
-  }, {
-    "day" : "Monday",
     "startTime" : 16,
     "endTime" : 18,
     "subject" : "Artificial Intelligence",
@@ -89,16 +79,6 @@
     "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
-  }, {
-    "day" : "Monday",
-    "startTime" : 16,
-    "endTime" : 18,
-    "subject" : "Advanced Mathematics",
-    "type" : "Course",
-    "group" : "B",
-    "teacher" : "Prof. Williams",
-    "teacherRole" : "LECTURER",
-    "room" : "C101"
   }, {
     "day" : "Monday",
     "startTime" : 18,
@@ -110,24 +90,14 @@
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
-    "day" : "Monday",
-    "startTime" : 18,
-    "endTime" : 20,
-    "subject" : "Advanced Mathematics",
-    "type" : "Course",
-    "group" : "E",
-    "teacher" : "Prof. Williams",
-    "teacherRole" : "LECTURER",
-    "room" : "C101"
-  }, {
     "day" : "Thursday",
     "startTime" : 8,
     "endTime" : 10,
     "subject" : "Advanced Mathematics",
     "type" : "Seminar",
     "group" : "B2",
-    "teacher" : "Prof. Williams",
-    "teacherRole" : "LECTURER",
+    "teacher" : "Ms. Jackson",
+    "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
     "day" : "Thursday",
@@ -146,7 +116,7 @@
     "subject" : "Advanced Mathematics",
     "type" : "Seminar",
     "group" : "B4",
-    "teacher" : "Ms. Jackson",
+    "teacher" : "Ms. Davis",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -166,7 +136,7 @@
     "subject" : "Advanced Mathematics",
     "type" : "Seminar",
     "group" : "E2",
-    "teacher" : "Ms. Davis",
+    "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -176,8 +146,8 @@
     "subject" : "Advanced Mathematics",
     "type" : "Seminar",
     "group" : "E3",
-    "teacher" : "Prof. Williams",
-    "teacherRole" : "LECTURER",
+    "teacher" : "Ms. Jackson",
+    "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
     "day" : "Tuesday",
@@ -191,6 +161,16 @@
     "room" : "S101"
   }, {
     "day" : "Tuesday",
+    "startTime" : 8,
+    "endTime" : 10,
+    "subject" : "Advanced Mathematics",
+    "type" : "Course",
+    "group" : "A",
+    "teacher" : "Prof. Williams",
+    "teacherRole" : "LECTURER",
+    "room" : "C101"
+  }, {
+    "day" : "Tuesday",
     "startTime" : 10,
     "endTime" : 12,
     "subject" : "Artificial Intelligence",
@@ -201,6 +181,16 @@
     "room" : "S101"
   }, {
     "day" : "Tuesday",
+    "startTime" : 10,
+    "endTime" : 12,
+    "subject" : "Advanced Mathematics",
+    "type" : "Course",
+    "group" : "B",
+    "teacher" : "Prof. Williams",
+    "teacherRole" : "LECTURER",
+    "room" : "C101"
+  }, {
+    "day" : "Tuesday",
     "startTime" : 12,
     "endTime" : 14,
     "subject" : "Artificial Intelligence",
@@ -209,6 +199,16 @@
     "teacher" : "Mr. Wilson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
+  }, {
+    "day" : "Tuesday",
+    "startTime" : 12,
+    "endTime" : 14,
+    "subject" : "Advanced Mathematics",
+    "type" : "Course",
+    "group" : "E",
+    "teacher" : "Prof. Williams",
+    "teacherRole" : "LECTURER",
+    "room" : "C101"
   }, {
     "day" : "Tuesday",
     "startTime" : 14,
@@ -256,7 +256,7 @@
     "subject" : "Advanced Mathematics",
     "type" : "Seminar",
     "group" : "A2",
-    "teacher" : "Ms. Davis",
+    "teacher" : "Ms. Jackson",
     "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
@@ -266,8 +266,8 @@
     "subject" : "Advanced Mathematics",
     "type" : "Seminar",
     "group" : "A3",
-    "teacher" : "Prof. Williams",
-    "teacherRole" : "LECTURER",
+    "teacher" : "Ms. Jackson",
+    "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
     "day" : "Wednesday",
@@ -286,8 +286,8 @@
     "subject" : "Advanced Mathematics",
     "type" : "Seminar",
     "group" : "A5",
-    "teacher" : "Prof. Williams",
-    "teacherRole" : "LECTURER",
+    "teacher" : "Ms. Davis",
+    "teacherRole" : "ASSISTANT",
     "room" : "S101"
   }, {
     "day" : "Wednesday",
@@ -296,8 +296,8 @@
     "subject" : "Advanced Mathematics",
     "type" : "Seminar",
     "group" : "B1",
-    "teacher" : "Prof. Williams",
-    "teacherRole" : "LECTURER",
+    "teacher" : "Ms. Davis",
+    "teacherRole" : "ASSISTANT",
     "room" : "S101"
   } ]
 }

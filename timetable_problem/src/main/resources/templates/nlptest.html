@@ -161,7 +161,43 @@
             <button type="button" onclick="buildJson()">Build JSON</button>
             <button type="button" onclick="saveJson()">Save JSON</button>
             <textarea id="resultJson" rows="10" readonly></textarea>
-            <button type="submit">Generate Timetable</button>
+            <button type="button" onclick="downloadJson()">Generate Timetable</button>
+            <script>
+                function downloadJson() {
+                    const jsonContent = document.getElementById('resultJson').value;
+                    if (!jsonContent) {
+                        alert('Please build the JSON first!');
+                        return;
+                    }
+
+                    // Send JSON data to the server
+                    fetch('/saveJson', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: jsonContent
+                    })
+                        .then(response => {
+                            if (response.ok) {
+                                alert('JSON file saved successfully.');
+                                window.location.href='/timetable';
+                            } else {
+                                alert('Failed to save JSON file.');
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            alert('An error occurred while saving the JSON file.');
+                        });
+
+                    //redirect to timetable_view.html
+
+
+
+
+                }
+            </script>
         </form>
     </section>
 

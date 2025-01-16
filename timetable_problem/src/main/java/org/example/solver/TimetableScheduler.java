@@ -10,8 +10,6 @@ import java.io.IOException;
 import java.util.*;
 
 
-// Update data classes to support JSON serialization
-
 
 public class TimetableScheduler {
     private final List<String> days;
@@ -129,7 +127,6 @@ public class TimetableScheduler {
             for (String series : this.series) {
                 for (int i = 1; i <= groupsPerSeries.get(series); i++) {
                     Session seminarSession = new Session(subject, false, series + i);
-                    // Randomly assign one of the seminar teachers
                     List<Teacher> availableTeachers = subject.getSeminarTeachers();
                     seminarSession.setTeacher(
                             availableTeachers.get(new Random().nextInt(availableTeachers.size()))
