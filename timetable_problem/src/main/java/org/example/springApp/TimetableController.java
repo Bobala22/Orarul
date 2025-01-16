@@ -234,7 +234,7 @@ public class TimetableController {
         return "nlptest";
     }
 
-    private static final String OPENAI_API_KEY = "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";
+    private static final String OPENAI_API_KEY = "bruh";
     private final OkHttpClient client = new OkHttpClient.Builder()
             .connectTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
