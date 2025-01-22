@@ -10,8 +10,9 @@ Moloce Alin
 
 - Java Backtracking Implementation for better solution generation performance (50% faster than old Python version)
 - Java Spring timetable pages at localhost:8080/timetable .Filtering available for custom timetables (Year Timetable,Series Timetable, Group Timetable, Teacher Timetable, Subject Timetable)
-  [https://github.com/Bobala22/Orarul/blob/main/links.png]
-  [https://github.com/Bobala22/Orarul/blob/main/year_1.png]
+<br>![localhost:8080/timetable preview](https://github.com/Bobala22/Orarul/blob/main/links.png?raw=true)
+![localhost:8080/timetable preview](https://github.com/Bobala22/Orarul/blob/main/year_1.png?raw=true)
+
  
 
 <br><b>Isache Bogdan</b>
