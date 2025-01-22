@@ -20,6 +20,7 @@ Moloce Alin
 - 
 
 <h2>Improvements to the proposed project</h2>
+
 - friendly web user interface made with Spring Java API that allows the customer to make his own timetable in a very intuitively manner
 - json import of an old version of the timetable and the posibility of modifing it
 - alternative of generating a timetable with natural language through the usage of prompt enginnering and GPT4.0
