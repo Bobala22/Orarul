@@ -22,7 +22,8 @@ Moloce Alin
 
 <br><b>Albert Alexandru</b>
 
-- 
+- Implemented natural language processing (NLP) to translate user input into JSON input for the timetable generation algorithm.
+- Worked on a web page that converts user requirements expressed in natural language into input for the timetable solver.
 
 <h2>Improvements to the proposed project</h2>
 
