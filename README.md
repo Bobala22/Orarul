@@ -19,6 +19,7 @@ Moloce Alin
 
 - Modeling the problem into variables with their domains that facilitate the representation of the problem alongside with hard and soft constraints in order for the timetable to be correct and fair and also try to respect the prefferences of teachers.
 - Creating the input filed section on the main page, json building functionality, and json saving/importing/modifying functionality
+<br> ![main-page preview](main-page.png)
 
 <br><b>Albert Alexandru</b>
 
